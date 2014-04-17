@@ -21,6 +21,8 @@
 		84FB1CB018FF369500D0381E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FB1C9218FF369400D0381E /* UIKit.framework */; };
 		84FB1CB818FF369500D0381E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84FB1CB618FF369500D0381E /* InfoPlist.strings */; };
 		84FB1CBA18FF369500D0381E /* CurrencyInformationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB1CB918FF369500D0381E /* CurrencyInformationTests.m */; };
+		84FB1CC518FF49FC00D0381E /* CICurrencyRatesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB1CC418FF49FC00D0381E /* CICurrencyRatesTableViewController.m */; };
+		84FB1CC818FF4B8D00D0381E /* CICurrencyRates.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB1CC718FF4B8D00D0381E /* CICurrencyRates.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		84FB1CB518FF369500D0381E /* CurrencyInformationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CurrencyInformationTests-Info.plist"; sourceTree = "<group>"; };
 		84FB1CB718FF369500D0381E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84FB1CB918FF369500D0381E /* CurrencyInformationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrencyInformationTests.m; sourceTree = "<group>"; };
+		84FB1CC318FF49FC00D0381E /* CICurrencyRatesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CICurrencyRatesTableViewController.h; sourceTree = "<group>"; };
+		84FB1CC418FF49FC00D0381E /* CICurrencyRatesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CICurrencyRatesTableViewController.m; sourceTree = "<group>"; };
+		84FB1CC618FF4B8D00D0381E /* CICurrencyRates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CICurrencyRates.h; sourceTree = "<group>"; };
+		84FB1CC718FF4B8D00D0381E /* CICurrencyRates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CICurrencyRates.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,10 @@
 				84FB1C9D18FF369400D0381E /* CIAppDelegate.h */,
 				84FB1C9E18FF369400D0381E /* CIAppDelegate.m */,
 				84FB1CA018FF369400D0381E /* Main.storyboard */,
+				84FB1CC318FF49FC00D0381E /* CICurrencyRatesTableViewController.h */,
+				84FB1CC618FF4B8D00D0381E /* CICurrencyRates.h */,
+				84FB1CC718FF4B8D00D0381E /* CICurrencyRates.m */,
+				84FB1CC418FF49FC00D0381E /* CICurrencyRatesTableViewController.m */,
 				84FB1CA318FF369400D0381E /* CIViewController.h */,
 				84FB1CA418FF369400D0381E /* CIViewController.m */,
 				84FB1CA618FF369400D0381E /* Images.xcassets */,
@@ -250,6 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FB1CC518FF49FC00D0381E /* CICurrencyRatesTableViewController.m in Sources */,
+				84FB1CC818FF4B8D00D0381E /* CICurrencyRates.m in Sources */,
 				84FB1C9F18FF369400D0381E /* CIAppDelegate.m in Sources */,
 				84FB1C9B18FF369400D0381E /* main.m in Sources */,
 				84FB1CA518FF369400D0381E /* CIViewController.m in Sources */,

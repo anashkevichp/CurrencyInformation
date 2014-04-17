@@ -7,11 +7,31 @@
 //
 
 #import "CIAppDelegate.h"
+#import "CICurrencyRates.h"
+#import "CICurrencyRatesTableViewController.h"
 
-@implementation CIAppDelegate
+@implementation CIAppDelegate {
+    NSMutableArray *currencyRates;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    currencyRates = [NSMutableArray arrayWithCapacity:10];
+    CICurrencyRates *currencyRate = [[CICurrencyRates alloc] init];
+    currencyRate.bankName = @"Беларусбанк";
+    [currencyRates addObject:currencyRate];
+    currencyRate = [[CICurrencyRates alloc] init];
+    currencyRate.bankName = @"Белинвестбанк";
+    [currencyRates addObject:currencyRate];
+    currencyRate = [[CICurrencyRates alloc] init];
+    currencyRate.bankName = @"Белагропромбанк";
+    [currencyRates addObject:currencyRate];
+    
+    UIViewController *viewController = (UIViewController *) self.window.rootViewController;
+    
+    //CICurrencyRatesTableViewController *currencyRatesTableViewController = [[navigationController viewControllers] objectAtIndex:0];
+    //currencyRatesTableViewController.currencyRates = currencyRates;
+    
     // Override point for customization after application launch.
     return YES;
 }
