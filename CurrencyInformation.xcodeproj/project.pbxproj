@@ -47,18 +47,18 @@
 		84FB1C9D18FF369400D0381E /* CIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIAppDelegate.h; sourceTree = "<group>"; };
 		84FB1C9E18FF369400D0381E /* CIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIAppDelegate.m; sourceTree = "<group>"; };
 		84FB1CA118FF369400D0381E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		84FB1CA318FF369400D0381E /* CIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIViewController.h; sourceTree = "<group>"; };
-		84FB1CA418FF369400D0381E /* CIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIViewController.m; sourceTree = "<group>"; };
+		84FB1CA318FF369400D0381E /* CIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CIViewController.h; path = ../CIViewController.h; sourceTree = "<group>"; };
+		84FB1CA418FF369400D0381E /* CIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CIViewController.m; path = ../CIViewController.m; sourceTree = "<group>"; };
 		84FB1CA618FF369400D0381E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		84FB1CAC18FF369500D0381E /* CurrencyInformationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyInformationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FB1CAD18FF369500D0381E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		84FB1CB518FF369500D0381E /* CurrencyInformationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CurrencyInformationTests-Info.plist"; sourceTree = "<group>"; };
 		84FB1CB718FF369500D0381E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84FB1CB918FF369500D0381E /* CurrencyInformationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrencyInformationTests.m; sourceTree = "<group>"; };
-		84FB1CC318FF49FC00D0381E /* CICurrencyRatesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CICurrencyRatesTableViewController.h; sourceTree = "<group>"; };
-		84FB1CC418FF49FC00D0381E /* CICurrencyRatesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CICurrencyRatesTableViewController.m; sourceTree = "<group>"; };
-		84FB1CC618FF4B8D00D0381E /* CICurrencyRates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CICurrencyRates.h; sourceTree = "<group>"; };
-		84FB1CC718FF4B8D00D0381E /* CICurrencyRates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CICurrencyRates.m; sourceTree = "<group>"; };
+		84FB1CC318FF49FC00D0381E /* CICurrencyRatesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CICurrencyRatesTableViewController.h; path = ../CICurrencyRatesTableViewController.h; sourceTree = "<group>"; };
+		84FB1CC418FF49FC00D0381E /* CICurrencyRatesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CICurrencyRatesTableViewController.m; path = ../CICurrencyRatesTableViewController.m; sourceTree = "<group>"; };
+		84FB1CC618FF4B8D00D0381E /* CICurrencyRates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CICurrencyRates.h; path = ../CICurrencyRates.h; sourceTree = "<group>"; };
+		84FB1CC718FF4B8D00D0381E /* CICurrencyRates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CICurrencyRates.m; path = ../CICurrencyRates.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +85,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8407153E1901E9200001410E /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				84FB1CC718FF4B8D00D0381E /* CICurrencyRates.m */,
+				84FB1CC618FF4B8D00D0381E /* CICurrencyRates.h */,
+			);
+			path = entities;
+			sourceTree = "<group>";
+		};
+		8407153F1901E9510001410E /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84FB1CC318FF49FC00D0381E /* CICurrencyRatesTableViewController.h */,
+				84FB1CC418FF49FC00D0381E /* CICurrencyRatesTableViewController.m */,
+				84FB1CA318FF369400D0381E /* CIViewController.h */,
+				84FB1CA418FF369400D0381E /* CIViewController.m */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
 		84FB1C8218FF369400D0381E = {
 			isa = PBXGroup;
 			children = (
@@ -118,15 +138,11 @@
 		84FB1C9418FF369400D0381E /* CurrencyInformation */ = {
 			isa = PBXGroup;
 			children = (
+				8407153F1901E9510001410E /* controllers */,
+				8407153E1901E9200001410E /* entities */,
 				84FB1C9D18FF369400D0381E /* CIAppDelegate.h */,
 				84FB1C9E18FF369400D0381E /* CIAppDelegate.m */,
 				84FB1CA018FF369400D0381E /* Main.storyboard */,
-				84FB1CC318FF49FC00D0381E /* CICurrencyRatesTableViewController.h */,
-				84FB1CC618FF4B8D00D0381E /* CICurrencyRates.h */,
-				84FB1CC718FF4B8D00D0381E /* CICurrencyRates.m */,
-				84FB1CC418FF49FC00D0381E /* CICurrencyRatesTableViewController.m */,
-				84FB1CA318FF369400D0381E /* CIViewController.h */,
-				84FB1CA418FF369400D0381E /* CIViewController.m */,
 				84FB1CA618FF369400D0381E /* Images.xcassets */,
 				84FB1C9518FF369400D0381E /* Supporting Files */,
 			);
@@ -475,6 +491,7 @@
 				84FB1CBF18FF369500D0381E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84FB1CC018FF369500D0381E /* Build configuration list for PBXNativeTarget "CurrencyInformationTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +500,7 @@
 				84FB1CC218FF369500D0381E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
