@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 First Group. All rights reserved.
 //
 
-#import "CICurrencyRatesTableViewController.h"
+#import "CICurrencyRatesTableViewController"
 #import "CICurrencyRates.h"
 
 @interface CICurrencyRatesTableViewController ()

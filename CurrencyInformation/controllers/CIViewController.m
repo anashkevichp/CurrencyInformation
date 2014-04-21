@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 First Group. All rights reserved.
 //
 
-#import "CIViewController.h"
+#import "CIViewController"
 
 @interface CIViewController ()
 

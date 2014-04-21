@@ -7,8 +7,8 @@
 //
 
 #import "CIAppDelegate.h"
-#import "CICurrencyRates.h"
-#import "CICurrencyRatesTableViewController.h"
+#import "entities/CICurrencyRates.h"
+#import "controllers/CICurrencyRatesTableViewController.h"
 
 @implementation CIAppDelegate {
     NSMutableArray *currencyRates;
