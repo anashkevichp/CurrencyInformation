@@ -113,10 +113,10 @@
 		84FB1C9418FF369400D0381E /* CurrencyInformation */ = {
 			isa = PBXGroup;
 			children = (
+				84A2EED61905945400B36A17 /* controllers */,
 				84A2EED81905947500B36A17 /* entities */,
 				84FB1C9D18FF369400D0381E /* CIAppDelegate.h */,
 				84FB1C9E18FF369400D0381E /* CIAppDelegate.m */,
-				84A2EED61905945400B36A17 /* controllers */,
 				84FB1CA018FF369400D0381E /* Main.storyboard */,
 				84FB1CA618FF369400D0381E /* Images.xcassets */,
 				84FB1C9518FF369400D0381E /* Supporting Files */,
