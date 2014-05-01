@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84A2EED71905945400B36A17 /* controllers in Resources */ = {isa = PBXBuildFile; fileRef = 84A2EED61905945400B36A17 /* controllers */; };
-		84A2EED91905947500B36A17 /* entities in Resources */ = {isa = PBXBuildFile; fileRef = 84A2EED81905947500B36A17 /* entities */; };
+		843845081912A5050088E88D /* CISellTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843845071912A5050088E88D /* CISellTableViewController.m */; };
+		8438450B1912A5DB0088E88D /* CICurrencyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438450A1912A5DB0088E88D /* CICurrencyTableViewCell.m */; };
+		843DBD0A1912A34F002AFB8C /* CICurrencyRates.m in Sources */ = {isa = PBXBuildFile; fileRef = 843DBD051912A34F002AFB8C /* CICurrencyRates.m */; };
+		843DBD0C1912A34F002AFB8C /* CIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843DBD091912A34F002AFB8C /* CIViewController.m */; };
 		84FB1C8F18FF369400D0381E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FB1C8E18FF369400D0381E /* Foundation.framework */; };
 		84FB1C9118FF369400D0381E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FB1C9018FF369400D0381E /* CoreGraphics.framework */; };
 		84FB1C9318FF369400D0381E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FB1C9218FF369400D0381E /* UIKit.framework */; };
@@ -35,8 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		84A2EED61905945400B36A17 /* controllers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = controllers; sourceTree = "<group>"; };
-		84A2EED81905947500B36A17 /* entities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = entities; sourceTree = "<group>"; };
+		843845061912A5050088E88D /* CISellTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CISellTableViewController.h; sourceTree = "<group>"; };
+		843845071912A5050088E88D /* CISellTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CISellTableViewController.m; sourceTree = "<group>"; };
+		843845091912A5DB0088E88D /* CICurrencyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CICurrencyTableViewCell.h; sourceTree = "<group>"; };
+		8438450A1912A5DB0088E88D /* CICurrencyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CICurrencyTableViewCell.m; sourceTree = "<group>"; };
+		843DBD041912A34F002AFB8C /* CICurrencyRates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CICurrencyRates.h; sourceTree = "<group>"; };
+		843DBD051912A34F002AFB8C /* CICurrencyRates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CICurrencyRates.m; sourceTree = "<group>"; };
+		843DBD081912A34F002AFB8C /* CIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIViewController.h; sourceTree = "<group>"; };
+		843DBD091912A34F002AFB8C /* CIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIViewController.m; sourceTree = "<group>"; };
 		84FB1C8B18FF369400D0381E /* CurrencyInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FB1C8E18FF369400D0381E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84FB1C9018FF369400D0381E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -80,6 +88,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		843DBD021912A2B8002AFB8C /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				843845061912A5050088E88D /* CISellTableViewController.h */,
+				843845071912A5050088E88D /* CISellTableViewController.m */,
+				843DBD081912A34F002AFB8C /* CIViewController.h */,
+				843DBD091912A34F002AFB8C /* CIViewController.m */,
+				843845091912A5DB0088E88D /* CICurrencyTableViewCell.h */,
+				8438450A1912A5DB0088E88D /* CICurrencyTableViewCell.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		843DBD031912A2C5002AFB8C /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				843DBD041912A34F002AFB8C /* CICurrencyRates.h */,
+				843DBD051912A34F002AFB8C /* CICurrencyRates.m */,
+			);
+			name = entities;
+			sourceTree = "<group>";
+		};
 		84FB1C8218FF369400D0381E = {
 			isa = PBXGroup;
 			children = (
@@ -113,8 +143,8 @@
 		84FB1C9418FF369400D0381E /* CurrencyInformation */ = {
 			isa = PBXGroup;
 			children = (
-				84A2EED61905945400B36A17 /* controllers */,
-				84A2EED81905947500B36A17 /* entities */,
+				843DBD031912A2C5002AFB8C /* entities */,
+				843DBD021912A2B8002AFB8C /* controllers */,
 				84FB1C9D18FF369400D0381E /* CIAppDelegate.h */,
 				84FB1C9E18FF369400D0381E /* CIAppDelegate.m */,
 				84FB1CA018FF369400D0381E /* Main.storyboard */,
@@ -232,8 +262,6 @@
 			files = (
 				84FB1CA718FF369400D0381E /* Images.xcassets in Resources */,
 				84FB1C9918FF369400D0381E /* InfoPlist.strings in Resources */,
-				84A2EED71905945400B36A17 /* controllers in Resources */,
-				84A2EED91905947500B36A17 /* entities in Resources */,
 				84FB1CA218FF369400D0381E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,8 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843DBD0C1912A34F002AFB8C /* CIViewController.m in Sources */,
 				84FB1C9F18FF369400D0381E /* CIAppDelegate.m in Sources */,
+				8438450B1912A5DB0088E88D /* CICurrencyTableViewCell.m in Sources */,
 				84FB1C9B18FF369400D0381E /* main.m in Sources */,
+				843845081912A5050088E88D /* CISellTableViewController.m in Sources */,
+				843DBD0A1912A34F002AFB8C /* CICurrencyRates.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,19 +1,22 @@
 //
-//  CICurrencyRatesTableViewController.m
+//  CISellTableViewController.m
 //  CurrencyInformation
 //
-//  Created by Admin on 17.04.14.
+//  Created by Pavel Anashkevich on 01.05.14.
 //  Copyright (c) 2014 First Group. All rights reserved.
 //
 
-#import "CICurrencyRatesTableViewController"
+#import "CISellTableViewController.h"
+#import "CICurrencyTableViewCell.h"
 #import "CICurrencyRates.h"
 
-@interface CICurrencyRatesTableViewController ()
+@interface CISellTableViewController ()
 
 @end
 
-@implementation CICurrencyRatesTableViewController
+@implementation CISellTableViewController {
+    NSMutableArray *currencyRates;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,6 +30,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    currencyRates = [NSMutableArray arrayWithCapacity:10];
+    
+    CICurrencyRates *cr = [[CICurrencyRates alloc] init];
+    cr.bankName = @"Беларусбанк";
+    cr.branchBankName = @"Отделение №252";
+    cr.usdToBurRate = 9950;
+    [currencyRates addObject:cr];
+    
+    cr = [[CICurrencyRates alloc] init];
+    cr.bankName = @"Белинвестбанк";
+    cr.branchBankName = @"Головной офис";
+    cr.usdToBurRate = 9950;
+    [currencyRates addObject:cr];
+    
+    cr = [[CICurrencyRates alloc] init];
+    cr.bankName = @"Беларусбанк";
+    cr.branchBankName = @"Отделение №123";
+    cr.usdToBurRate = 9960;
+    [currencyRates addObject:cr];
+    
+    cr = [[CICurrencyRates alloc] init];
+    cr.bankName = @"Белагропромбанк";
+    cr.branchBankName = @"Отделение №356";
+    cr.usdToBurRate = 9960;
+    [currencyRates addObject:cr];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -52,18 +81,27 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.currencyRates count];
+    return [currencyRates count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CurrencyRateCell" forIndexPath:indexPath];
-    CICurrencyRates *currencyRate = [self.currencyRates objectAtIndex:indexPath.row];
-    cell.textLabel.text = currencyRate.bankName;
+    static NSString *cellIdentifier = @"currencyRateCellId";
+    CICurrencyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier];
     
-    // Configure the cell...
+    if (cell == nil) {
+        NSLog(@"cell = nill");
+        cell = [[CICurrencyTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
     
+    long row = [indexPath row];
+    CICurrencyRates *cr = [currencyRates objectAtIndex:row];
+    
+    cell.bankNameLabel.text = cr.bankName;
+    cell.branchBankNameLabel.text = cr.branchBankName;
+    cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", cr.usdToBurRate];
+
     return cell;
 }
 

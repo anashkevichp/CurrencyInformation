@@ -11,5 +11,7 @@
 @interface CICurrencyRates : NSObject
 
 @property (nonatomic, copy) NSString *bankName;
+@property (nonatomic, copy) NSString *branchBankName;
+@property (nonatomic, assign) int usdToBurRate;
 
 @end

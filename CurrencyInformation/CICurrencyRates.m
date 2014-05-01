@@ -11,5 +11,7 @@
 @implementation CICurrencyRates
 
 @synthesize bankName;
+@synthesize branchBankName;
+@synthesize usdToBurRate;
 
 @end
