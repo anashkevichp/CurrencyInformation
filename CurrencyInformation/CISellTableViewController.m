@@ -14,9 +14,7 @@
 
 @end
 
-@implementation CISellTableViewController {
-    // NSMutableArray *banks;
-}
+@implementation CISellTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,32 +28,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.banks = [NSMutableArray arrayWithCapacity:10];
-    
-    CIBank *bank = [[CIBank alloc] init];
-    bank.bankName = @"Беларусбанк";
-    bank.branchBankName = @"Отделение №252";
-    bank.bankBuyUSD = 9950;
-    [self.banks addObject:bank];
-    
-    bank = [[CIBank alloc] init];
-    bank.bankName = @"Белинвестбанк";
-    bank.branchBankName = @"Головной офис";
-    bank.bankBuyUSD = 9950;
-    [self.banks addObject:bank];
-    
-    bank = [[CIBank alloc] init];
-    bank.bankName = @"Беларусбанк";
-    bank.branchBankName = @"Отделение №123";
-    bank.bankBuyUSD = 9960;
-    [self.banks addObject:bank];
-    
-    bank = [[CIBank alloc] init];
-    bank.bankName = @"Белагропромбанк";
-    bank.branchBankName = @"Отделение №356";
-    bank.bankBuyUSD = 9960;
-    [self.banks addObject:bank];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -84,7 +56,6 @@
     return [self.banks count];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"CurrencyRateCell";
@@ -99,7 +70,7 @@
     
     cell.bankNameLabel.text = bank.bankName;
     cell.branchBankNameLabel.text = bank.branchBankName;
-    cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankBuyUSD];
+    cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankSellUSD];
 
     return cell;
 }

@@ -1,23 +1,20 @@
 //
-//  CIMainTableViewController.m
+//  CIBuyTableViewController.m
 //  CurrencyInformation
 //
-//  Created by Pavel Anashkevich on 08.05.14.
+//  Created by Pavel Anashkevich on 09.05.14.
 //  Copyright (c) 2014 First Group. All rights reserved.
 //
 
-#import "CIMainTableViewController.h"
-#import "CISellTableViewController.h"
 #import "CIBuyTableViewController.h"
+#import "CICurrencyTableViewCell.h"
 #import "CIBank.h"
 
-@interface CIMainTableViewController ()
+@interface CIBuyTableViewController ()
 
 @end
 
-@implementation CIMainTableViewController {
-    NSMutableArray *banks;
-}
+@implementation CIBuyTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,35 +29,6 @@
 {
     [super viewDidLoad];
     
-    banks = [NSMutableArray arrayWithCapacity:10];
-    
-    CIBank *bank = [[CIBank alloc] init];
-    bank.bankName = @"Беларусбанк";
-    bank.branchBankName = @"Отделение №252";
-    bank.bankBuyUSD = 9950;
-    bank.bankSellUSD = 10000;
-    [banks addObject:bank];
-    
-    bank = [[CIBank alloc] init];
-    bank.bankName = @"Белинвестбанк";
-    bank.branchBankName = @"Головной офис";
-    bank.bankBuyUSD = 9950;
-    bank.bankSellUSD = 10010;
-    [banks addObject:bank];
-    
-    bank = [[CIBank alloc] init];
-    bank.bankName = @"Беларусбанк";
-    bank.branchBankName = @"Отделение №123";
-    bank.bankBuyUSD = 9960;
-    bank.bankSellUSD = 10030;
-    [banks addObject:bank];
-    
-    bank = [[CIBank alloc] init];
-    bank.bankName = @"Белагропромбанк";
-    bank.branchBankName = @"Отделение №356";
-    bank.bankBuyUSD = 9960;
-    bank.bankSellUSD = 10030;
-    [banks addObject:bank];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -85,19 +53,27 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 3;
+    return [self.banks count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *cellIdentifier = @"CurrencyRateCell";
+    CICurrencyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier];
     
-    // Configure the cell...
+    if (cell == nil) {
+        cell = [[CICurrencyTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    long row = [indexPath row];
+    CIBank *bank = [self.banks objectAtIndex:row];
+    
+    cell.bankNameLabel.text = bank.bankName;
+    cell.branchBankNameLabel.text = bank.branchBankName;
+    cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankBuyUSD];
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -137,23 +113,15 @@
 }
 */
 
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"MainToRatesSegue"]) {
-        UITabBarController *tabBarController = [segue destinationViewController];
-        
-        CISellTableViewController *sellViewController = [[tabBarController viewControllers] objectAtIndex: 1];
-        sellViewController.banks = banks;
-        
-        CIBuyTableViewController *buyViewController = [[tabBarController viewControllers] objectAtIndex: 0];
-        buyViewController.banks = banks;
-    }
-    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
+*/
 
 @end

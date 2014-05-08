@@ -10,11 +10,11 @@
 
 @interface CIBank : NSObject
 
-@property (nonatomic, copy) NSString *bankName;
-@property (nonatomic, copy) NSString *branchBankName;
-@property (nonatomic, copy) NSString *address;
-@property (nonatomic, copy) NSString *phoneNumber;
-@property (nonatomic, copy) NSString *workTime;
+@property (nonatomic, strong) NSString *bankName;
+@property (nonatomic, strong) NSString *branchBankName;
+@property (nonatomic, strong) NSString *address;
+@property (nonatomic, strong) NSString *phoneNumber;
+@property (nonatomic, strong) NSString *workTime;
 
 @property (nonatomic, assign) int bankBuyUSD;
 @property (nonatomic, assign) int bankBuyEUR;
