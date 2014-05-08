@@ -5,12 +5,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller - Курсы валют-->
+        <!--Tab Bar Controller-->
         <scene sceneID="a81-4a-FOP">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="Ywh-Mv-nyl" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Курсы валют" id="6v0-ck-GX6">
+                    <navigationItem key="navigationItem" id="6v0-ck-GX6">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="BTL-OY-h0y"/>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -28,7 +28,7 @@
             </objects>
             <point key="canvasLocation" x="-295" y="-944"/>
         </scene>
-        <!--Sell Table View Controller - Продажа-->
+        <!--Sell Table View Controller - Банк продает-->
         <scene sceneID="Nv1-t1-Pyd">
             <objects>
                 <tableViewController id="SjL-it-XiK" customClass="CISellTableViewController" sceneMemberID="viewController">
@@ -88,8 +88,8 @@
                             <outlet property="delegate" destination="SjL-it-XiK" id="5Kb-wf-8vP"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Я продаю" id="ZX5-Bm-1Qy"/>
-                    <navigationItem key="navigationItem" title="Продажа" id="VQn-3y-S1d">
+                    <tabBarItem key="tabBarItem" title="Банк продает" id="ZX5-Bm-1Qy"/>
+                    <navigationItem key="navigationItem" title="Банк продает" id="VQn-3y-S1d">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="McO-vZ-Fvm"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -98,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="298" y="-1271"/>
         </scene>
-        <!--Table View Controller - Покупка-->
+        <!--Table View Controller - Банк покупает-->
         <scene sceneID="0fF-1g-KHx">
             <objects>
                 <tableViewController id="7GB-Kc-3Dz" sceneMemberID="viewController">
@@ -217,8 +217,8 @@
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <tabBarItem key="tabBarItem" title="Я покупаю" id="6ya-DE-9No"/>
-                    <navigationItem key="navigationItem" title="Покупка" id="XAv-JM-99n">
+                    <tabBarItem key="tabBarItem" title="Банк покупает" id="6ya-DE-9No"/>
+                    <navigationItem key="navigationItem" title="Банк покупает" id="XAv-JM-99n">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="P9u-HP-iQ9"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

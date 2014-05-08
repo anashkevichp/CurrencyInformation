@@ -1,22 +1,18 @@
 //
-//  CISellTableViewController.m
+//  CIMainTableViewController.m
 //  CurrencyInformation
 //
-//  Created by Pavel Anashkevich on 01.05.14.
+//  Created by Pavel Anashkevich on 08.05.14.
 //  Copyright (c) 2014 First Group. All rights reserved.
 //
 
-#import "CISellTableViewController.h"
-#import "CICurrencyTableViewCell.h"
-#import "CIBank.h"
+#import "CIMainTableViewController.h"
 
-@interface CISellTableViewController ()
+@interface CIMainTableViewController ()
 
 @end
 
-@implementation CISellTableViewController {
-    // NSMutableArray *banks;
-}
+@implementation CIMainTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -31,31 +27,7 @@
 {
     [super viewDidLoad];
     
-    self.banks = [NSMutableArray arrayWithCapacity:10];
     
-    CIBank *bank = [[CIBank alloc] init];
-    bank.bankName = @"Беларусбанк";
-    bank.branchBankName = @"Отделение №252";
-    bank.bankBuyUSD = 9950;
-    [self.banks addObject:bank];
-    
-    bank = [[CIBank alloc] init];
-    bank.bankName = @"Белинвестбанк";
-    bank.branchBankName = @"Головной офис";
-    bank.bankBuyUSD = 9950;
-    [self.banks addObject:bank];
-    
-    bank = [[CIBank alloc] init];
-    bank.bankName = @"Беларусбанк";
-    bank.branchBankName = @"Отделение №123";
-    bank.bankBuyUSD = 9960;
-    [self.banks addObject:bank];
-    
-    bank = [[CIBank alloc] init];
-    bank.bankName = @"Белагропромбанк";
-    bank.branchBankName = @"Отделение №356";
-    bank.bankBuyUSD = 9960;
-    [self.banks addObject:bank];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -81,29 +53,19 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.banks count];
+    return 3;
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"CurrencyRateCell";
-    CICurrencyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    if (cell == nil) {
-        cell = [[CICurrencyTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    }
+    // Configure the cell...
     
-    long row = [indexPath row];
-    CIBank *bank = [self.banks objectAtIndex:row];
-    
-    cell.bankNameLabel.text = bank.bankName;
-    cell.branchBankNameLabel.text = bank.branchBankName;
-    cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankBuyUSD];
-
     return cell;
 }
-
+*/
 
 /*
 // Override to support conditional editing of the table view.

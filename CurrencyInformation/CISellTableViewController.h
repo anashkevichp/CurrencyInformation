@@ -10,4 +10,6 @@
 
 @interface CISellTableViewController : UITableViewController
 
+@property (nonatomic, strong) NSMutableArray *banks;
+
 @end
