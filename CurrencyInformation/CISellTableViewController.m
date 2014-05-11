@@ -43,6 +43,24 @@
 }
 
 #pragma mark - Table view data source
+- (IBAction)SellSegmented:(id)sender {
+    UISegmentedControl* control = sender;
+    switch (control.selectedSegmentIndex) {
+        case 0:
+            __sellType = 0;
+            [self.tableView reloadData];
+            break;
+        case 1:
+            __sellType = 1;
+            [self.tableView reloadData];
+            break;
+        case 2:
+            __sellType = 2;
+            [self.tableView reloadData];
+            break;
+            
+    }
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -58,6 +76,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     static NSString *cellIdentifier = @"CurrencyRateCell";
     CICurrencyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier];
     
@@ -67,10 +86,21 @@
     
     long row = [indexPath row];
     CIBank *bank = [self.banks objectAtIndex:row];
-    
-    cell.bankNameLabel.text = bank.bankName;
-    cell.branchBankNameLabel.text = bank.branchBankName;
-    cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankSellUSD];
+    if(__sellType == 0){
+        cell.bankNameLabel.text = bank.bankName;
+        cell.branchBankNameLabel.text = bank.branchBankName;
+        cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankSellUSD];
+    }
+    else if(__sellType == 1){
+        cell.bankNameLabel.text = bank.bankName;
+        cell.branchBankNameLabel.text = bank.branchBankName;
+        cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankSellEUR];
+    }
+    else if(__sellType == 2){
+        cell.bankNameLabel.text = bank.bankName;
+        cell.branchBankNameLabel.text = bank.branchBankName;
+        cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankSellRUB];
+    }
 
     return cell;
 }

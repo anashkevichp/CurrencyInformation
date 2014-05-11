@@ -43,6 +43,24 @@
 }
 
 #pragma mark - Table view data source
+- (IBAction)BuySegmented:(id)sender {
+    UISegmentedControl* control = sender;
+    switch (control.selectedSegmentIndex) {
+        case 0:
+            __buyType = 0;
+            [self.tableView reloadData];
+            break;
+        case 1:
+            __buyType = 1;
+            [self.tableView reloadData];
+            break;
+        case 2:
+            __buyType = 2;
+            [self.tableView reloadData];
+            break;
+            
+    }
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -68,9 +86,21 @@
     long row = [indexPath row];
     CIBank *bank = [self.banks objectAtIndex:row];
     
-    cell.bankNameLabel.text = bank.bankName;
-    cell.branchBankNameLabel.text = bank.branchBankName;
-    cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankBuyUSD];
+    if(__buyType == 0){
+        cell.bankNameLabel.text = bank.bankName;
+        cell.branchBankNameLabel.text = bank.branchBankName;
+        cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankBuyUSD];
+    }
+    else if(__buyType == 1){
+        cell.bankNameLabel.text = bank.bankName;
+        cell.branchBankNameLabel.text = bank.branchBankName;
+        cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankBuyEUR];
+    }
+    else if(__buyType == 2){
+        cell.bankNameLabel.text = bank.bankName;
+        cell.branchBankNameLabel.text = bank.branchBankName;
+        cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankBuyRUB];
+    }
     
     return cell;
 }

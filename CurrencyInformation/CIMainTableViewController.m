@@ -11,6 +11,7 @@
 #import "CIBuyTableViewController.h"
 #import "CIBank.h"
 
+
 @interface CIMainTableViewController ()
 
 @end
@@ -39,6 +40,11 @@
     bank.branchBankName = @"Отделение №252";
     bank.bankBuyUSD = 9950;
     bank.bankSellUSD = 10000;
+    bank.bankBuyEUR = 13000;
+    bank.bankSellEUR = 13030;
+    bank.bankBuyRUB = 298;
+    bank.bankSellRUB = 310;
+    
     [banks addObject:bank];
     
     bank = [[CIBank alloc] init];
@@ -46,6 +52,10 @@
     bank.branchBankName = @"Головной офис";
     bank.bankBuyUSD = 9950;
     bank.bankSellUSD = 10010;
+    bank.bankBuyEUR = 13000;
+    bank.bankSellEUR = 13030;
+    bank.bankBuyRUB = 298;
+    bank.bankSellRUB = 310;
     [banks addObject:bank];
     
     bank = [[CIBank alloc] init];
@@ -53,6 +63,10 @@
     bank.branchBankName = @"Отделение №123";
     bank.bankBuyUSD = 9960;
     bank.bankSellUSD = 10030;
+    bank.bankBuyEUR = 13000;
+    bank.bankSellEUR = 13030;
+    bank.bankBuyRUB = 298;
+    bank.bankSellRUB = 310;
     [banks addObject:bank];
     
     bank = [[CIBank alloc] init];
@@ -60,6 +74,10 @@
     bank.branchBankName = @"Отделение №356";
     bank.bankBuyUSD = 9960;
     bank.bankSellUSD = 10030;
+    bank.bankBuyEUR = 13000;
+    bank.bankSellEUR = 13030;
+    bank.bankBuyRUB = 298;
+    bank.bankSellRUB = 310;
     [banks addObject:bank];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -136,6 +154,9 @@
     return YES;
 }
 */
+
+
+
 
 #pragma mark - Navigation
 

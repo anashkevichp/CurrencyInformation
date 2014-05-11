@@ -44,6 +44,9 @@
                                 <segment title="EUR"/>
                                 <segment title="RUB"/>
                             </segments>
+                            <connections>
+                                <action selector="SellSegmented:" destination="SjL-it-XiK" eventType="valueChanged" id="Iak-rd-eYM"/>
+                            </connections>
                         </segmentedControl>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CurrencyRateCell" id="p9b-X9-BV1" customClass="CICurrencyTableViewCell">
@@ -114,6 +117,9 @@
                                 <segment title="EUR"/>
                                 <segment title="RUB"/>
                             </segments>
+                            <connections>
+                                <action selector="BuySegmented:" destination="7GB-Kc-3Dz" eventType="valueChanged" id="jgX-IT-6tF"/>
+                            </connections>
                         </segmentedControl>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CurrencyRateCell" id="57Q-TL-j1U" customClass="CICurrencyTableViewCell">
