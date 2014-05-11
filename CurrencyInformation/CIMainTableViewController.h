@@ -10,4 +10,7 @@
 
 @interface CIMainTableViewController : UITableViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *rangeSlider;
+@property (nonatomic, assign) int sliderValue;
+
 @end

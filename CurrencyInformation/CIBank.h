@@ -24,4 +24,5 @@
 @property (nonatomic, assign) int bankSellEUR;
 @property (nonatomic, assign) int bankSellRUB;
 
+
 @end

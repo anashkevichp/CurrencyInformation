@@ -106,6 +106,16 @@
     return 3;
 }
 
+
+- (IBAction)Slider:(id)sender {
+    UISlider* Slider = sender;
+    _sliderValue = (Slider.value * 1000);
+    self.rangeSlider.text = [NSString stringWithFormat:@"%i м", _sliderValue];
+
+}
+
+
+
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
