@@ -8,6 +8,7 @@
 
 #import "CISellTableViewController.h"
 #import "CICurrencyTableViewCell.h"
+#import "CIBankDetailTableViewController.h"
 #import "CIBank.h"
 
 @interface CISellTableViewController ()
@@ -144,15 +145,20 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if ([[segue identifier] isEqualToString:@"SellToDetailSegue"]) {
+        CIBankDetailTableViewController *detail = [segue destinationViewController];
+        
+        NSInteger selected = [[self.tableView indexPathForSelectedRow] row];
+        detail.bank = [self.banks objectAtIndex:selected];
+    }
+    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
 @end

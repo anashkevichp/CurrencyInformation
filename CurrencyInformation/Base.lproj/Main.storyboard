@@ -81,7 +81,7 @@
                                     <outlet property="bankNameLabel" destination="N7Q-K5-eJz" id="OyT-Yg-Cd7"/>
                                     <outlet property="branchBankNameLabel" destination="4oQ-yv-kG4" id="r9J-dd-sf0"/>
                                     <outlet property="currencyRateLabel" destination="9c5-p0-VCN" id="hMc-75-xvc"/>
-                                    <segue destination="Yg1-3I-Akt" kind="push" id="IsY-Qb-84Q"/>
+                                    <segue destination="Yg1-3I-Akt" kind="push" identifier="SellToDetailSegue" id="IsY-Qb-84Q"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -154,7 +154,7 @@
                                     <outlet property="bankNameLabel" destination="l3m-8P-Kan" id="dli-Bm-8Y4"/>
                                     <outlet property="branchBankNameLabel" destination="Apq-F0-mFZ" id="ZkA-ib-5hZ"/>
                                     <outlet property="currencyRateLabel" destination="7lh-O8-Uyp" id="f9F-WU-Fq0"/>
-                                    <segue destination="Yg1-3I-Akt" kind="push" id="dpw-tt-zIS"/>
+                                    <segue destination="Yg1-3I-Akt" kind="push" identifier="BuyToDetailSegue" id="dpw-tt-zIS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -175,46 +175,47 @@
             </objects>
             <point key="canvasLocation" x="298" y="-474"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Bank Detail Table View Controller - Подробнее-->
         <scene sceneID="hfG-Ww-12G">
             <objects>
-                <tableViewController id="Yg1-3I-Akt" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="SBX-ea-Zue">
+                <tableViewController id="Yg1-3I-Akt" customClass="CIBankDetailTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="SBX-ea-Zue">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <sections>
-                            <tableViewSection id="YQq-2w-FVS">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Ohp-wH-4ZZ" style="IBUITableViewCellStyleDefault" id="8yz-fN-snB">
-                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8yz-fN-snB" id="s5Z-y5-d5p">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DetailCell" textLabel="Ohp-wH-4ZZ" detailTextLabel="8hu-mX-V78" style="IBUITableViewCellStyleValue2" id="8yz-fN-snB">
+                                <rect key="frame" x="0.0" y="119" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8yz-fN-snB" id="s5Z-y5-d5p">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Банк:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ohp-wH-4ZZ">
+                                            <rect key="frame" x="15" y="13" width="91" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Показать на карте" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ohp-wH-4ZZ">
-                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="hfD-sx-wid" kind="push" id="XA6-aR-rVO"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8hu-mX-V78">
+                                            <rect key="frame" x="112" y="13" width="37" height="17"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="Yg1-3I-Akt" id="tUc-3K-57L"/>
                             <outlet property="delegate" destination="Yg1-3I-Akt" id="pUQ-w8-Axx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="e90-4y-d5d"/>
+                    <navigationItem key="navigationItem" title="Подробнее" id="e90-4y-d5d"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lq6-U5-gjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		84033F1D191C26FB006D72A8 /* CIMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84033F1C191C26FB006D72A8 /* CIMainTableViewController.m */; };
 		84033F23191C3CD4006D72A8 /* CIBuyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84033F22191C3CD4006D72A8 /* CIBuyTableViewController.m */; };
+		84033F27191C4A1C006D72A8 /* CIBankDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84033F26191C4A1C006D72A8 /* CIBankDetailTableViewController.m */; };
 		843845081912A5050088E88D /* CISellTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843845071912A5050088E88D /* CISellTableViewController.m */; };
 		8438450B1912A5DB0088E88D /* CICurrencyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438450A1912A5DB0088E88D /* CICurrencyTableViewCell.m */; };
 		843DBD0A1912A34F002AFB8C /* CIBank.m in Sources */ = {isa = PBXBuildFile; fileRef = 843DBD051912A34F002AFB8C /* CIBank.m */; };
@@ -42,6 +43,8 @@
 		84033F1C191C26FB006D72A8 /* CIMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIMainTableViewController.m; sourceTree = "<group>"; };
 		84033F21191C3CD4006D72A8 /* CIBuyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIBuyTableViewController.h; sourceTree = "<group>"; };
 		84033F22191C3CD4006D72A8 /* CIBuyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIBuyTableViewController.m; sourceTree = "<group>"; };
+		84033F25191C4A1C006D72A8 /* CIBankDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIBankDetailTableViewController.h; sourceTree = "<group>"; };
+		84033F26191C4A1C006D72A8 /* CIBankDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIBankDetailTableViewController.m; sourceTree = "<group>"; };
 		843845061912A5050088E88D /* CISellTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CISellTableViewController.h; sourceTree = "<group>"; };
 		843845071912A5050088E88D /* CISellTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CISellTableViewController.m; sourceTree = "<group>"; };
 		843845091912A5DB0088E88D /* CICurrencyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CICurrencyTableViewCell.h; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 				84033F24191C3D37006D72A8 /* rates */,
 				84033F1B191C26FB006D72A8 /* CIMainTableViewController.h */,
 				84033F1C191C26FB006D72A8 /* CIMainTableViewController.m */,
+				84033F25191C4A1C006D72A8 /* CIBankDetailTableViewController.h */,
+				84033F26191C4A1C006D72A8 /* CIBankDetailTableViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 			files = (
 				84FB1C9F18FF369400D0381E /* CIAppDelegate.m in Sources */,
 				8438450B1912A5DB0088E88D /* CICurrencyTableViewCell.m in Sources */,
+				84033F27191C4A1C006D72A8 /* CIBankDetailTableViewController.m in Sources */,
 				84FB1C9B18FF369400D0381E /* main.m in Sources */,
 				843845081912A5050088E88D /* CISellTableViewController.m in Sources */,
 				843DBD0A1912A34F002AFB8C /* CIBank.m in Sources */,
