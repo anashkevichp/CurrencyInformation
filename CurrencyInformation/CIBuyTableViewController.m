@@ -87,20 +87,22 @@
     long row = [indexPath row];
     CIBank *bank = [self.banks objectAtIndex:row];
     
-    if(__buyType == 0){
-        cell.bankNameLabel.text = bank.bankName;
-        cell.branchBankNameLabel.text = bank.branchBankName;
-        cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankBuyUSD];
-    }
-    else if(__buyType == 1){
-        cell.bankNameLabel.text = bank.bankName;
-        cell.branchBankNameLabel.text = bank.branchBankName;
-        cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankBuyEUR];
-    }
-    else if(__buyType == 2){
-        cell.bankNameLabel.text = bank.bankName;
-        cell.branchBankNameLabel.text = bank.branchBankName;
-        cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankBuyRUB];
+    switch (__buyType) {
+        case 0:
+            cell.bankNameLabel.text = bank.bankName;
+            cell.branchBankNameLabel.text = bank.branchBankName;
+            cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankBuyUSD];
+            break;
+        case 1:
+            cell.bankNameLabel.text = bank.bankName;
+            cell.branchBankNameLabel.text = bank.branchBankName;
+            cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankBuyEUR];
+            break;
+        case 2:
+            cell.bankNameLabel.text = bank.bankName;
+            cell.branchBankNameLabel.text = bank.branchBankName;
+            cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankBuyRUB];
+            break;
     }
     
     return cell;
