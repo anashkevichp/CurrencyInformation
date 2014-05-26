@@ -13,7 +13,8 @@
 		843845081912A5050088E88D /* CISellTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843845071912A5050088E88D /* CISellTableViewController.m */; };
 		8438450B1912A5DB0088E88D /* CICurrencyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438450A1912A5DB0088E88D /* CICurrencyTableViewCell.m */; };
 		843DBD0A1912A34F002AFB8C /* CIBank.m in Sources */ = {isa = PBXBuildFile; fileRef = 843DBD051912A34F002AFB8C /* CIBank.m */; };
-		84A31D92191FE21500143277 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A31D91191FE21500143277 /* XCTest.framework */; };
+		847D0E1B193334D0002089F4 /* bank_sell.png in Resources */ = {isa = PBXBuildFile; fileRef = 847D0E19193334D0002089F4 /* bank_sell.png */; };
+		847D0E1C193334D0002089F4 /* bank_buy.png in Resources */ = {isa = PBXBuildFile; fileRef = 847D0E1A193334D0002089F4 /* bank_buy.png */; };
 		84FB1C8F18FF369400D0381E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FB1C8E18FF369400D0381E /* Foundation.framework */; };
 		84FB1C9118FF369400D0381E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FB1C9018FF369400D0381E /* CoreGraphics.framework */; };
 		84FB1C9318FF369400D0381E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FB1C9218FF369400D0381E /* UIKit.framework */; };
@@ -51,6 +52,8 @@
 		8438450A1912A5DB0088E88D /* CICurrencyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CICurrencyTableViewCell.m; sourceTree = "<group>"; };
 		843DBD041912A34F002AFB8C /* CIBank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIBank.h; sourceTree = "<group>"; };
 		843DBD051912A34F002AFB8C /* CIBank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIBank.m; sourceTree = "<group>"; };
+		847D0E19193334D0002089F4 /* bank_sell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bank_sell.png; path = ../../../../../Desktop/bank_sell.png; sourceTree = "<group>"; };
+		847D0E1A193334D0002089F4 /* bank_buy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bank_buy.png; path = ../../../../../Desktop/bank_buy.png; sourceTree = "<group>"; };
 		84A31D91191FE21500143277 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		84FB1C8B18FF369400D0381E /* CurrencyInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FB1C8E18FF369400D0381E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -76,7 +79,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				84FB1C9118FF369400D0381E /* CoreGraphics.framework in Frameworks */,
-				84A31D92191FE21500143277 /* XCTest.framework in Frameworks */,
 				84FB1C9318FF369400D0381E /* UIKit.framework in Frameworks */,
 				84FB1C8F18FF369400D0381E /* Foundation.framework in Frameworks */,
 			);
@@ -195,6 +197,8 @@
 		84FB1CB418FF369500D0381E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				847D0E19193334D0002089F4 /* bank_sell.png */,
+				847D0E1A193334D0002089F4 /* bank_buy.png */,
 				84FB1CB518FF369500D0381E /* CurrencyInformationTests-Info.plist */,
 				84FB1CB618FF369500D0381E /* InfoPlist.strings */,
 			);
@@ -278,8 +282,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847D0E1C193334D0002089F4 /* bank_buy.png in Resources */,
 				84FB1CA718FF369400D0381E /* Images.xcassets in Resources */,
 				84FB1C9918FF369400D0381E /* InfoPlist.strings in Resources */,
+				847D0E1B193334D0002089F4 /* bank_sell.png in Resources */,
 				84FB1CA218FF369400D0381E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

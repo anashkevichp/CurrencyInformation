@@ -91,7 +91,7 @@
                             <outlet property="delegate" destination="SjL-it-XiK" id="5Kb-wf-8vP"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Банк продает" id="ZX5-Bm-1Qy"/>
+                    <tabBarItem key="tabBarItem" title="Банк продает" image="bank_sell.png" id="ZX5-Bm-1Qy"/>
                     <navigationItem key="navigationItem" title="Банк продает" id="VQn-3y-S1d">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="McO-vZ-Fvm"/>
                     </navigationItem>
@@ -165,7 +165,7 @@
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <tabBarItem key="tabBarItem" title="Банк покупает" id="6ya-DE-9No"/>
+                    <tabBarItem key="tabBarItem" title="Банк покупает" image="bank_buy.png" id="6ya-DE-9No"/>
                     <navigationItem key="navigationItem" title="Банк покупает" id="XAv-JM-99n">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="P9u-HP-iQ9"/>
                     </navigationItem>
@@ -585,13 +585,21 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1050 м" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7X-7Y-8tV" userLabel="rangeSlider">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1050 м" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7X-7Y-8tV" userLabel="rangeSlider">
                                                     <rect key="frame" x="238" y="0.0" width="82" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="82" id="u4W-qA-LfC"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="p7X-7Y-8tV" secondAttribute="trailing" id="MOz-ON-Hbt"/>
+                                                <constraint firstAttribute="bottom" secondItem="p7X-7Y-8tV" secondAttribute="bottom" constant="-1" id="OK7-C8-NrH"/>
+                                                <constraint firstItem="p7X-7Y-8tV" firstAttribute="top" secondItem="yB1-e4-H9g" secondAttribute="top" id="wZ2-Bd-FNz"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -633,12 +641,16 @@
             <point key="canvasLocation" x="-1482" y="240"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bank_buy.png" width="60" height="60"/>
+        <image name="bank_sell.png" width="60" height="60"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="IsY-Qb-84Q"/>
+        <segue reference="dpw-tt-zIS"/>
     </inferredMetricsTieBreakers>
 </document>
