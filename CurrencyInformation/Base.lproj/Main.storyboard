@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bjL-g4-Cpf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bjL-g4-Cpf">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -91,7 +91,9 @@
                             <outlet property="delegate" destination="SjL-it-XiK" id="5Kb-wf-8vP"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Банк продает" image="bank_sell.png" id="ZX5-Bm-1Qy"/>
+                    <tabBarItem key="tabBarItem" title="Банк продает" id="ZX5-Bm-1Qy">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-17"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Банк продает" id="VQn-3y-S1d">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="McO-vZ-Fvm"/>
                     </navigationItem>
@@ -165,7 +167,9 @@
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <tabBarItem key="tabBarItem" title="Банк покупает" image="bank_buy.png" id="6ya-DE-9No"/>
+                    <tabBarItem key="tabBarItem" title="Банк покупает" id="6ya-DE-9No">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-17"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Банк покупает" id="XAv-JM-99n">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="P9u-HP-iQ9"/>
                     </navigationItem>
@@ -332,6 +336,7 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nu-me-I0f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -641,10 +646,6 @@
             <point key="canvasLocation" x="-1482" y="240"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="bank_buy.png" width="60" height="60"/>
-        <image name="bank_sell.png" width="60" height="60"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
