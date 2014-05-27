@@ -180,8 +180,8 @@ static NSString * const BaseURLString = @"http://wm.shadurin.com/";
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
 
         
-        NSArray *data = [responseObject valueForKeyPath:@"USD_SELL"];
-        NSLog(@"asdaf:%@", data);
+        NSArray *data = [responseObject valueForKeyPath:@"\u041c\u043e\u0441\u043a\u0432\u0430-\u041c\u0438\u043d\u0441\u043a \u0411\u0430\u043d\u043a.USD_SELL"];
+        NSLog(@"%@", data);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
