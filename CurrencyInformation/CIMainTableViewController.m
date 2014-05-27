@@ -10,8 +10,9 @@
 #import "CISellTableViewController.h"
 #import "CIBuyTableViewController.h"
 #import "CIBank.h"
+#import "AFNetworking.h"
 
-
+static NSString * const BaseURLString = @"http://wm.shadurin.com/";
 @interface CIMainTableViewController ()
 
 @end
@@ -165,6 +166,40 @@
 }
 */
 
+- (IBAction)btn:(UIButton *)sender {
+    
+    //networking
+    NSString *string = [NSString stringWithFormat:@"%@select.php", BaseURLString];
+    NSURL *url = [NSURL URLWithString:string];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+
+        
+        NSArray *data = [responseObject valueForKeyPath:@"USD_SELL"];
+        NSLog(@"asdaf:%@", data);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Data"
+                                                            message:[error localizedDescription]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }];
+    
+    
+    
+    
+
+    [operation start];
+    
+}
 
 
 
