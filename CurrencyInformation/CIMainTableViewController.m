@@ -32,6 +32,39 @@ static NSString * const BaseURLString = @"http://wm.shadurin.com/";
 
 - (void)viewDidLoad
 {
+    //networking
+    NSString *string = [NSString stringWithFormat:@"%@select.php", BaseURLString];
+    NSURL *url = [NSURL URLWithString:string];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    operation.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        
+//        NSArray *data = [responseObject valueForKeyPath:@"\u041c\u043e\u0441\u043a\u0432\u0430-\u041c\u0438\u043d\u0441\u043a \u0411\u0430\u043d\u043a.USD_SELL"];
+        NSLog(@"%@", responseObject); //change on "data" here
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Data"
+                                                            message:[error localizedDescription]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }];
+    
+    
+    
+    
+    
+    [operation start];
+    //end networking
+    
     [super viewDidLoad];
     
     banks = [NSMutableArray arrayWithCapacity:10];
@@ -166,41 +199,6 @@ static NSString * const BaseURLString = @"http://wm.shadurin.com/";
 }
 */
 
-- (IBAction)btn:(UIButton *)sender {
-    
-    //networking
-    NSString *string = [NSString stringWithFormat:@"%@select.php", BaseURLString];
-    NSURL *url = [NSURL URLWithString:string];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    operation.responseSerializer = [AFJSONResponseSerializer serializer];
-    operation.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-
-        
-        NSArray *data = [responseObject valueForKeyPath:@"\u041c\u043e\u0441\u043a\u0432\u0430-\u041c\u0438\u043d\u0441\u043a \u0411\u0430\u043d\u043a.USD_SELL"];
-        NSLog(@"%@", data);
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Data"
-                                                            message:[error localizedDescription]
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"Ok"
-                                                  otherButtonTitles:nil];
-        [alertView show];
-    }];
-    
-    
-    
-    
-
-    [operation start];
-    
-}
 
 
 
