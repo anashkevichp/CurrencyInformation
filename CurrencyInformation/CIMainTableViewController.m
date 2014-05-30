@@ -9,10 +9,11 @@
 #import "CIMainTableViewController.h"
 #import "CISellTableViewController.h"
 #import "CIBuyTableViewController.h"
-#import "CIBank.h"
 #import "AFNetworking.h"
+#import "CIBank.h"
 
-static NSString * const BaseURLString = @"http://wm.shadurin.com/";
+#define JSON_URL @"http://wm.shadurin.com/select.php"
+
 @interface CIMainTableViewController ()
 
 @end
@@ -32,24 +33,40 @@ static NSString * const BaseURLString = @"http://wm.shadurin.com/";
 
 - (void)viewDidLoad
 {
-    //networking
-    NSString *string = [NSString stringWithFormat:@"%@select.php", BaseURLString];
-    NSURL *url = [NSURL URLWithString:string];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [super viewDidLoad];
     
+    /*              *** start networking ***              */
+    
+    NSURL *url = [NSURL URLWithString:JSON_URL];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     operation.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+       
+        banks = [NSMutableArray arrayWithCapacity:10];
+        CIBank *bank;
+        NSDictionary *dict = (NSDictionary *) responseObject;
         
-        
-//        NSArray *data = [responseObject valueForKeyPath:@"\u041c\u043e\u0441\u043a\u0432\u0430-\u041c\u0438\u043d\u0441\u043a \u0411\u0430\u043d\u043a.USD_SELL"];
-        NSLog(@"%@", responseObject); //change on "data" here
+        for (NSArray *keysArray in dict) {
+            NSDictionary *rates = [dict objectForKey:keysArray];
+            
+            bank = [[CIBank alloc] init];
+
+            bank.bankName = (NSString *) keysArray;
+            bank.bankSellEUR = [[rates objectForKey:@"EUR_BUY"] integerValue];
+            bank.bankBuyEUR = [[rates objectForKey:@"EUR_SELL"] integerValue];
+            bank.bankSellUSD = [[rates objectForKey:@"USD_BUY"] integerValue];
+            bank.bankBuyUSD = [[rates objectForKey:@"USD_SELL"] integerValue];
+            bank.bankSellRUB = [[rates objectForKey:@"RUR_BUY"] integerValue];
+            bank.bankBuyRUB = [[rates objectForKey:@"RUR_SELL"] integerValue];
+            
+            [banks addObject:bank];
+        }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Data"
                                                             message:[error localizedDescription]
                                                            delegate:nil
@@ -58,61 +75,10 @@ static NSString * const BaseURLString = @"http://wm.shadurin.com/";
         [alertView show];
     }];
     
-    
-    
-    
-    
     [operation start];
-    //end networking
     
-    [super viewDidLoad];
-    
-    banks = [NSMutableArray arrayWithCapacity:10];
-    
-    CIBank *bank = [[CIBank alloc] init];
-    bank.bankName = @"Беларусбанк";
-    bank.branchBankName = @"Отделение №252";
-    bank.bankBuyUSD = 9950;
-    bank.bankSellUSD = 10000;
-    bank.bankBuyEUR = 13000;
-    bank.bankSellEUR = 13030;
-    bank.bankBuyRUB = 298;
-    bank.bankSellRUB = 310;
-    
-    [banks addObject:bank];
-    
-    bank = [[CIBank alloc] init];
-    bank.bankName = @"Белинвестбанк";
-    bank.branchBankName = @"Головной офис";
-    bank.bankBuyUSD = 9950;
-    bank.bankSellUSD = 10010;
-    bank.bankBuyEUR = 13000;
-    bank.bankSellEUR = 13030;
-    bank.bankBuyRUB = 298;
-    bank.bankSellRUB = 310;
-    [banks addObject:bank];
-    
-    bank = [[CIBank alloc] init];
-    bank.bankName = @"Беларусбанк";
-    bank.branchBankName = @"Отделение №123";
-    bank.bankBuyUSD = 9960;
-    bank.bankSellUSD = 10030;
-    bank.bankBuyEUR = 13000;
-    bank.bankSellEUR = 13030;
-    bank.bankBuyRUB = 298;
-    bank.bankSellRUB = 310;
-    [banks addObject:bank];
-    
-    bank = [[CIBank alloc] init];
-    bank.bankName = @"Белагропромбанк";
-    bank.branchBankName = @"Отделение №356";
-    bank.bankBuyUSD = 9960;
-    bank.bankSellUSD = 10030;
-    bank.bankBuyEUR = 13000;
-    bank.bankSellEUR = 13030;
-    bank.bankBuyRUB = 298;
-    bank.bankSellRUB = 310;
-    [banks addObject:bank];
+    /*                *** end networking ***              */
+   
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -140,14 +106,11 @@ static NSString * const BaseURLString = @"http://wm.shadurin.com/";
     return 3;
 }
 
-
 - (IBAction)Slider:(id)sender {
     UISlider* Slider = sender;
     _sliderValue = (Slider.value * 1000);
     self.rangeSlider.text = [NSString stringWithFormat:@"%i м", _sliderValue];
-
 }
-
 
 
 /*
@@ -198,9 +161,6 @@ static NSString * const BaseURLString = @"http://wm.shadurin.com/";
     return YES;
 }
 */
-
-
-
 
 #pragma mark - Navigation
 

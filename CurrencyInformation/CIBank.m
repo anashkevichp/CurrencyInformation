@@ -10,8 +10,4 @@
 
 @implementation CIBank
 
-@synthesize bankName;
-@synthesize branchBankName;
-@synthesize bankBuyUSD;
-
 @end
