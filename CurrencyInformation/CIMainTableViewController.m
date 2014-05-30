@@ -67,6 +67,8 @@
             [banks addObject:bank];
         }
         
+        #warning need to reload active view controller!
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Data"
                                                             message:[error localizedDescription]
@@ -172,12 +174,45 @@
         UITabBarController *tabBarController = [segue destinationViewController];
         
         CISellTableViewController *sellViewController = [[tabBarController viewControllers] objectAtIndex: 1];
+        
+        // sort banks array by bankSellUSD
+        [banks sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
+            NSInteger rate1 = bank1.bankSellUSD;
+            NSInteger rate2 = bank2.bankSellUSD;
+            if (rate1 < rate2) {
+                return NSOrderedAscending;
+            } else if (rate1 > rate2) {
+                return NSOrderedDescending;
+            } else {
+                return NSOrderedSame;
+            }
+        }];
         sellViewController.banks = banks;
         
         CIBuyTableViewController *buyViewController = [[tabBarController viewControllers] objectAtIndex: 0];
+        
+        // sort banks array by bankBuyUSD
+        [banks sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
+            NSInteger rate1 = bank1.bankBuyUSD;
+            NSInteger rate2 = bank2.bankBuyUSD;
+            if (rate1 < rate2) {
+                return NSOrderedDescending;
+            } else if (rate1 > rate2) {
+                return NSOrderedAscending;
+            } else {
+                return NSOrderedSame;
+            }
+        }];
         buyViewController.banks = banks;
+        
     } else if ([[segue identifier] isEqualToString:@"MainToBankListSegue"]) {
         CIBankListTableViewController *bankListController = [segue destinationViewController];
+        
+        // sort banks array by bankName
+        [banks sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
+            return [bank1.bankName compare:bank2.bankName];
+        }];
+        
         bankListController.banks = banks;
     }
     

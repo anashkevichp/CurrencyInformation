@@ -11,6 +11,10 @@
 #import "CIBankDetailTableViewController.h"
 #import "CIBank.h"
 
+#define USD_SEGMENT 0
+#define EUR_SEGMENT 1
+#define RUB_SEGMENT 2
+
 @interface CIBuyTableViewController ()
 
 @end
@@ -25,7 +29,7 @@
     }
     return self;
 }
-
+ 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -44,23 +48,57 @@
 }
 
 #pragma mark - Table view data source
-- (IBAction)BuySegmented:(id)sender {
+- (IBAction)BuySegmented:(id)sender
+{
     UISegmentedControl* control = sender;
-    switch (control.selectedSegmentIndex) {
-        case 0:
-            __buyType = 0;
-            [self.tableView reloadData];
-            break;
-        case 1:
-            __buyType = 1;
-            [self.tableView reloadData];
-            break;
-        case 2:
-            __buyType = 2;
-            [self.tableView reloadData];
-            break;
+    __buyType = control.selectedSegmentIndex;
+    
+    // this code raise NSInvalidArgumentException
+    /*
+    switch (__buyType) {
+        case USD_SEGMENT:
             
+            NSLog(@"%d", [self.banks count]);
+            
+            [self.banks sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
+                NSInteger rate1 = bank1.bankBuyUSD;
+                NSInteger rate2 = bank2.bankBuyUSD;
+                if (rate1 < rate2) {
+                    return NSOrderedDescending;
+                } else {
+                    return NSOrderedAscending;
+                }
+            }];
+            break;
+        case EUR_SEGMENT:
+            
+            NSLog(@"%d", [self.banks count]);
+            
+            [self.banks sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
+                NSInteger rate1 = bank1.bankBuyEUR;
+                NSInteger rate2 = bank2.bankBuyEUR;
+                if (rate1 < rate2) {
+                    return NSOrderedDescending;
+                } else {
+                    return NSOrderedAscending;
+                }
+            }];
+            break;
+        case RUB_SEGMENT:
+            [self.banks sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
+                NSInteger rate1 = bank1.bankBuyRUB;
+                NSInteger rate2 = bank2.bankBuyRUB;
+                if (rate1 < rate2) {
+                    return NSOrderedDescending;
+                } else {
+                    return NSOrderedAscending;
+                }
+            }];
+            break;
     }
+     */
+    
+    [self.tableView reloadData];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -88,17 +126,17 @@
     CIBank *bank = [self.banks objectAtIndex:row];
     
     switch (__buyType) {
-        case 0:
+        case USD_SEGMENT:
             cell.bankNameLabel.text = bank.bankName;
             cell.branchBankNameLabel.text = bank.branchBankName;
             cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankBuyUSD];
             break;
-        case 1:
+        case EUR_SEGMENT:
             cell.bankNameLabel.text = bank.bankName;
             cell.branchBankNameLabel.text = bank.branchBankName;
             cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankBuyEUR];
             break;
-        case 2:
+        case RUB_SEGMENT:
             cell.bankNameLabel.text = bank.bankName;
             cell.branchBankNameLabel.text = bank.branchBankName;
             cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankBuyRUB];
