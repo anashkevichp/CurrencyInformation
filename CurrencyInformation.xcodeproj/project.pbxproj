@@ -32,6 +32,7 @@
 		84546F6D1933805200A56337 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 84546F5A1933805200A56337 /* UIProgressView+AFNetworking.m */; };
 		84546F6E1933805200A56337 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 84546F5C1933805200A56337 /* UIRefreshControl+AFNetworking.m */; };
 		84546F6F1933805200A56337 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 84546F5E1933805200A56337 /* UIWebView+AFNetworking.m */; };
+		84EC297E19392574006C5AFC /* CIBankListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EC297D19392574006C5AFC /* CIBankListTableViewController.m */; };
 		84FB1C8F18FF369400D0381E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FB1C8E18FF369400D0381E /* Foundation.framework */; };
 		84FB1C9118FF369400D0381E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FB1C9018FF369400D0381E /* CoreGraphics.framework */; };
 		84FB1C9318FF369400D0381E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FB1C9218FF369400D0381E /* UIKit.framework */; };
@@ -108,6 +109,8 @@
 		84546F5D1933805200A56337 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		84546F5E1933805200A56337 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		84A31D91191FE21500143277 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		84EC297C19392574006C5AFC /* CIBankListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIBankListTableViewController.h; sourceTree = "<group>"; };
+		84EC297D19392574006C5AFC /* CIBankListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIBankListTableViewController.m; sourceTree = "<group>"; };
 		84FB1C8B18FF369400D0381E /* CurrencyInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FB1C8E18FF369400D0381E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84FB1C9018FF369400D0381E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -165,11 +168,11 @@
 		843DBD021912A2B8002AFB8C /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84EC2980193925C6006C5AFC /* detail */,
+				84EC297F19392588006C5AFC /* banks */,
 				84033F24191C3D37006D72A8 /* rates */,
 				84033F1B191C26FB006D72A8 /* CIMainTableViewController.h */,
 				84033F1C191C26FB006D72A8 /* CIMainTableViewController.m */,
-				84033F25191C4A1C006D72A8 /* CIBankDetailTableViewController.h */,
-				84033F26191C4A1C006D72A8 /* CIBankDetailTableViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -231,6 +234,24 @@
 				84546F5E1933805200A56337 /* UIWebView+AFNetworking.m */,
 			);
 			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		84EC297F19392588006C5AFC /* banks */ = {
+			isa = PBXGroup;
+			children = (
+				84EC297C19392574006C5AFC /* CIBankListTableViewController.h */,
+				84EC297D19392574006C5AFC /* CIBankListTableViewController.m */,
+			);
+			name = banks;
+			sourceTree = "<group>";
+		};
+		84EC2980193925C6006C5AFC /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				84033F25191C4A1C006D72A8 /* CIBankDetailTableViewController.h */,
+				84033F26191C4A1C006D72A8 /* CIBankDetailTableViewController.m */,
+			);
+			name = detail;
 			sourceTree = "<group>";
 		};
 		84FB1C8218FF369400D0381E = {
@@ -425,6 +446,7 @@
 				84546F611933805200A56337 /* AFHTTPSessionManager.m in Sources */,
 				84546F691933805200A56337 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				84546F681933805200A56337 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				84EC297E19392574006C5AFC /* CIBankListTableViewController.m in Sources */,
 				84FB1C9B18FF369400D0381E /* main.m in Sources */,
 				843845081912A5050088E88D /* CISellTableViewController.m in Sources */,
 				843DBD0A1912A34F002AFB8C /* CIBank.m in Sources */,

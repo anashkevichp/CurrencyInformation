@@ -7,6 +7,7 @@
 //
 
 #import "CIMainTableViewController.h"
+#import "CIBankListTableViewController.h"
 #import "CISellTableViewController.h"
 #import "CIBuyTableViewController.h"
 #import "AFNetworking.h"
@@ -175,6 +176,9 @@
         
         CIBuyTableViewController *buyViewController = [[tabBarController viewControllers] objectAtIndex: 0];
         buyViewController.banks = banks;
+    } else if ([[segue identifier] isEqualToString:@"MainToBankListSegue"]) {
+        CIBankListTableViewController *bankListController = [segue destinationViewController];
+        bankListController.banks = banks;
     }
     
     // Get the new view controller using [segue destinationViewController].
