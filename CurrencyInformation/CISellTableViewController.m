@@ -11,6 +11,10 @@
 #import "CIBankDetailTableViewController.h"
 #import "CIBank.h"
 
+#define USD_SEGMENT 0
+#define EUR_SEGMENT 1
+#define RUB_SEGMENT 2
+
 @interface CISellTableViewController ()
 
 @end
@@ -44,23 +48,12 @@
 }
 
 #pragma mark - Table view data source
-- (IBAction)SellSegmented:(id)sender {
+- (IBAction)SellSegmented:(id)sender
+{
     UISegmentedControl* control = sender;
-    switch (control.selectedSegmentIndex) {
-        case 0:
-            __sellType = 0;
-            [self.tableView reloadData];
-            break;
-        case 1:
-            __sellType = 1;
-            [self.tableView reloadData];
-            break;
-        case 2:
-            __sellType = 2;
-            [self.tableView reloadData];
-            break;
-            
-    }
+    __sellType = control.selectedSegmentIndex;
+    [self.tableView reloadData];
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -88,18 +81,17 @@
     long row = [indexPath row];
     CIBank *bank = [self.banks objectAtIndex:row];
     switch (__sellType) {
-        case 0:
+        case USD_SEGMENT:
             cell.bankNameLabel.text = bank.bankName;
             cell.branchBankNameLabel.text = bank.branchBankName;
             cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankSellUSD];
             break;
-        case 1:
+        case EUR_SEGMENT:
             cell.bankNameLabel.text = bank.bankName;
             cell.branchBankNameLabel.text = bank.branchBankName;
             cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankSellEUR];
             break;
-            
-        case 2:
+        case RUB_SEGMENT:
             cell.bankNameLabel.text = bank.bankName;
             cell.branchBankNameLabel.text = bank.branchBankName;
             cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankSellRUB];
