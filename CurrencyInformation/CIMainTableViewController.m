@@ -113,6 +113,9 @@
     UISlider* Slider = sender;
     _sliderValue = (Slider.value * 1000);
     self.rangeSlider.text = [NSString stringWithFormat:@"%i м", _sliderValue];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setInteger:_sliderValue forKey:@"_sliderValue"];
+    NSLog(@"value = %ld", (long)[userDefaults integerForKey:@"_sliderValue"]);
 }
 
 

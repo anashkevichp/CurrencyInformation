@@ -520,7 +520,10 @@
                                                     <rect key="frame" x="52" y="5" width="224" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
+                                                        <action selector="SaveSliderValue:" destination="3AM-J8-0Ku" eventType="editingDidEnd" id="yfZ-Ys-i6l"/>
                                                         <action selector="Slider:" destination="3AM-J8-0Ku" eventType="valueChanged" id="ulr-Qg-UBu"/>
+                                                        <action selector="Slider:" destination="3AM-J8-0Ku" eventType="editingDidEnd" id="zts-0k-cva"/>
+                                                        <action selector="UserValue:" destination="3AM-J8-0Ku" eventType="touchDragExit" id="4iO-fm-8sV"/>
                                                     </connections>
                                                 </slider>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100м" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6W-WI-ZSS">
