@@ -217,6 +217,12 @@
         }];
         
         bankListController.banks = banks;
+    } else if ([[segue identifier] isEqualToString:@"MainToSettingsSegue"]){
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        NSLog(@"value = %ld", (long)[userDefaults integerForKey:@"_sliderValue"]);
+        
+    
+
     }
     
     // Get the new view controller using [segue destinationViewController].

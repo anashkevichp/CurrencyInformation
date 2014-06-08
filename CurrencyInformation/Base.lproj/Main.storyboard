@@ -319,7 +319,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="3AM-J8-0Ku" kind="push" id="RT0-Fb-Nbj"/>
+                                            <segue destination="3AM-J8-0Ku" kind="push" identifier="MainToSettingsSegue" id="RT0-Fb-Nbj"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
