@@ -10,10 +10,6 @@
 
 @interface CIBankListTableViewController : UITableViewController <UISearchBarDelegate>
 @property (nonatomic, strong) NSMutableArray *banks;
-@property (nonatomic, strong) NSMutableArray *objects;
-@property (nonatomic, strong) NSMutableArray *results;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
-
-
 
 @end
