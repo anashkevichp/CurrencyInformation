@@ -59,9 +59,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BankNameCell" forIndexPath:indexPath];
-    NSInteger row = [indexPath row];
-    CIBank *bank = [self.banks objectAtIndex:row];
-    cell.textLabel.text = bank.bankName;
+    cell.textLabel.text = [[self.banks objectAtIndex:[indexPath row]] bankName];
 
     return cell;
 }
