@@ -350,14 +350,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="4Jz-Ey-XSb">
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="lZF-Mg-HF5">
                             <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
-                            <scopeButtonTitles>
-                                <string>Title</string>
-                                <string>Title</string>
-                            </scopeButtonTitles>
+                            <connections>
+                                <outlet property="delegate" destination="j3k-R6-7nk" id="94e-CU-VXY"/>
+                            </connections>
                         </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BankNameCell" textLabel="DqX-EU-7Re" style="IBUITableViewCellStyleDefault" id="38P-69-R7C">
@@ -377,7 +376,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Lxs-Yp-lGP" kind="push" id="hKe-Pn-qrW"/>
+                                    <segue destination="Lxs-Yp-lGP" kind="push" identifier="ShowDetail" id="hKe-Pn-qrW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -390,8 +389,21 @@
                     <navigationItem key="navigationItem" title="Список банков" id="G7a-ie-HN0">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="if8-HC-5Fa"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="lZF-Mg-HF5" id="GvA-S2-0Ub"/>
+                        <outlet property="searchDisplayController" destination="JEQ-Pt-17p" id="ztt-Li-Ymh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6L-ab-Nj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="JEQ-Pt-17p">
+                    <connections>
+                        <outlet property="delegate" destination="j3k-R6-7nk" id="qtj-ZZ-xP5"/>
+                        <outlet property="searchBar" destination="lZF-Mg-HF5" id="UUM-1L-IG5"/>
+                        <outlet property="searchContentsController" destination="j3k-R6-7nk" id="wU7-8U-mdM"/>
+                        <outlet property="searchResultsDataSource" destination="j3k-R6-7nk" id="U03-4s-gmE"/>
+                        <outlet property="searchResultsDelegate" destination="j3k-R6-7nk" id="wNt-qU-04E"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-295" y="240"/>
         </scene>
