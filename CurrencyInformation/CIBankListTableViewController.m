@@ -7,6 +7,7 @@
 //
 
 #import "CIBankListTableViewController.h"
+#import "CIBankDetailTableViewController.h"
 #import "CIBank.h"
 
 @interface CIBankListTableViewController ()
@@ -87,28 +88,24 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.searchDisplayController.isActive) {
-		[self performSegueWithIdentifier:@"ShowDetail" sender:self];
+		[self performSegueWithIdentifier:@"BankNameToDetail" sender:self];
 	}
 }
 
-/*
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-	if ([[segue identifier] isEqualToString:@"ShowDetail"]) {
-		NSString *object = nil;
-		NSIndexPath *indexPath = nil;
-		
-		if (self.searchDisplayController.isActive) {
+	if ([[segue identifier] isEqualToString:@"BankNameToDetail"]) {
+		CIBankDetailTableViewController *detail = [segue destinationViewController];
+        NSIndexPath *indexPath = nil;
+        
+		if ([self.searchDisplayController isActive]) {
 			indexPath = [[self.searchDisplayController searchResultsTableView] indexPathForSelectedRow];
-			object = self.results[indexPath.row];
+			detail.bank = searchResults[indexPath.row];
 		} else {
 			indexPath = [self.tableView indexPathForSelectedRow];
-			object = self.objects[indexPath.row];
+			detail.bank = self.banks [indexPath.row];
 		}
-		
-		//[[segue destinationViewController] setDetailLabelContents:object];
 	}
 }
-*/
 
 @end
