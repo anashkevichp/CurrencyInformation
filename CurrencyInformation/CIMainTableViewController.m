@@ -190,7 +190,7 @@
                 return NSOrderedSame;
             }
         }];
-        sellViewController.banks = banks;
+        sellViewController.banks = [banks mutableCopy];
         
         CIBuyTableViewController *buyViewController = [[tabBarController viewControllers] objectAtIndex: 0];
         
@@ -206,7 +206,7 @@
                 return NSOrderedSame;
             }
         }];
-        buyViewController.banks = banks;
+        buyViewController.banks = [banks mutableCopy];
         
     } else if ([[segue identifier] isEqualToString:@"MainToBankListSegue"]) {
         CIBankListTableViewController *bankListController = [segue destinationViewController];
@@ -215,14 +215,11 @@
         [banks sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
             return [bank1.bankName compare:bank2.bankName];
         }];
-        
         bankListController.banks = banks;
+        
     } else if ([[segue identifier] isEqualToString:@"MainToSettingsSegue"]){
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         NSLog(@"value = %ld", (long)[userDefaults integerForKey:@"_sliderValue"]);
-        
-    
-
     }
     
     // Get the new view controller using [segue destinationViewController].

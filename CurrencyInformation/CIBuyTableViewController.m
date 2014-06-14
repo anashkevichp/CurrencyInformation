@@ -51,14 +51,10 @@
 - (IBAction)BuySegmented:(id)sender
 {
     UISegmentedControl* control = sender;
-    __buyType = control.selectedSegmentIndex;
     
-    // this code raise NSInvalidArgumentException
-    /*
-    switch (__buyType) {
+#warning this code raise NSInvalidArgumentException because self.banks is NSArray instead of NSMutableArray
+    switch (control.selectedSegmentIndex) {
         case USD_SEGMENT:
-            
-            NSLog(@"%d", [self.banks count]);
             
             [self.banks sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
                 NSInteger rate1 = bank1.bankBuyUSD;
@@ -72,8 +68,6 @@
             break;
         case EUR_SEGMENT:
             
-            NSLog(@"%d", [self.banks count]);
-            
             [self.banks sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
                 NSInteger rate1 = bank1.bankBuyEUR;
                 NSInteger rate2 = bank2.bankBuyEUR;
@@ -85,7 +79,7 @@
             }];
             break;
         case RUB_SEGMENT:
-            [self.banks sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
+            [((NSMutableArray *) self.banks) sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
                 NSInteger rate1 = bank1.bankBuyRUB;
                 NSInteger rate2 = bank2.bankBuyRUB;
                 if (rate1 < rate2) {
@@ -96,7 +90,7 @@
             }];
             break;
     }
-     */
+    
     
     [self.tableView reloadData];
 }
