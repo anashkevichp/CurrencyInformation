@@ -50,7 +50,7 @@
         banks = [NSMutableArray arrayWithCapacity:10];
         CIBank *bank;
         _dict = (NSDictionary *) responseObject;
-        //NSLog(@"%@", _dict);
+        // NSLog(@"%@", _dict);
         
         
         for (NSArray *keysArray in _dict) {
