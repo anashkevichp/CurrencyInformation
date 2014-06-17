@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSString *branchBankName;
 @property (nonatomic, strong) NSString *address;
 @property (nonatomic, strong) NSString *phoneNumber;
+@property (nonatomic, strong) NSString *site;
 @property (nonatomic, strong) NSString *workTime;
 
 @property (nonatomic, assign) int bankBuyUSD;
