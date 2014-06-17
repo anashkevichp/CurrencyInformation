@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CIBankListTableViewController : UITableViewController <UISearchBarDelegate>
+
 @property (nonatomic, strong) NSMutableArray *banks;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 

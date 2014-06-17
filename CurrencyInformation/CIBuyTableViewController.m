@@ -19,7 +19,9 @@
 
 @end
 
-@implementation CIBuyTableViewController
+@implementation CIBuyTableViewController {
+    int _segmentIndex;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -51,47 +53,50 @@
 - (IBAction)BuySegmented:(id)sender
 {
     UISegmentedControl* control = sender;
-    
-#warning this code raise NSInvalidArgumentException because self.banks is NSArray instead of NSMutableArray
     switch (control.selectedSegmentIndex) {
+        
         case USD_SEGMENT:
-            
             [self.banks sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
                 NSInteger rate1 = bank1.bankBuyUSD;
                 NSInteger rate2 = bank2.bankBuyUSD;
                 if (rate1 < rate2) {
                     return NSOrderedDescending;
-                } else {
+                } else if (rate1 > rate2) {
                     return NSOrderedAscending;
+                } else {
+                    return NSOrderedSame;
                 }
             }];
             break;
         case EUR_SEGMENT:
-            
             [self.banks sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
                 NSInteger rate1 = bank1.bankBuyEUR;
                 NSInteger rate2 = bank2.bankBuyEUR;
                 if (rate1 < rate2) {
                     return NSOrderedDescending;
-                } else {
+                } else if (rate1 > rate2) {
                     return NSOrderedAscending;
+                } else {
+                    return NSOrderedSame;
                 }
             }];
             break;
         case RUB_SEGMENT:
-            [((NSMutableArray *) self.banks) sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
+            [self.banks sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
                 NSInteger rate1 = bank1.bankBuyRUB;
                 NSInteger rate2 = bank2.bankBuyRUB;
                 if (rate1 < rate2) {
                     return NSOrderedDescending;
-                } else {
+                } else if (rate1 > rate2) {
                     return NSOrderedAscending;
+                } else {
+                    return NSOrderedSame;
                 }
             }];
             break;
     }
     
-    
+    _segmentIndex = control.selectedSegmentIndex;
     [self.tableView reloadData];
 }
 
@@ -119,7 +124,7 @@
     long row = [indexPath row];
     CIBank *bank = [self.banks objectAtIndex:row];
     
-    switch (__buyType) {
+    switch (_segmentIndex) {
         case USD_SEGMENT:
             cell.bankNameLabel.text = bank.bankName;
             cell.branchBankNameLabel.text = bank.branchBankName;

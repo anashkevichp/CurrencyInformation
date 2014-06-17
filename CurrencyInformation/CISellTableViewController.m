@@ -19,7 +19,9 @@
 
 @end
 
-@implementation CISellTableViewController
+@implementation CISellTableViewController {
+    int _segmentIndex;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -51,9 +53,53 @@
 - (IBAction)SellSegmented:(id)sender
 {
     UISegmentedControl* control = sender;
-    __sellType = control.selectedSegmentIndex;
-    [self.tableView reloadData];
+    switch (control.selectedSegmentIndex) {
+            
+        case USD_SEGMENT:
+            
+            [self.banks sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
+                NSInteger rate1 = bank1.bankSellUSD;
+                NSInteger rate2 = bank2.bankSellUSD;
+                if (rate1 > rate2) {
+                    return NSOrderedDescending;
+                } else if (rate1 < rate2) {
+                    return NSOrderedAscending;
+                } else {
+                    return NSOrderedSame;
+                }
+            }];
+            break;
+        case EUR_SEGMENT:
+            
+            [self.banks sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
+                NSInteger rate1 = bank1.bankSellEUR;
+                NSInteger rate2 = bank2.bankSellEUR;
+                if (rate1 > rate2) {
+                    return NSOrderedDescending;
+                } else if (rate1 < rate2) {
+                    return NSOrderedAscending;
+                } else {
+                    return NSOrderedSame;
+                }
+            }];
+            break;
+        case RUB_SEGMENT:
+            [((NSMutableArray *) self.banks) sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
+                NSInteger rate1 = bank1.bankSellRUB;
+                NSInteger rate2 = bank2.bankSellRUB;
+                if (rate1 > rate2) {
+                    return NSOrderedDescending;
+                } else if (rate1 < rate2) {
+                    return NSOrderedAscending;
+                } else {
+                    return NSOrderedSame;
+                }
+            }];
+            break;
+    }
     
+    _segmentIndex = control.selectedSegmentIndex;
+    [self.tableView reloadData];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -80,7 +126,7 @@
     
     long row = [indexPath row];
     CIBank *bank = [self.banks objectAtIndex:row];
-    switch (__sellType) {
+    switch (_segmentIndex) {
         case USD_SEGMENT:
             cell.bankNameLabel.text = bank.bankName;
             cell.branchBankNameLabel.text = bank.branchBankName;
