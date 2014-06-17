@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *rangeSlider;
 @property (nonatomic, assign) int sliderValue;
+@property (strong, nonatomic) NSDictionary *dict;
 
 @end

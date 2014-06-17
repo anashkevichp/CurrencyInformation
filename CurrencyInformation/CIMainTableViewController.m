@@ -49,10 +49,12 @@
        
         banks = [NSMutableArray arrayWithCapacity:10];
         CIBank *bank;
-        NSDictionary *dict = (NSDictionary *) responseObject;
+        _dict = (NSDictionary *) responseObject;
+        //NSLog(@"%@", _dict);
         
-        for (NSArray *keysArray in dict) {
-            NSDictionary *rates = [dict objectForKey:keysArray];
+        
+        for (NSArray *keysArray in _dict) {
+            NSDictionary *rates = [_dict objectForKey:keysArray];
             
             bank = [[CIBank alloc] init];
 
@@ -65,6 +67,7 @@
             bank.bankBuyRUB = [[rates objectForKey:@"RUR_SELL"] integerValue];
             
             [banks addObject:bank];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"ReloadNotification" object:self];
         }
         
         #warning need to reload active view controller!
@@ -87,6 +90,19 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)writeData:(NSDictionary *)dicResponseData
+{
+    // get paths from root directory
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+    // get documents path
+    NSString *documentsPath = [paths objectAtIndex:0];
+    // get the path to our Data/plist file
+    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"Datafile.plist"];
+    
+    [_dict writeToFile:plistPath atomically: YES];
 }
 
 - (void)didReceiveMemoryWarning
