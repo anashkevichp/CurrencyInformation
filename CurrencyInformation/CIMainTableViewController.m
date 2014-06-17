@@ -36,6 +36,14 @@
 {
     [super viewDidLoad];
     
+    [self.tableView setUserInteractionEnabled:NO];
+    
+    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [indicator setCenter:self.tableView.center];
+    [indicator setHidesWhenStopped:YES];
+    [indicator startAnimating];
+    [self.view addSubview:indicator];
+    
     /*              *** start networking ***              */
     
     NSURL *url = [NSURL URLWithString:JSON_URL];
@@ -67,7 +75,8 @@
             [banks addObject:bank];
         }
         
-        #warning need to reload active view controller!
+        [indicator stopAnimating];
+        [self.tableView setUserInteractionEnabled:YES];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Data"
@@ -75,6 +84,8 @@
                                                            delegate:nil
                                                   cancelButtonTitle:@"Ok"
                                                   otherButtonTitles:nil];
+        [indicator stopAnimating];
+        [self.tableView setUserInteractionEnabled:YES];
         [alertView show];
     }];
     
