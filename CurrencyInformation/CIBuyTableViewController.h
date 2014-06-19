@@ -10,7 +10,6 @@
 
 @interface CIBuyTableViewController : UITableViewController
 
-@property (nonatomic, copy) NSMutableArray *banks;
-@property (nonatomic, assign) int _buyType;
+@property (nonatomic, strong) NSMutableArray *banks;
 
 @end

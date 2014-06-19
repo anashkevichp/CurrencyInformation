@@ -14,8 +14,9 @@
 #define BRANCH_NAME_ROW 1
 
 #define CONTACT_SECTION 1
-#define ADDRESS_ROW 0
-#define PHONE_NUMBER_ROW 1
+#define PHONE_NUMBER_ROW 0
+#define ADDRESS_ROW 1
+#define SITE_ROW 2
 
 #define WORKTIME_SECTION 2
 #define MON_FRI_TIME_ROW 0
@@ -74,7 +75,7 @@
             rows = 2;
             break;
         case CONTACT_SECTION:
-            rows = 2;
+            rows = 3;
             break;
         case WORKTIME_SECTION:
             rows = 4;
@@ -102,17 +103,20 @@
                 cell.detailTextLabel.text = self.bank.bankName;
             } else if (row == BRANCH_NAME_ROW) {
                 cell.textLabel.text = @"Отделение:";
-                cell.detailTextLabel.text = self.bank.branchBankName;
+                cell.detailTextLabel.text = @"Головной офис";
             }
             break;
             
         case CONTACT_SECTION:
-            if (row == ADDRESS_ROW) {
-                cell.textLabel.text = @"Адрес:";
-                cell.detailTextLabel.text = self.bank.address;
-            } else if (row == PHONE_NUMBER_ROW) {
+            if (row == PHONE_NUMBER_ROW) {
                 cell.textLabel.text = @"Телефон:";
                 cell.detailTextLabel.text = self.bank.phoneNumber;
+            } else if (row == ADDRESS_ROW ) {
+                cell.textLabel.text = @"Адрес:";
+                cell.detailTextLabel.text = self.bank.address;
+            } else if (row == SITE_ROW) {
+                cell.textLabel.text = @"Сайт:";
+                cell.detailTextLabel.text = self.bank.site;
             }
             break;
         

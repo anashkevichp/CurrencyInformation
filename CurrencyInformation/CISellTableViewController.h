@@ -10,7 +10,6 @@
 
 @interface CISellTableViewController : UITableViewController
 
-@property (nonatomic, copy) NSMutableArray *banks;
-@property (nonatomic, assign) int _sellType;
+@property (nonatomic, strong) NSMutableArray *banks;
 
 @end
