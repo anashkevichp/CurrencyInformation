@@ -280,11 +280,11 @@ http://fransabank.by</string>
 	<key>БелСвиссБанк</key>
 	<dict>
 		<key>phone</key>
-		<string></string>
+		<string>+375173062040</string>
 		<key>address</key>
 		<string>Минск, пр.Победителей, 23/3</string>
 		<key>site</key>
-		<string></string>
+		<string>http://www.bsb.by</string>
 		<key>howWork</key>
 		<string></string>
 		<key>other</key>
@@ -293,11 +293,11 @@ http://fransabank.by</string>
 	<key>БелИнвестБанк</key>
 	<dict>
 		<key>phone</key>
-		<string></string>
+		<string>+375172390239</string>
 		<key>address</key>
-		<string></string>
+		<string>Минск, просп. Машерова, 29</string>
 		<key>site</key>
-		<string></string>
+		<string>http://www.belinvestbank.by</string>
 		<key>howWork</key>
 		<string></string>
 		<key>other</key>
@@ -306,11 +306,11 @@ http://fransabank.by</string>
 	<key>БелГазпромБанк</key>
 	<dict>
 		<key>phone</key>
-		<string></string>
+		<string>+375172291616</string>
 		<key>address</key>
-		<string></string>
+		<string>Минск, ул. Притыцкого, 60/2</string>
 		<key>site</key>
-		<string></string>
+		<string>http://www.belgazprombank.by</string>
 		<key>howWork</key>
 		<string></string>
 		<key>other</key>
@@ -319,11 +319,11 @@ http://fransabank.by</string>
 	<key>БелВЭБ</key>
 	<dict>
 		<key>phone</key>
-		<string></string>
+		<string>+375172092944</string>
 		<key>address</key>
-		<string></string>
+		<string>Минск, ул. Мясникова, 32</string>
 		<key>site</key>
-		<string></string>
+		<string>http://www.bveb.by</string>
 		<key>howWork</key>
 		<string></string>
 		<key>other</key>
@@ -332,11 +332,11 @@ http://fransabank.by</string>
 	<key>БелАгроПромБанк</key>
 	<dict>
 		<key>phone</key>
-		<string></string>
+		<string>136</string>
 		<key>address</key>
-		<string></string>
+		<string>Минск, просп. Жукова, 3</string>
 		<key>site</key>
-		<string></string>
+		<string>http://www.belapb.by</string>
 		<key>howWork</key>
 		<string></string>
 		<key>other</key>
@@ -345,11 +345,13 @@ http://fransabank.by</string>
 	<key>БТА Банк</key>
 	<dict>
 		<key>phone</key>
-		<string></string>
+		<string>289-58-39
++375172895839
+2895839</string>
 		<key>address</key>
-		<string></string>
+		<string>Минск, ул. В. Хоружей, 20</string>
 		<key>site</key>
-		<string></string>
+		<string>http://www.btabank.by</string>
 		<key>howWork</key>
 		<string></string>
 		<key>other</key>
@@ -358,11 +360,11 @@ http://fransabank.by</string>
 	<key>БПС-Сбербанк</key>
 	<dict>
 		<key>phone</key>
-		<string></string>
+		<string>148</string>
 		<key>address</key>
-		<string></string>
+		<string>Минск, ул. Сурганова, 39</string>
 		<key>site</key>
-		<string></string>
+		<string>https://www.bps-sberbank.by</string>
 		<key>howWork</key>
 		<string></string>
 		<key>other</key>
@@ -371,11 +373,11 @@ http://fransabank.by</string>
 	<key>Альфа-Банк</key>
 	<dict>
 		<key>phone</key>
-		<string></string>
+		<string>198</string>
 		<key>address</key>
-		<string></string>
+		<string>Минск, просп. Независимости, 177</string>
 		<key>site</key>
-		<string></string>
+		<string>http://www.alfabank.by</string>
 		<key>howWork</key>
 		<string></string>
 		<key>other</key>
@@ -384,11 +386,11 @@ http://fransabank.by</string>
 	<key>Абсолютбанк</key>
 	<dict>
 		<key>phone</key>
-		<string></string>
+		<string>+375172118356</string>
 		<key>address</key>
-		<string></string>
+		<string>Минск, пр. Независимости, 95</string>
 		<key>site</key>
-		<string></string>
+		<string>http://www.absolutbank.by</string>
 		<key>howWork</key>
 		<string></string>
 		<key>other</key>
