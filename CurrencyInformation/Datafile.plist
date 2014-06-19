@@ -1,5 +1,398 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>Цептер Банк</key>
+	<dict>
+		<key>phone</key>
+		<string>+375173318949</string>
+		<key>address</key>
+		<string>Минск, ул. Платонова, 1б</string>
+		<key>site</key>
+		<string>http://www.zepterbank.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>Хоум Кредит Банк</key>
+	<dict>
+		<key>phone</key>
+		<string>+375172298989</string>
+		<key>address</key>
+		<string>Минск, ул. Притыцкого, 83</string>
+		<key>site</key>
+		<string>http://homecredit.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>ФрансаБанк</key>
+	<dict>
+		<key>phone</key>
+		<string>+375173893636</string>
+		<key>address</key>
+		<string>Минск, просп. Независимости, 95а</string>
+		<key>site</key>
+		<string>www.fransabank.byEng
+www.fransabank.byEng
+http://fransabank.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>ТрастБанк</key>
+	<dict>
+		<key>phone</key>
+		<string>+375172032467</string>
+		<key>address</key>
+		<string>Минск, ул. Игнатенко, 11</string>
+		<key>site</key>
+		<string>http://www.trustbank.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>ТехноБанк</key>
+	<dict>
+		<key>phone</key>
+		<string>+375172832828</string>
+		<key>address</key>
+		<string>Минск, ул.Кропоткина, 44</string>
+		<key>site</key>
+		<string>http://tb.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>ТК Банк</key>
+	<dict>
+		<key>phone</key>
+		<string>+375172863333</string>
+		<key>address</key>
+		<string>Минск, ул. Тимирязева, 65а</string>
+		<key>site</key>
+		<string>http://www.tcbank.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>РРБ-Банк</key>
+	<dict>
+		<key>phone</key>
+		<string>+375172692309</string>
+		<key>address</key>
+		<string>Минск, ул. Краснозвездная, 18</string>
+		<key>site</key>
+		<string>http://www.rrb.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>ПриорБанк</key>
+	<dict>
+		<key>phone</key>
+		<string>+375172899090</string>
+		<key>address</key>
+		<string>Минск, ул. В. Хоружей, 31а</string>
+		<key>site</key>
+		<string>http://www.priorbank.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>Паритетбанк</key>
+	<dict>
+		<key>phone</key>
+		<string>+375172039722</string>
+		<key>address</key>
+		<string>Минск, пр. Победителей, 21</string>
+		<key>site</key>
+		<string>http://www.paritetbank.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>Москва-Минск Банк</key>
+	<dict>
+		<key>phone</key>
+		<string>+375172379797</string>
+		<key>address</key>
+		<string>Минск, ул. Коммунистическая, 49</string>
+		<key>site</key>
+		<string>http://www.mmbank.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>МТБанк</key>
+	<dict>
+		<key>phone</key>
+		<string>+375172299999</string>
+		<key>address</key>
+		<string>Минск, просп. Партизанский, 6а</string>
+		<key>site</key>
+		<string>http://www.mtbank.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>ИнтерПэйБанк</key>
+	<dict>
+		<key>phone</key>
+		<string>88011006000</string>
+		<key>address</key>
+		<string>Минск, ул.Некрасова, 114</string>
+		<key>site</key>
+		<string>http://ipaybank.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>Идея Банк</key>
+	<dict>
+		<key>phone</key>
+		<string>+375173063314</string>
+		<key>address</key>
+		<string>Минск, ул. Кальварийская, 24</string>
+		<key>site</key>
+		<string>https://ideabank.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>ЕвроТоргИнвестБанк</key>
+	<dict>
+		<key>phone</key>
+		<string>+375172996900</string>
+		<key>address</key>
+		<string>Минск, пер. Промышленный, 11</string>
+		<key>site</key>
+		<string>http://etib.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>ЕвроБанк</key>
+	<dict>
+		<key>phone</key>
+		<string>+375172596117</string>
+		<key>address</key>
+		<string>Минск, ул. Тимирязева, 129/5</string>
+		<key>site</key>
+		<string>http://www.eurobank.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>Дельта Банк</key>
+	<dict>
+		<key>phone</key>
+		<string>+375172790242</string>
+		<key>address</key>
+		<string>Минск, ул. К. Маркса, 25</string>
+		<key>site</key>
+		<string>https://deltabank.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>ВТБ Беларусь</key>
+	<dict>
+		<key>phone</key>
+		<string>+375172832326</string>
+		<key>address</key>
+		<string>Минск, ул.Богдановича, 70</string>
+		<key>site</key>
+		<string>http://www.vtb-bank.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>Белорусский Народный Банк</key>
+	<dict>
+		<key>phone</key>
+		<string>+375173097309</string>
+		<key>address</key>
+		<string>Минск, пр. Независимости, 87а</string>
+		<key>site</key>
+		<string>http://www.bnb.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>Банк Малого Бизнесса</key>
+	<dict>
+		<key>phone</key>
+		<string>+375172021378</string>
+		<key>address</key>
+		<string>Минск, ул. Сурганова, 28</string>
+		<key>site</key>
+		<string>http://www.bbsb.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>БеларусБанк</key>
+	<dict>
+		<key>phone</key>
+		<string>+375172188431</string>
+		<key>address</key>
+		<string>Минск, просп. Дзержинского, 18</string>
+		<key>site</key>
+		<string>http://belarusbank.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>БелСвиссБанк, РКЦ №1</key>
+	<dict>
+		<key>phone</key>
+		<string>+375173064900</string>
+		<key>address</key>
+		<string>Минск, пл. Свободы, 23</string>
+		<key>site</key>
+		<string>http://www.bsb.by</string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>БелСвиссБанк</key>
+	<dict>
+		<key>phone</key>
+		<string></string>
+		<key>address</key>
+		<string>Минск, пр.Победителей, 23/3</string>
+		<key>site</key>
+		<string></string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>БелИнвестБанк</key>
+	<dict>
+		<key>phone</key>
+		<string></string>
+		<key>address</key>
+		<string></string>
+		<key>site</key>
+		<string></string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>БелГазпромБанк</key>
+	<dict>
+		<key>phone</key>
+		<string></string>
+		<key>address</key>
+		<string></string>
+		<key>site</key>
+		<string></string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>БелВЭБ</key>
+	<dict>
+		<key>phone</key>
+		<string></string>
+		<key>address</key>
+		<string></string>
+		<key>site</key>
+		<string></string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>БелАгроПромБанк</key>
+	<dict>
+		<key>phone</key>
+		<string></string>
+		<key>address</key>
+		<string></string>
+		<key>site</key>
+		<string></string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>БТА Банк</key>
+	<dict>
+		<key>phone</key>
+		<string></string>
+		<key>address</key>
+		<string></string>
+		<key>site</key>
+		<string></string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>БПС-Сбербанк</key>
+	<dict>
+		<key>phone</key>
+		<string></string>
+		<key>address</key>
+		<string></string>
+		<key>site</key>
+		<string></string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>Альфа-Банк</key>
+	<dict>
+		<key>phone</key>
+		<string></string>
+		<key>address</key>
+		<string></string>
+		<key>site</key>
+		<string></string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+	<key>Абсолютбанк</key>
+	<dict>
+		<key>phone</key>
+		<string></string>
+		<key>address</key>
+		<string></string>
+		<key>site</key>
+		<string></string>
+		<key>howWork</key>
+		<string></string>
+		<key>other</key>
+		<string></string>
+	</dict>
+</dict>
 </plist>
