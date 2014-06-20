@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CIMainTableViewController : UITableViewController
+@interface CIMainTableViewController : UITableViewController <UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *rangeSlider;
 @property (nonatomic, assign) int sliderValue;
-@property (strong, nonatomic) NSDictionary *dict;
 
 @end

@@ -21,6 +21,8 @@
 
 @implementation CIMainTableViewController {
     NSMutableArray *banks;
+    NSDictionary *dict;
+    
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -36,7 +38,7 @@
 {
     [super viewDidLoad];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ReloadNotification:) name:@"ReloadNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ReloadNotification:) name:@"SaveToPlist" object:nil];
     
     [self.tableView setUserInteractionEnabled:NO];
     
@@ -59,11 +61,11 @@
        
         banks = [NSMutableArray arrayWithCapacity:10];
         CIBank *bank;
-        _dict = (NSDictionary *) responseObject;
+        dict = (NSDictionary *) responseObject;
         
         
-        for (NSArray *keysArray in _dict) {
-            NSDictionary *rates = [_dict objectForKey:keysArray];
+        for (NSArray *keysArray in dict) {
+            NSDictionary *rates = [dict objectForKey:keysArray];
             
             bank = [[CIBank alloc] init];
 
@@ -76,18 +78,42 @@
             bank.bankBuyRUB = [[rates objectForKey:@"RUR_SELL"] integerValue];
             
             [banks addObject:bank];
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"ReloadNotification" object:self];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"SaveToPlist" object:self];
         }
         
         [indicator stopAnimating];
         [self.tableView setUserInteractionEnabled:YES];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Data"
-                                                            message:[error localizedDescription]
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Ошибка получения данных!"
+                                                            message:@"Будут использованы ранее сохраненные данные"
                                                            delegate:nil
                                                   cancelButtonTitle:@"Ok"
                                                   otherButtonTitles:nil];
+        
+        banks = [NSMutableArray arrayWithCapacity:10];
+        CIBank *bank;
+        
+        NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"saveData" ofType:@"plist"];
+        dict = [NSDictionary dictionaryWithContentsOfFile:dataPath];
+        
+        for (NSArray *keysArray in dict) {
+            NSDictionary *rates = [dict objectForKey:keysArray];
+            
+            bank = [[CIBank alloc] init];
+            
+            bank.bankName = (NSString *) keysArray;
+            bank.bankSellEUR = [[rates objectForKey:@"EUR_BUY"] integerValue];
+            bank.bankBuyEUR = [[rates objectForKey:@"EUR_SELL"] integerValue];
+            bank.bankSellUSD = [[rates objectForKey:@"USD_BUY"] integerValue];
+            bank.bankBuyUSD = [[rates objectForKey:@"USD_SELL"] integerValue];
+            bank.bankSellRUB = [[rates objectForKey:@"RUR_BUY"] integerValue];
+            bank.bankBuyRUB = [[rates objectForKey:@"RUR_SELL"] integerValue];
+            
+            [banks addObject:bank];
+        }
+        
+        
         [indicator stopAnimating];
         [self.tableView setUserInteractionEnabled:YES];
         [alertView show];
@@ -106,8 +132,9 @@
 
 - (void)ReloadNotification:(NSNotification *)notification
 {
+    //@"/Users/admin/Documents/CurrencyInformation/CurrencyInformation/saveData.plist"
     NSError *error = nil;
-    NSData *representation = [NSPropertyListSerialization dataWithPropertyList:_dict format:NSPropertyListXMLFormat_v1_0 options:0 error:&error];
+    NSData *representation = [NSPropertyListSerialization dataWithPropertyList:dict format:NSPropertyListXMLFormat_v1_0 options:0 error:&error];
     if (!error)
     {
         BOOL ok = [representation writeToFile:@"/Users/admin/Documents/CurrencyInformation/CurrencyInformation/saveData.plist" atomically:YES];
@@ -127,7 +154,6 @@
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-
 
 - (void)didReceiveMemoryWarning
 {
