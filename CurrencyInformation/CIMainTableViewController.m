@@ -36,6 +36,8 @@
 {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ReloadNotification:) name:@"ReloadNotification" object:nil];
+    
     [self.tableView setUserInteractionEnabled:NO];
     
     UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -103,18 +105,23 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
--(void)writeData:(NSDictionary *)dicResponseData
+- (void)ReloadNotification:(NSNotification *)notification
 {
-    // get paths from root directory
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
-    // get documents path
-    NSString *documentsPath = [paths objectAtIndex:0];
-    // get the path to our Data/plist file
-    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"Datafile.plist"];
-    
-    [_dict writeToFile:plistPath atomically: YES];
+//    NSString* plistPath = nil;
+//    NSFileManager* manager = [NSFileManager defaultManager];
+//    if ((plistPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"saveData.plist"]))
+//    {
+//        if ([manager isWritableFileAtPath:plistPath])
+//        {
+//            NSMutableDictionary* infoDict = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
+//            [infoDict setObject:@"foo object" forKey:@"fookey"];
+//            [infoDict writeToFile:plistPath atomically:NO];
+//            [manager setAttributes:[NSDictionary dictionaryWithObject:[NSDate date] forKey:NSFileModificationDate] ofItemAtPath:[[NSBundle mainBundle] bundlePath] error:nil];
+//        }
+//    }
+    NSLog(@"write plist");
 }
+
 
 - (void)didReceiveMemoryWarning
 {

@@ -33,6 +33,7 @@
 		84546F6E1933805200A56337 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 84546F5C1933805200A56337 /* UIRefreshControl+AFNetworking.m */; };
 		84546F6F1933805200A56337 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 84546F5E1933805200A56337 /* UIWebView+AFNetworking.m */; };
 		849CD9C6194DCBC000D23FE7 /* Datafile.plist in Resources */ = {isa = PBXBuildFile; fileRef = 849CD9C5194DCBC000D23FE7 /* Datafile.plist */; };
+		84E4658419545F330018F312 /* saveData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84E4658319545F330018F312 /* saveData.plist */; };
 		84EC297E19392574006C5AFC /* CIBankListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EC297D19392574006C5AFC /* CIBankListTableViewController.m */; };
 		84FB1C8F18FF369400D0381E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FB1C8E18FF369400D0381E /* Foundation.framework */; };
 		84FB1C9118FF369400D0381E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FB1C9018FF369400D0381E /* CoreGraphics.framework */; };
@@ -111,6 +112,7 @@
 		84546F5E1933805200A56337 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		849CD9C5194DCBC000D23FE7 /* Datafile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Datafile.plist; sourceTree = "<group>"; };
 		84A31D91191FE21500143277 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		84E4658319545F330018F312 /* saveData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = saveData.plist; sourceTree = "<group>"; };
 		84EC297C19392574006C5AFC /* CIBankListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIBankListTableViewController.h; sourceTree = "<group>"; };
 		84EC297D19392574006C5AFC /* CIBankListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIBankListTableViewController.m; sourceTree = "<group>"; };
 		84FB1C8B18FF369400D0381E /* CurrencyInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,7 @@
 				84033F24191C3D37006D72A8 /* rates */,
 				84033F1B191C26FB006D72A8 /* CIMainTableViewController.h */,
 				84033F1C191C26FB006D72A8 /* CIMainTableViewController.m */,
+				84E4658319545F330018F312 /* saveData.plist */,
 				849CD9C5194DCBC000D23FE7 /* Datafile.plist */,
 			);
 			name = controllers;
@@ -414,6 +417,7 @@
 				84FB1CA718FF369400D0381E /* Images.xcassets in Resources */,
 				84FB1C9918FF369400D0381E /* InfoPlist.strings in Resources */,
 				84546F381933768800A56337 /* upload_tray.png in Resources */,
+				84E4658419545F330018F312 /* saveData.plist in Resources */,
 				84FB1CA218FF369400D0381E /* Main.storyboard in Resources */,
 				849CD9C6194DCBC000D23FE7 /* Datafile.plist in Resources */,
 				84546F371933768800A56337 /* download_tray.png in Resources */,

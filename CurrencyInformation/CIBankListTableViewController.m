@@ -29,15 +29,11 @@
     return self;
 }
 
-- (void)ReloadNotification:(NSNotification *)notification
-{
-    NSLog(@"BankList reloaded");
-}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ReloadNotification:) name:@"ReloadNotification" object:nil];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
