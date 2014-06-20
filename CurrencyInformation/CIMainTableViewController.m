@@ -133,6 +133,10 @@
 - (void)ReloadNotification:(NSNotification *)notification
 {
     //@"/Users/admin/Documents/CurrencyInformation/CurrencyInformation/saveData.plist"
+    
+//    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+//	NSString *plistPath = [rootPath stringByAppendingPathComponent:@"saveData.plist"];
+//    NSLog(@"plist file path: %@", plistPath);
     NSError *error = nil;
     NSData *representation = [NSPropertyListSerialization dataWithPropertyList:dict format:NSPropertyListXMLFormat_v1_0 options:0 error:&error];
     if (!error)
@@ -144,7 +148,7 @@
         }
         else
         {
-            NSLog(@"error writing to file: %@", @"CurrencyInformation/saveData.plist");
+            NSLog(@"error writing to file: %@", @"saveData.plist");
         }
     }
     else
