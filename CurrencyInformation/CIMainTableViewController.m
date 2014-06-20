@@ -60,7 +60,6 @@
         banks = [NSMutableArray arrayWithCapacity:10];
         CIBank *bank;
         _dict = (NSDictionary *) responseObject;
-        // NSLog(@"%@", _dict);
         
         
         for (NSArray *keysArray in _dict) {
@@ -107,19 +106,26 @@
 
 - (void)ReloadNotification:(NSNotification *)notification
 {
-//    NSString* plistPath = nil;
-//    NSFileManager* manager = [NSFileManager defaultManager];
-//    if ((plistPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"saveData.plist"]))
-//    {
-//        if ([manager isWritableFileAtPath:plistPath])
-//        {
-//            NSMutableDictionary* infoDict = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
-//            [infoDict setObject:@"foo object" forKey:@"fookey"];
-//            [infoDict writeToFile:plistPath atomically:NO];
-//            [manager setAttributes:[NSDictionary dictionaryWithObject:[NSDate date] forKey:NSFileModificationDate] ofItemAtPath:[[NSBundle mainBundle] bundlePath] error:nil];
-//        }
-//    }
-    NSLog(@"write plist");
+    NSError *error = nil;
+    NSData *representation = [NSPropertyListSerialization dataWithPropertyList:_dict format:NSPropertyListXMLFormat_v1_0 options:0 error:&error];
+    if (!error)
+    {
+        BOOL ok = [representation writeToFile:@"/Users/admin/Documents/CurrencyInformation/CurrencyInformation/saveData.plist" atomically:YES];
+        if (ok)
+        {
+            NSLog(@"ok!");
+        }
+        else
+        {
+            NSLog(@"error writing to file: %@", @"CurrencyInformation/saveData.plist");
+        }
+    }
+    else
+    {
+        NSLog(@"error: %@", error);
+    }
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 
