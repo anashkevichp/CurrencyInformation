@@ -42,6 +42,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"Datafile" ofType:@"plist"];
+    self.data = [NSDictionary dictionaryWithContentsOfFile:dataPath];
+    NSLog(@"%@", self.data);
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
