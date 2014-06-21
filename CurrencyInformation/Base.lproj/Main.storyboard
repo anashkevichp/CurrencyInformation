@@ -188,11 +188,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DetailCell" textLabel="Ohp-wH-4ZZ" detailTextLabel="8hu-mX-V78" style="IBUITableViewCellStyleValue2" id="8yz-fN-snB">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DetailCell" textLabel="Ohp-wH-4ZZ" detailTextLabel="8hu-mX-V78" style="IBUITableViewCellStyleValue2" id="8yz-fN-snB">
                                 <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8yz-fN-snB" id="s5Z-y5-d5p">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Банк:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ohp-wH-4ZZ">
@@ -211,6 +211,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="A36-rK-LnF" kind="push" id="w5w-CI-o4l"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -226,30 +229,23 @@
             <point key="canvasLocation" x="938" y="240"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="RIw-C6-ll0">
+        <scene sceneID="niw-1K-nub">
             <objects>
-                <viewController id="hfD-sx-wid" sceneMemberID="viewController">
+                <viewController id="A36-rK-LnF" customClass="CIViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kQH-6M-SeS"/>
-                        <viewControllerLayoutGuide type="bottom" id="bA1-0x-LFm"/>
+                        <viewControllerLayoutGuide type="top" id="CoG-UJ-g50"/>
+                        <viewControllerLayoutGuide type="bottom" id="J0u-47-UX0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DyA-Vs-2fz">
+                    <view key="view" contentMode="scaleToFill" id="auV-XD-r11">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="99Q-Ec-jgY">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="H3h-zi-vbk"/>
+                    <navigationItem key="navigationItem" id="DXa-du-loM"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mcN-No-urg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pAp-4u-YHD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1440" y="240"/>
+            <point key="canvasLocation" x="1426" y="240"/>
         </scene>
         <!--Main Table View Controller - Главное меню-->
         <scene sceneID="2db-G5-Scy">
