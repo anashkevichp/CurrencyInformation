@@ -15,7 +15,11 @@
 #define EUR_SEGMENT 1
 #define RUB_SEGMENT 2
 
-@interface CISellTableViewController ()
+@interface CISellTableViewController (){
+    
+}
+
+-(void)my;
 
 @end
 

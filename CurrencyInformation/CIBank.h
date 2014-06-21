@@ -15,7 +15,10 @@
 @property (nonatomic, strong) NSString *address;
 @property (nonatomic, strong) NSString *phoneNumber;
 @property (nonatomic, strong) NSString *site;
+@property (nonatomic, strong) NSString *monThuWorkTime;
+@property (nonatomic, strong) NSString *friWorkTime;
 @property (nonatomic, strong) NSString *workTime;
+
 
 @property (nonatomic, assign) int bankBuyUSD;
 @property (nonatomic, assign) int bankBuyEUR;

@@ -7,6 +7,7 @@
 //
 
 #import "CIBankDetailTableViewController.h"
+#import "CIViewController.h"
 #import "CIBank.h"
 
 #define BANK_NAME_SECTION 0
@@ -81,7 +82,7 @@
             rows = 3;
             break;
         case WORKTIME_SECTION:
-            rows = 4;
+            rows = 2;
             break;
         default:
             NSLog(@"section number error");
@@ -126,12 +127,12 @@
         case WORKTIME_SECTION:
             switch (row) {
                 case MON_FRI_TIME_ROW:
-                    cell.textLabel.text = @"Пн-Пт:";
-                    cell.detailTextLabel.text = self.bank.workTime;
+                    cell.textLabel.text = @"Пн-Чт:";
+                    cell.detailTextLabel.text = self.bank.monThuWorkTime;
                     break;
                 case SAT_TIME_ROW:
-                    cell.textLabel.text = @"Сб:";
-                    cell.detailTextLabel.text = self.bank.workTime;
+                    cell.textLabel.text = @"Пт:";
+                    cell.detailTextLabel.text = self.bank.friWorkTime;
                     break;
                 case SUN_TIME_ROW:
                     cell.textLabel.text = @"Вс:";
@@ -199,15 +200,20 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    CIViewController *map = [segue destinationViewController];
+    map.address = [self.bank address];
+    
+    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
 }
-*/
+
 
 @end

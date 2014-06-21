@@ -10,4 +10,6 @@
 
 @interface CIViewController : UIViewController
 
+@property (strong, nonatomic) NSString *address;
+
 @end

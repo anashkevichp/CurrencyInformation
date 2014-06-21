@@ -14,6 +14,9 @@
 #import "CIBank.h"
 
 #define JSON_URL @"http://wm.shadurin.com/select.php"
+#define REQUEST_TIMEOUT_INTERVAL 7.0
+#define PATH_TO_BANK_DETAILS_PLIST @"bankDetails"
+
 
 @interface CIMainTableViewController ()
 
@@ -50,36 +53,20 @@
     
     /*              *** start networking ***              */
     
+    banks = [NSMutableArray arrayWithCapacity:10];
     NSURL *url = [NSURL URLWithString:JSON_URL];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT_INTERVAL];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     operation.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-       
-        banks = [NSMutableArray arrayWithCapacity:10];
-        CIBank *bank;
+        
         dict = (NSDictionary *) responseObject;
-        
-        
-        for (NSArray *keysArray in dict) {
-            NSDictionary *rates = [dict objectForKey:keysArray];
-            
-            bank = [[CIBank alloc] init];
-
-            bank.bankName = (NSString *) keysArray;
-            bank.bankSellEUR = [[rates objectForKey:@"EUR_BUY"] integerValue];
-            bank.bankBuyEUR = [[rates objectForKey:@"EUR_SELL"] integerValue];
-            bank.bankSellUSD = [[rates objectForKey:@"USD_BUY"] integerValue];
-            bank.bankBuyUSD = [[rates objectForKey:@"USD_SELL"] integerValue];
-            bank.bankSellRUB = [[rates objectForKey:@"RUR_BUY"] integerValue];
-            bank.bankBuyRUB = [[rates objectForKey:@"RUR_SELL"] integerValue];
-            
-            [banks addObject:bank];
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"SaveToPlist" object:self];
-        }
+        [self fillRatesArrayFromDictionary];
+        [self readBankDetailsFromPlist];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"SaveToPlist" object:self];
         
         [indicator stopAnimating];
         [self.tableView setUserInteractionEnabled:YES];
@@ -88,31 +75,15 @@
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Ошибка получения данных!"
                                                             message:@"Будут использованы ранее сохраненные данные"
                                                            delegate:nil
-                                                  cancelButtonTitle:@"Ok"
+                                                  cancelButtonTitle:@"Продолжить"
                                                   otherButtonTitles:nil];
         
-        banks = [NSMutableArray arrayWithCapacity:10];
-        CIBank *bank;
         
         NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"saveData" ofType:@"plist"];
+        
         dict = [NSDictionary dictionaryWithContentsOfFile:dataPath];
-        
-        for (NSArray *keysArray in dict) {
-            NSDictionary *rates = [dict objectForKey:keysArray];
-            
-            bank = [[CIBank alloc] init];
-            
-            bank.bankName = (NSString *) keysArray;
-            bank.bankSellEUR = [[rates objectForKey:@"EUR_BUY"] integerValue];
-            bank.bankBuyEUR = [[rates objectForKey:@"EUR_SELL"] integerValue];
-            bank.bankSellUSD = [[rates objectForKey:@"USD_BUY"] integerValue];
-            bank.bankBuyUSD = [[rates objectForKey:@"USD_SELL"] integerValue];
-            bank.bankSellRUB = [[rates objectForKey:@"RUR_BUY"] integerValue];
-            bank.bankBuyRUB = [[rates objectForKey:@"RUR_SELL"] integerValue];
-            
-            [banks addObject:bank];
-        }
-        
+        [self fillRatesArrayFromDictionary];
+        [self readBankDetailsFromPlist];
         
         [indicator stopAnimating];
         [self.tableView setUserInteractionEnabled:YES];
@@ -132,31 +103,52 @@
 
 - (void)ReloadNotification:(NSNotification *)notification
 {
-    //@"/Users/admin/Documents/CurrencyInformation/CurrencyInformation/saveData.plist"
-    
-//    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-//	NSString *plistPath = [rootPath stringByAppendingPathComponent:@"saveData.plist"];
-//    NSLog(@"plist file path: %@", plistPath);
-    NSError *error = nil;
-    NSData *representation = [NSPropertyListSerialization dataWithPropertyList:dict format:NSPropertyListXMLFormat_v1_0 options:0 error:&error];
-    if (!error)
-    {
-        BOOL ok = [representation writeToFile:@"/Users/admin/Documents/CurrencyInformation/CurrencyInformation/saveData.plist" atomically:YES];
-        if (ok)
-        {
-            NSLog(@"ok!");
-        }
-        else
-        {
-            NSLog(@"error writing to file: %@", @"saveData.plist");
-        }
-    }
-    else
-    {
-        NSLog(@"error: %@", error);
-    }
+    [dict writeToFile:@"33ts/CurrencyInformation/CurrencyInformation/saveData.plist" atomically:YES];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void) fillRatesArrayFromDictionary
+{
+    CIBank *bank;
+    for (NSArray *keysArray in dict) {
+        NSDictionary *rates = [dict objectForKey:keysArray];
+        
+        bank = [[CIBank alloc] init];
+        
+        bank.bankName = (NSString *) keysArray;
+        bank.bankSellEUR = [[rates objectForKey:@"EUR_BUY"] integerValue];
+        bank.bankBuyEUR = [[rates objectForKey:@"EUR_SELL"] integerValue];
+        bank.bankSellUSD = [[rates objectForKey:@"USD_BUY"] integerValue];
+        bank.bankBuyUSD = [[rates objectForKey:@"USD_SELL"] integerValue];
+        bank.bankSellRUB = [[rates objectForKey:@"RUR_BUY"] integerValue];
+        bank.bankBuyRUB = [[rates objectForKey:@"RUR_SELL"] integerValue];
+        
+        [banks addObject:bank];
+    }
+}
+
+- (void) readBankDetailsFromPlist
+{
+    NSString *dataPath = [[NSBundle mainBundle] pathForResource:PATH_TO_BANK_DETAILS_PLIST ofType:@"plist"];
+    NSDictionary *bankDetailsDict = [NSDictionary dictionaryWithContentsOfFile:dataPath];
+    NSEnumerator *enumerator = [banks objectEnumerator];
+    
+    for (NSArray *keysArray in bankDetailsDict) {
+        NSDictionary *values = [bankDetailsDict objectForKey:keysArray];
+        
+        CIBank *bank = [enumerator nextObject];
+        
+        bank.bankName = [values objectForKey:@"bankName"];
+        bank.address = [values objectForKey:@"address"];
+        bank.site = [values objectForKey:@"site"];
+        //bank._mapURL = [values objectForKey:@"_mapURL"];
+        bank.phoneNumber = [values objectForKey:@"phoneNumber"];
+        bank.monThuWorkTime = [values objectForKey:@"monThuWorkTime"];
+        bank.friWorkTime = [values objectForKey:@"friWorkTime"];
+    }
+    
+    //NSLog(bankDetailsDict);
 }
 
 - (void)didReceiveMemoryWarning
@@ -176,18 +168,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 3;
+    return 2;
 }
-
-- (IBAction)Slider:(id)sender {
-    UISlider* Slider = sender;
-    _sliderValue = (Slider.value * 1000);
-    self.rangeSlider.text = [NSString stringWithFormat:@"%i м", _sliderValue];
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setInteger:_sliderValue forKey:@"_sliderValue"];
-    NSLog(@"value = %ld", (long)[userDefaults integerForKey:@"_sliderValue"]);
-}
-
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -287,9 +269,6 @@
         }];
         bankListController.banks = banks;
         
-    } else if ([[segue identifier] isEqualToString:@"MainToSettingsSegue"]){
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        NSLog(@"value = %ld", (long)[userDefaults integerForKey:@"_sliderValue"]);
     }
     
     // Get the new view controller using [segue destinationViewController].
