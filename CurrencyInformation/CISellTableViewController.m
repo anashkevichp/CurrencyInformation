@@ -19,8 +19,6 @@
     
 }
 
--(void)my;
-
 @end
 
 @implementation CISellTableViewController {
