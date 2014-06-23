@@ -80,7 +80,7 @@
                                                   otherButtonTitles:nil];
         
         
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
         NSString *documentsDir = [paths objectAtIndex:0];
         NSString *filePath = [documentsDir stringByAppendingPathComponent:CURRENCY_RATES_PLIST_NAME];
         
@@ -99,7 +99,7 @@
 
 - (void)ReloadNotification:(NSNotification *)notification
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     NSString *documentsDir = [paths objectAtIndex:0];
     NSString *filePath = [documentsDir stringByAppendingPathComponent:CURRENCY_RATES_PLIST_NAME];
     [ratesDict writeToFile:filePath atomically:YES];
