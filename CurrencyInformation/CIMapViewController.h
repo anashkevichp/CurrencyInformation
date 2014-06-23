@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CIViewController : UIViewController
+@interface CIMapViewController : UIViewController
 
 @property (strong, nonatomic) NSString *address;
 
