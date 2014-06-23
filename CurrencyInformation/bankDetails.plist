@@ -6,7 +6,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9259598</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.6166947</string>
             <key>_mapURL</key>
             <string>https://goo.gl/maps/f82FE</string>
@@ -27,7 +27,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.895276</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.540777</string>
             <key>_mapURL</key>
             <string>https://goo.gl/maps/ioLVW</string>
@@ -48,7 +48,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9137653</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5843284</string>
             <key>_mapURL</key>
             <string>https://goo.gl/maps/N5AKc</string>
@@ -69,7 +69,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9201118</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5750963</string>
             <key>_mapURL</key>
             <string>https://goo.gl/maps/FjPFK</string>
@@ -90,7 +90,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.8935922</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5003683</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -111,7 +111,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9131129</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5434131</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -132,7 +132,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9089421</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.4682612</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -153,7 +153,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9167276</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5558694</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -174,7 +174,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9111478</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5405764</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -195,7 +195,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9036492</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5572836</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -216,7 +216,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.8982224</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5428937</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -237,7 +237,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9258643</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5960375</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -258,7 +258,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9237872</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.6055231</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -279,7 +279,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.8887578</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5381004</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -300,7 +300,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.8892986</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5126281</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -321,7 +321,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.925485</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5088227</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -342,7 +342,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.837403</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.6833456</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -363,7 +363,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.89829</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5571496</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -384,7 +384,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9401999</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5673418</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -405,7 +405,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.8845576</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5834192</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -426,7 +426,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9124936</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5634884</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -447,7 +447,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9151182</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.560553</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -468,7 +468,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9225004</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5580989</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -489,7 +489,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9097531</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5857633</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -510,7 +510,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9233513</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5105851</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -531,7 +531,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9166804</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5570457</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -552,7 +552,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9180991</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5258223</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -573,7 +573,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9261517</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.6186432</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -594,7 +594,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.9007541</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.4693944</string>
             <key>_mapURL</key>
             <string>tempURL</string>
@@ -615,7 +615,7 @@
         <dict>
             <key>_mapLatitude</key>
             <string>53.904456</string>
-            <key>_map_Longitude</key>
+            <key>_mapLongitude</key>
             <string>27.5888371</string>
             <key>_mapURL</key>
             <string>tempURL</string>
