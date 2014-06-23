@@ -7,7 +7,7 @@
 //
 
 #import "CIBankDetailTableViewController.h"
-#import "CIViewController.h"
+#import "CIMapViewController.h"
 #import "CIBank.h"
 
 #define BANK_NAME_SECTION 0
@@ -41,9 +41,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"Datafile" ofType:@"plist"];
-    //self.data = [NSDictionary dictionaryWithContentsOfFile:dataPath];
-    //NSLog(@"%@", self.data);
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -100,6 +97,7 @@
     switch (section) {
         
         case BANK_NAME_SECTION:
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             if (row == BANK_NAME_ROW) {
                 cell.textLabel.text = @"Банк:";
                 cell.detailTextLabel.text = self.bank.bankName;
@@ -123,15 +121,13 @@
             break;
         
         case WORKTIME_SECTION:
-            switch (row) {
-                case MON_FRI_TIME_ROW:
-                    cell.textLabel.text = @"Пн-Чт:";
-                    cell.detailTextLabel.text = self.bank.monThuWorkTime;
-                    break;
-                case SAT_TIME_ROW:
-                    cell.textLabel.text = @"Пт:";
-                    cell.detailTextLabel.text = self.bank.friWorkTime;
-                    break;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            if (row == MON_FRI_TIME_ROW) {
+                cell.textLabel.text = @"Пн-Чт:";
+                cell.detailTextLabel.text = self.bank.monThuWorkTime;
+            } else if (row == SAT_TIME_ROW) {
+                cell.textLabel.text = @"Пт:";
+                cell.detailTextLabel.text = self.bank.friWorkTime;
             }
             break;
     }
@@ -193,17 +189,38 @@
 
 #pragma mark - Navigation
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    int section = [indexPath section];
+    int row = [indexPath row];
+    
+    if (section == CONTACT_SECTION) {
+        if (row == ADDRESS_ROW) {
+            CIMapViewController *mapController = [[CIMapViewController alloc] init];
+            mapController.address = [self.bank address];
+            [self.navigationController pushViewController:mapController animated:YES];
+        } else if (row == SITE_ROW) {
+            NSString *urlString = [NSString stringWithFormat:@"http://%@", [self.bank site]];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+        } else if (row == PHONE_NUMBER_ROW) {
+            /*
+            NSString *phoneUrl = [NSString stringWithFormat:@"telpromt:%@", [self.bank phoneNumber]];
+            [[UIApplication sharedApplication] openURL: [NSURL URLWithString:phoneUrl]];
+            */
+        }
+    }
+    
+}
+
+/*
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    CIViewController *map = [segue destinationViewController];
-    map.address = [self.bank address];
-    
-    
+ 
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
 }
-
+*/
 
 @end

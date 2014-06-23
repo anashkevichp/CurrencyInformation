@@ -197,9 +197,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="A36-rK-LnF" kind="push" identifier="DetailToMap" id="w5w-CI-o4l"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -214,10 +211,10 @@
             </objects>
             <point key="canvasLocation" x="938" y="240"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="niw-1K-nub">
             <objects>
-                <viewController id="A36-rK-LnF" customClass="CIViewController" sceneMemberID="viewController">
+                <viewController id="A36-rK-LnF" customClass="CIMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CoG-UJ-g50"/>
                         <viewControllerLayoutGuide type="bottom" id="J0u-47-UX0"/>

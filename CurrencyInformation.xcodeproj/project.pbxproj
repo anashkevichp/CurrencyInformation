@@ -22,7 +22,7 @@
 		841F39FF195561E100C77700 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841F39FE195561E100C77700 /* OpenGLES.framework */; };
 		841F3A01195561ED00C77700 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841F3A00195561ED00C77700 /* QuartzCore.framework */; };
 		841F3A03195561FD00C77700 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841F3A02195561FD00C77700 /* SystemConfiguration.framework */; };
-		841F3A0919556C8000C77700 /* CIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841F3A0819556C8000C77700 /* CIViewController.m */; };
+		841F3A0919556C8000C77700 /* CIMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841F3A0819556C8000C77700 /* CIMapViewController.m */; };
 		843845081912A5050088E88D /* CISellTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843845071912A5050088E88D /* CISellTableViewController.m */; };
 		8438450B1912A5DB0088E88D /* CICurrencyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438450A1912A5DB0088E88D /* CICurrencyTableViewCell.m */; };
 		843DBD0A1912A34F002AFB8C /* CIBank.m in Sources */ = {isa = PBXBuildFile; fileRef = 843DBD051912A34F002AFB8C /* CIBank.m */; };
@@ -94,8 +94,8 @@
 		841F39FE195561E100C77700 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		841F3A00195561ED00C77700 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		841F3A02195561FD00C77700 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		841F3A0719556C8000C77700 /* CIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIViewController.h; sourceTree = "<group>"; };
-		841F3A0819556C8000C77700 /* CIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIViewController.m; sourceTree = "<group>"; };
+		841F3A0719556C8000C77700 /* CIMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIMapViewController.h; sourceTree = "<group>"; };
+		841F3A0819556C8000C77700 /* CIMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIMapViewController.m; sourceTree = "<group>"; };
 		843845061912A5050088E88D /* CISellTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CISellTableViewController.h; sourceTree = "<group>"; };
 		843845071912A5050088E88D /* CISellTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CISellTableViewController.m; sourceTree = "<group>"; };
 		843845091912A5DB0088E88D /* CICurrencyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CICurrencyTableViewCell.h; sourceTree = "<group>"; };
@@ -317,8 +317,8 @@
 		84F3802D19559E88008EA30B /* map */ = {
 			isa = PBXGroup;
 			children = (
-				841F3A0719556C8000C77700 /* CIViewController.h */,
-				841F3A0819556C8000C77700 /* CIViewController.m */,
+				841F3A0719556C8000C77700 /* CIMapViewController.h */,
+				841F3A0819556C8000C77700 /* CIMapViewController.m */,
 			);
 			name = map;
 			sourceTree = "<group>";
@@ -529,7 +529,7 @@
 				84546F601933805200A56337 /* AFHTTPRequestOperationManager.m in Sources */,
 				8438450B1912A5DB0088E88D /* CICurrencyTableViewCell.m in Sources */,
 				84033F27191C4A1C006D72A8 /* CIBankDetailTableViewController.m in Sources */,
-				841F3A0919556C8000C77700 /* CIViewController.m in Sources */,
+				841F3A0919556C8000C77700 /* CIMapViewController.m in Sources */,
 				84546F6C1933805200A56337 /* UIImageView+AFNetworking.m in Sources */,
 				84546F611933805200A56337 /* AFHTTPSessionManager.m in Sources */,
 				84546F691933805200A56337 /* UIActivityIndicatorView+AFNetworking.m in Sources */,

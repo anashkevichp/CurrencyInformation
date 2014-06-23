@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 First Group. All rights reserved.
 //
 
-#import "CIViewController.h"
+#import "CIMapViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
 
-@interface CIViewController ()
+@interface CIMapViewController ()
 
 @end
 
-@implementation CIViewController{
+@implementation CIMapViewController{
     GMSMapView *mapView_;
 }
 
