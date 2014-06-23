@@ -27,21 +27,19 @@
 }
 
 - (void)loadView {
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:51.5
-                                                            longitude:-0.127
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:self._mapLatitude
+                                                            longitude:self._mapLongitude
                                                                  zoom:12];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.myLocationEnabled = YES;
     mapView_.settings.myLocationButton = YES;
-    CLLocationCoordinate2D position = CLLocationCoordinate2DMake(51.5, -0.127);
+    CLLocationCoordinate2D position = CLLocationCoordinate2DMake(self._mapLatitude, self._mapLongitude);
     GMSMarker *marker = [GMSMarker markerWithPosition:position];
     marker.title = @"title";
     marker.snippet = @"snippet";
     marker.appearAnimation = kGMSMarkerAnimationPop;
     marker.map = mapView_;
     self.view = mapView_;
-
-    
 }
 
 - (void)viewDidLoad

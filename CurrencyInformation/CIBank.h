@@ -17,8 +17,6 @@
 @property (nonatomic, strong) NSString *site;
 @property (nonatomic, strong) NSString *monThuWorkTime;
 @property (nonatomic, strong) NSString *friWorkTime;
-@property (nonatomic, strong) NSString *workTime;
-
 
 @property (nonatomic, assign) int bankBuyUSD;
 @property (nonatomic, assign) int bankBuyEUR;
@@ -28,5 +26,7 @@
 @property (nonatomic, assign) int bankSellEUR;
 @property (nonatomic, assign) int bankSellRUB;
 
+@property (nonatomic, assign) double _mapLatitude;
+@property (nonatomic, assign) double _mapLongitude;
 
 @end

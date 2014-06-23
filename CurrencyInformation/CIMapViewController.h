@@ -12,4 +12,7 @@
 
 @property (strong, nonatomic) NSString *address;
 
+@property (assign, nonatomic) double _mapLatitude;
+@property (assign, nonatomic) double _mapLongitude;
+
 @end

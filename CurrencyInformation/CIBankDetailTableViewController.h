@@ -12,7 +12,5 @@
 @interface CIBankDetailTableViewController : UITableViewController
 
 @property (nonatomic, strong) CIBank *bank;
-@property (nonatomic, strong) NSDictionary *data;
-
 
 @end

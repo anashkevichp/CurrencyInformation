@@ -127,6 +127,8 @@
         bank.phoneNumber = [details objectForKey:@"phoneNumber"];
         bank.monThuWorkTime = [details objectForKey:@"monThuWorkTime"];
         bank.friWorkTime = [details objectForKey:@"friWorkTime"];
+        bank._mapLatitude = [[details objectForKey:@"_mapLatitude"] doubleValue];
+        bank._mapLongitude = [[details objectForKey:@"_map_Longitude"] doubleValue];
         
         bank.bankSellEUR = [[rates objectForKey:@"EUR_BUY"] integerValue];
         bank.bankBuyEUR = [[rates objectForKey:@"EUR_SELL"] integerValue];
