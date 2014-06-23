@@ -15,7 +15,8 @@
 
 #define JSON_URL @"http://wm.shadurin.com/select.php"
 #define REQUEST_TIMEOUT_INTERVAL 7.0
-#define PATH_TO_BANK_DETAILS_PLIST @"bankDetails"
+#define BANK_DETAILS_PLIST_NAME @"bankDetails"
+#define CURRENCY_RATES_PLIST_NAME @"currencyRates.plist"
 
 
 @interface CIMainTableViewController ()
@@ -41,15 +42,14 @@
 {
     [super viewDidLoad];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ReloadNotification:) name:@"SaveToPlist" object:nil];
-    
     [self.tableView setUserInteractionEnabled:NO];
-    
     UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [indicator setCenter:self.tableView.center];
     [indicator setHidesWhenStopped:YES];
     [indicator startAnimating];
     [self.view addSubview:indicator];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ReloadNotification:) name:@"SaveToPlist" object:nil];
     
     banks = [NSMutableArray arrayWithCapacity:10];
     [self readBankDetailsFromPlist];
@@ -73,21 +73,23 @@
         [self.tableView setUserInteractionEnabled:YES];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Ошибка получения данных!"
+        UIAlertView *connectionErrorAlert = [[UIAlertView alloc] initWithTitle:@"Ошибка получения данных!"
                                                             message:@"Будут использованы ранее сохраненные данные"
                                                            delegate:nil
                                                   cancelButtonTitle:@"Продолжить"
                                                   otherButtonTitles:nil];
         
         
-        NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"saveData" ofType:@"plist"];
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+        NSString *documentsDir = [paths objectAtIndex:0];
+        NSString *filePath = [documentsDir stringByAppendingPathComponent:CURRENCY_RATES_PLIST_NAME];
         
-        ratesDict = [NSMutableDictionary dictionaryWithContentsOfFile:dataPath];
+        ratesDict = [NSMutableDictionary dictionaryWithContentsOfFile:filePath];
         [self mergeDictionaries];
         
         [indicator stopAnimating];
         [self.tableView setUserInteractionEnabled:YES];
-        [alertView show];
+        [connectionErrorAlert show];
     }];
     
     [operation start];
@@ -103,7 +105,10 @@
 
 - (void)ReloadNotification:(NSNotification *)notification
 {
-    [ratesDict writeToFile:@"33ts/CurrencyInformation/CurrencyInformation/saveData.plist" atomically:YES];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+    NSString *documentsDir = [paths objectAtIndex:0];
+    NSString *filePath = [documentsDir stringByAppendingPathComponent:CURRENCY_RATES_PLIST_NAME];
+    [ratesDict writeToFile:filePath atomically:YES];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
@@ -119,7 +124,6 @@
         bank.bankName = [details objectForKey:@"bankName"];
         bank.address = [details objectForKey:@"address"];
         bank.site = [details objectForKey:@"site"];
-        //bank._mapURL = [details objectForKey:@"_mapURL"];
         bank.phoneNumber = [details objectForKey:@"phoneNumber"];
         bank.monThuWorkTime = [details objectForKey:@"monThuWorkTime"];
         bank.friWorkTime = [details objectForKey:@"friWorkTime"];
@@ -132,15 +136,13 @@
         bank.bankBuyRUB = [[rates objectForKey:@"RUR_SELL"] integerValue];
         
         [banks addObject:bank];
-        
-        NSLog(@"%d", bank.bankSellUSD);
     }
 }
 
 - (void) readBankDetailsFromPlist
 {
-    NSString *dataPath = [[NSBundle mainBundle] pathForResource:PATH_TO_BANK_DETAILS_PLIST ofType:@"plist"];
-    bankDetailsDict = [NSMutableDictionary dictionaryWithContentsOfFile:dataPath];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:BANK_DETAILS_PLIST_NAME ofType:@"plist"];
+    bankDetailsDict = [NSMutableDictionary dictionaryWithContentsOfFile:filePath];
 }
 
 - (void)didReceiveMemoryWarning

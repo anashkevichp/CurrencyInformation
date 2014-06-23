@@ -7,13 +7,13 @@
 		<key>_mapURL</key>
 		<string>https://goo.gl/maps/f82FE</string>
 		<key>address</key>
-		<string>Минск, пр. Независимости, 95</string>
+		<string>пр. Независимости, 95</string>
 		<key>bankName</key>
 		<string>Абсолютбанк</string>
 		<key>monThuWorkTime</key>
 		<string>9:00 - 16:00</string>
 		<key>phoneNumber</key>
-		<string>+375 17 237-07-02</string>
+		<string>+375 (17) 237-07-02</string>
 		<key>friWorkTime</key>
 		<string>9:00 - 15:00</string>
 		<key>site</key>
@@ -24,7 +24,7 @@
 		<key>_mapURL</key>
 		<string>https://goo.gl/maps/ioLVW</string>
 		<key>address</key>
-		<string>г. Минск, ул. Мясникова, 70</string>
+		<string>ул. Мясникова, 70</string>
 		<key>bankName</key>
 		<string>Альфа-Банк</string>
 		<key>monThuWorkTime</key>
@@ -58,7 +58,7 @@
 		<key>_mapURL</key>
 		<string>https://goo.gl/maps/FjPFK</string>
 		<key>address</key>
-		<string>г. Минск, ул. В. Хоружей, 20</string>
+		<string>ул. В. Хоружей, 20</string>
 		<key>bankName</key>
 		<string>БТА Банк</string>
 		<key>monThuWorkTime</key>
@@ -75,15 +75,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>пр-т. Жукова, 3</string>
 		<key>bankName</key>
 		<string>Белагропромбанк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>8:00 - 20:00</string>
 		<key>phoneNumber</key>
 		<string>136</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>8:00 - 20:00</string>
 		<key>site</key>
 		<string>www.belapb.by</string>
 	</dict>
@@ -92,15 +92,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>пр-т Победителей, 29</string>
 		<key>bankName</key>
 		<string>БелВЭБ</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>9.00 – 16.30</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 209-29-44</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>9.00 – 15.00</string>
 		<key>site</key>
 		<string>www.bveb.by</string>
 	</dict>
@@ -109,15 +109,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>г. Минск, ул.Притыцкого 60/2</string>
 		<key>bankName</key>
 		<string>Белгазпромбанк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>9.00-19.00</string>
 		<key>phoneNumber</key>
 		<string>120</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>9.00-18.00</string>
 		<key>site</key>
 		<string>www.belgazprombank.by</string>
 	</dict>
@@ -126,15 +126,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>г. инск, пр. Машерова, 29</string>
 		<key>bankName</key>
 		<string>Белинвестбанк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>9:00 - 19:00</string>
 		<key>phoneNumber</key>
 		<string>146</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>10:00 - 15:00</string>
 		<key>site</key>
 		<string>www.belinvestbank.by</string>
 	</dict>
@@ -143,15 +143,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>пр-т Победителей, 23/3</string>
 		<key>bankName</key>
 		<string>Белcвиссбанк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>9:00 - 17:00</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 306-20-40</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>9:00 - 17:00</string>
 		<key>site</key>
 		<string>www.bsb.by</string>
 	</dict>
@@ -160,32 +160,32 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string> г. Минск, пл. Свободы, 23</string>
 		<key>bankName</key>
 		<string>Белсвиссбанк, РКЦ №1</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>9:00 - 17:00</string>
 		<key>phoneNumber</key>
-		<string>3333***333</string>
+		<string>+ 375 (17) 306 20 40</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>9:00 - 17:00</string>
 		<key>site</key>
-		<string>***site***</string>
+		<string>www.bsb.by</string>
 	</dict>
 	<key>БеларусБанк</key>
 	<dict>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>ул. Мясникова, 32</string>
 		<key>bankName</key>
 		<string>Беларусбанк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>8:30 - 17:30</string>
 		<key>phoneNumber</key>
 		<string>147</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>8:30 - 16:15</string>
 		<key>site</key>
 		<string>belarusbank.by</string>
 	</dict>
@@ -194,15 +194,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>ул. Сурганова, 28</string>
 		<key>bankName</key>
-		<string>Белорусский Банк Малого Бизнеса</string>
+		<string>Бел. Банк Малого Бизнеса</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>8:30 - 17:30</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 385 22 14</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>8:30 - 17:30</string>
 		<key>site</key>
 		<string>www.bbsb.by</string>
 	</dict>
@@ -211,15 +211,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>пр. Независимости 87а</string>
 		<key>bankName</key>
 		<string>Белорусский Нородный Банк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string> 9:00 - 17:15</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 309 73 09</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>9:00 - 16:00</string>
 		<key>site</key>
 		<string>www.bnb.by</string>
 	</dict>
@@ -228,15 +228,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>ул. Московская, 14</string>
 		<key>bankName</key>
 		<string>ВТБ Банк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>8:30 - 17:30</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 309-15-15</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>8:30 - 16:15</string>
 		<key>site</key>
 		<string>www.vtb-bank.by</string>
 	</dict>
@@ -245,15 +245,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>Дельта Банк</string>
+		<string>ул. Р.Люксембург, 95</string>
 		<key>bankName</key>
 		<string>Дельта Банк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>9:00 - 19:00</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 279 02 79</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>9:00 - 19:00</string>
 		<key>site</key>
 		<string>deltabank.by</string>
 	</dict>
@@ -262,15 +262,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>ул. Тимирязева, 129/5</string>
 		<key>bankName</key>
 		<string>Евробанк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>8:30 - 17:00</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 259-61-17</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>8:30 - 16:15</string>
 		<key>site</key>
 		<string>www.eurobank.by</string>
 	</dict>
@@ -279,15 +279,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>пер.Промышленный, 11</string>
 		<key>bankName</key>
 		<string>Евроторгинвестбанк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>8:30 - 17:15</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 262-11-11</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>8:30 - 16:15</string>
 		<key>site</key>
 		<string>etib.by</string>
 	</dict>
@@ -296,15 +296,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>ул. К. Маркса, 25</string>
 		<key>bankName</key>
 		<string>Идея Банк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>8:30 - 17:30</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 306-33-14</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>8:30 - 17:30</string>
 		<key>site</key>
 		<string>ideabank.by</string>
 	</dict>
@@ -313,15 +313,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>ул. Некрасова, 114</string>
 		<key>bankName</key>
 		<string>ИнтерПэйБанк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>8:30 - 17:30</string>
 		<key>phoneNumber</key>
-		<string>8-801-100-60-00</string>
+		<string>8 801 100 60 00</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>8:30 - 16:30</string>
 		<key>site</key>
 		<string>ipaybank.by</string>
 	</dict>
@@ -330,15 +330,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>пр-т Партизанский, 6а</string>
 		<key>bankName</key>
 		<string>МТБанк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>9:00 - 17:00</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 229-99-99</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>9:00 - 15:30</string>
 		<key>site</key>
 		<string>www.mtbank.by</string>
 	</dict>
@@ -347,15 +347,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>ул. Коммунистическая, 49</string>
 		<key>bankName</key>
-		<string>Москва-Минск Банк</string>
+		<string>Банк Москва-Минск</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>9:00 - 19:00</string>
 		<key>phoneNumber</key>
 		<string>186</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>9:00 - 19:00</string>
 		<key>site</key>
 		<string>www.mmbank.by</string>
 	</dict>
@@ -364,15 +364,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>ул. Киселева, 61а</string>
 		<key>bankName</key>
 		<string>Паритетбанк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>9:00 - 15:30</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 237-76-85</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>9:00 - 15:00</string>
 		<key>site</key>
 		<string>www.paritetbank.by</string>
 	</dict>
@@ -381,15 +381,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>ул. Веры Хоружей, 31a</string>
 		<key>bankName</key>
 		<string>Приорбанк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>8:30 - 17:30</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 289-92-92</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>8:30 - 16:15</string>
 		<key>site</key>
 		<string>www.priorbank.by</string>
 	</dict>
@@ -398,15 +398,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>ул. Краснозвездная, 18</string>
 		<key>bankName</key>
 		<string>РРБ-Банк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>9:00 - 17:30</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 306-02-02</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>9:00 до 16:15</string>
 		<key>site</key>
 		<string>www.rrb.by</string>
 	</dict>
@@ -415,15 +415,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>ул. Тимирязева 65а</string>
 		<key>bankName</key>
-		<string>ТК банк</string>
+		<string>ТК Банк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>9:00 - 16:30</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 312-10-12</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>9:00 - 15:00</string>
 		<key>site</key>
 		<string>www.tcbank.by</string>
 	</dict>
@@ -432,15 +432,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>ул. Кропоткина, 44</string>
 		<key>bankName</key>
 		<string>Технобанк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>9:00 - 18:00</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 283-28-28</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>9:00 - 16:45</string>
 		<key>site</key>
 		<string>tb.by</string>
 	</dict>
@@ -449,15 +449,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>ул. Игнатенко, 11</string>
 		<key>bankName</key>
 		<string>Трастбанк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>9:00 - 16:00</string>
 		<key>phoneNumber</key>
 		<string>8 801 100 33 33</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>9:00 - 14:45</string>
 		<key>site</key>
 		<string>www.trustbank.by</string>
 	</dict>
@@ -466,15 +466,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>пр-т Независимости, 95а</string>
 		<key>bankName</key>
 		<string>Франсабанк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>8:30 - 17:30</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 389-36-36</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>8:30 - 17:30</string>
 		<key>site</key>
 		<string>www.fransabank.by</string>
 	</dict>
@@ -483,15 +483,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>адрес</string>
+		<string>ул. Одоевского, 129</string>
 		<key>bankName</key>
 		<string>Хоум Кредит Банк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>9:00 - 18:00</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 229-89-89</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>9:00 - 16:45</string>
 		<key>site</key>
 		<string>www.homecredit.by</string>
 	</dict>
@@ -500,15 +500,15 @@
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
-		<string>***temp-address***</string>
+		<string>ул. Платонова, 1б</string>
 		<key>bankName</key>
 		<string>Цептер Банк</string>
 		<key>monThuWorkTime</key>
-		<string>monThu</string>
+		<string>9.00 - 17.30</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 331-89-49</string>
 		<key>friWorkTime</key>
-		<string>sat</string>
+		<string>9.00 - 16.15</string>
 		<key>site</key>
 		<string>www.zepterbank.by</string>
 	</dict>
