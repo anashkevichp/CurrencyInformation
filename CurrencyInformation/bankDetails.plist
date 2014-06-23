@@ -11,7 +11,7 @@
             <key>_mapURL</key>
             <string>https://goo.gl/maps/f82FE</string>
             <key>address</key>
-            <string>г. Минск, пр. Независимости, 95</string>
+            <string>пр. Независимости, 95</string>
             <key>bankName</key>
             <string>Абсолютбанк</string>
             <key>monThuWorkTime</key>
@@ -32,7 +32,7 @@
             <key>_mapURL</key>
             <string>https://goo.gl/maps/ioLVW</string>
             <key>address</key>
-            <string>г. Минск, ул. Мясникова, 70</string>
+            <string>ул. Мясникова, 70</string>
             <key>bankName</key>
             <string>Альфа-Банк</string>
             <key>monThuWorkTime</key>
@@ -53,7 +53,7 @@
             <key>_mapURL</key>
             <string>https://goo.gl/maps/N5AKc</string>
             <key>address</key>
-            <string>г. Минск, б-р им. Мулявина, 6</string>
+            <string>б-р им. Мулявина, 6</string>
             <key>bankName</key>
             <string>БПС-Сбербанк</string>
             <key>monThuWorkTime</key>
@@ -74,7 +74,7 @@
             <key>_mapURL</key>
             <string>https://goo.gl/maps/FjPFK</string>
             <key>address</key>
-            <string>г. Минск, ул. В. Хоружей, 20</string>
+            <string>ул. В. Хоружей, 20</string>
             <key>bankName</key>
             <string>БТА Банк</string>
             <key>monThuWorkTime</key>
@@ -95,7 +95,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, пр-т. Жукова, 3</string>
+            <string>пр-т. Жукова, 3</string>
             <key>bankName</key>
             <string>Белагропромбанк</string>
             <key>monThuWorkTime</key>
@@ -116,7 +116,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, пр-т Победителей, 29</string>
+            <string>пр-т Победителей, 29</string>
             <key>bankName</key>
             <string>БелВЭБ</string>
             <key>monThuWorkTime</key>
@@ -137,7 +137,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, ул.Притыцкого 60/2</string>
+            <string>ул.Притыцкого 60/2</string>
             <key>bankName</key>
             <string>Белгазпромбанк</string>
             <key>monThuWorkTime</key>
@@ -158,7 +158,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, пр. Машерова, 29</string>
+            <string>пр. Машерова, 29</string>
             <key>bankName</key>
             <string>Белинвестбанк</string>
             <key>monThuWorkTime</key>
@@ -179,7 +179,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, пр-т Победителей, 23/3</string>
+            <string>пр-т Победителей, 23/3</string>
             <key>bankName</key>
             <string>Белcвиссбанк</string>
             <key>monThuWorkTime</key>
@@ -200,7 +200,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, пл. Свободы, 23</string>
+            <string>пл. Свободы, 23</string>
             <key>bankName</key>
             <string>Белсвиссбанк, РКЦ №1</string>
             <key>monThuWorkTime</key>
@@ -221,7 +221,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, ул. Мясникова, 32</string>
+            <string>ул. Мясникова, 32</string>
             <key>bankName</key>
             <string>Беларусбанк</string>
             <key>monThuWorkTime</key>
@@ -242,7 +242,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, ул. Сурганова, 28</string>
+            <string>ул. Сурганова, 28</string>
             <key>bankName</key>
             <string>Бел. Банк Малого Бизнеса</string>
             <key>monThuWorkTime</key>
@@ -263,7 +263,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, пр. Независимости 87а</string>
+            <string>пр. Независимости 87а</string>
             <key>bankName</key>
             <string>Белорусский Нородный Банк</string>
             <key>monThuWorkTime</key>
@@ -284,7 +284,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, ул. Московская, 14</string>
+            <string>ул. Московская, 14</string>
             <key>bankName</key>
             <string>ВТБ Банк</string>
             <key>monThuWorkTime</key>
@@ -305,7 +305,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, ул. Р.Люксембург, 95</string>
+            <string>ул. Р.Люксембург, 95</string>
             <key>bankName</key>
             <string>Дельта Банк</string>
             <key>monThuWorkTime</key>
@@ -326,7 +326,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, ул. Тимирязева, 129/5</string>
+            <string>ул. Тимирязева, 129/5</string>
             <key>bankName</key>
             <string>Евробанк</string>
             <key>monThuWorkTime</key>
@@ -347,7 +347,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, пер.Промышленный, 11</string>
+            <string>пер.Промышленный, 11</string>
             <key>bankName</key>
             <string>Евроторгинвестбанк</string>
             <key>monThuWorkTime</key>
@@ -368,7 +368,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, ул. К. Маркса, 25</string>
+            <string>ул. К. Маркса, 25</string>
             <key>bankName</key>
             <string>Идея Банк</string>
             <key>monThuWorkTime</key>
@@ -389,7 +389,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, ул. Некрасова, 114</string>
+            <string>ул. Некрасова, 114</string>
             <key>bankName</key>
             <string>ИнтерПэйБанк</string>
             <key>monThuWorkTime</key>
@@ -410,7 +410,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, пр-т Партизанский, 6а</string>
+            <string>пр-т Партизанский, 6а</string>
             <key>bankName</key>
             <string>МТБанк</string>
             <key>monThuWorkTime</key>
@@ -431,7 +431,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, ул. Коммунистическая, 49</string>
+            <string>ул. Коммунистическая, 49</string>
             <key>bankName</key>
             <string>Банк Москва-Минск</string>
             <key>monThuWorkTime</key>
@@ -452,7 +452,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, ул. Киселева, 61а</string>
+            <string>ул. Киселева, 61а</string>
             <key>bankName</key>
             <string>Паритетбанк</string>
             <key>monThuWorkTime</key>
@@ -473,7 +473,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, ул. Веры Хоружей, 31a</string>
+            <string>ул. Веры Хоружей, 31a</string>
             <key>bankName</key>
             <string>Приорбанк</string>
             <key>monThuWorkTime</key>
@@ -494,7 +494,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, ул. Краснозвездная, 18</string>
+            <string>ул. Краснозвездная, 18</string>
             <key>bankName</key>
             <string>РРБ-Банк</string>
             <key>monThuWorkTime</key>
@@ -515,7 +515,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, ул. Тимирязева 65а</string>
+            <string>ул. Тимирязева 65а</string>
             <key>bankName</key>
             <string>ТК Банк</string>
             <key>monThuWorkTime</key>
@@ -536,7 +536,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, ул. Кропоткина, 44</string>
+            <string>ул. Кропоткина, 44</string>
             <key>bankName</key>
             <string>Технобанк</string>
             <key>monThuWorkTime</key>
@@ -557,7 +557,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, ул. Игнатенко, 11</string>
+            <string>ул. Игнатенко, 11</string>
             <key>bankName</key>
             <string>Трастбанк</string>
             <key>monThuWorkTime</key>
@@ -578,7 +578,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, пр-т Независимости, 95а</string>
+            <string>пр-т Независимости, 95а</string>
             <key>bankName</key>
             <string>Франсабанк</string>
             <key>monThuWorkTime</key>
@@ -599,7 +599,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, ул. Одоевского, 129</string>
+            <string>ул. Одоевского, 129</string>
             <key>bankName</key>
             <string>Хоум Кредит Банк</string>
             <key>monThuWorkTime</key>
@@ -620,7 +620,7 @@
             <key>_mapURL</key>
             <string>tempURL</string>
             <key>address</key>
-            <string>г. Минск, ул. Платонова, 1б</string>
+            <string>ул. Платонова, 1б</string>
             <key>bankName</key>
             <string>Цептер Банк</string>
             <key>monThuWorkTime</key>
