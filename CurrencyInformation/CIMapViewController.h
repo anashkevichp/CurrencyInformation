@@ -10,6 +10,7 @@
 
 @interface CIMapViewController : UIViewController
 
+@property (strong, nonatomic) NSString *bankName;
 @property (strong, nonatomic) NSString *address;
 
 @property (assign, nonatomic) double _mapLatitude;

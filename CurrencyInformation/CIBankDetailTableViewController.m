@@ -148,16 +148,17 @@
     if (section == CONTACT_SECTION) {
         if (row == ADDRESS_ROW) {
             CIMapViewController *mapController = [[CIMapViewController alloc] init];
+            mapController.bankName = [self.bank bankName];
             mapController.address = [self.bank address];
+            mapController._mapLatitude = [self.bank _mapLatitude];
+            mapController._mapLongitude = [self.bank _mapLongitude];
             [self.navigationController pushViewController:mapController animated:YES];
         } else if (row == SITE_ROW) {
-            NSString *urlString = [NSString stringWithFormat:@"tel://%@", [self.bank site]];
+            NSString *urlString = [NSString stringWithFormat:@"http://%@", [self.bank site]];
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
         } else if (row == PHONE_NUMBER_ROW) {
-            /*
-            NSString *phoneUrl = [NSString stringWithFormat:@"telpromt:%@", [self.bank phoneNumber]];
+            NSString *phoneUrl = [NSString stringWithFormat:@"telprompt://%@", [self.bank phoneNumber]];
             [[UIApplication sharedApplication] openURL: [NSURL URLWithString:phoneUrl]];
-            */
         }
     }
     

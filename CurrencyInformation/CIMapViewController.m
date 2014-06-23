@@ -34,11 +34,13 @@
     mapView_.myLocationEnabled = YES;
     mapView_.settings.myLocationButton = YES;
     CLLocationCoordinate2D position = CLLocationCoordinate2DMake(self._mapLatitude, self._mapLongitude);
+    
     GMSMarker *marker = [GMSMarker markerWithPosition:position];
-    marker.title = @"title";
-    marker.snippet = @"snippet";
+    marker.title = self.bankName;
+    marker.snippet = self.address;
     marker.appearAnimation = kGMSMarkerAnimationPop;
     marker.map = mapView_;
+    [mapView_ setSelectedMarker:marker];
     self.view = mapView_;
 }
 
