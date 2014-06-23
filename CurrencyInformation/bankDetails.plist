@@ -12,16 +12,12 @@
 		<string>Абсолютбанк</string>
 		<key>monThuWorkTime</key>
 		<string>9:00 - 16:00</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 17 237-07-02</string>
 		<key>friWorkTime</key>
 		<string>9:00 - 15:00</string>
 		<key>site</key>
 		<string>www.absolutbank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>Альфа-Банк</key>
 	<dict>
@@ -33,16 +29,12 @@
 		<string>Альфа-Банк</string>
 		<key>monThuWorkTime</key>
 		<string>8:30 - 17:30</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>198</string>
 		<key>friWorkTime</key>
 		<string>8:30 - 16:15</string>
 		<key>site</key>
 		<string>www.alfabank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>БПС-Сбербанк</key>
 	<dict>
@@ -54,16 +46,12 @@
 		<string>БПС-Сбербанк</string>
 		<key>monThuWorkTime</key>
 		<string>9:00 - 17:20</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>148</string>
 		<key>friWorkTime</key>
 		<string>9:00 - 16:00</string>
 		<key>site</key>
 		<string>www.bps-sberbank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>БТА Банк</key>
 	<dict>
@@ -75,16 +63,12 @@
 		<string>БТА Банк</string>
 		<key>monThuWorkTime</key>
 		<string>9:00 - 16:15</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 17 334 54 34</string>
 		<key>friWorkTime</key>
 		<string>9:00 - 15:15</string>
 		<key>site</key>
 		<string>www.btabank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>БелАгроПромБанк</key>
 	<dict>
@@ -96,16 +80,12 @@
 		<string>Белагропромбанк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>136</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.belapb.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>БелВЭБ</key>
 	<dict>
@@ -117,16 +97,12 @@
 		<string>БелВЭБ</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 209-29-44</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.bveb.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>БелГазпромБанк</key>
 	<dict>
@@ -138,16 +114,12 @@
 		<string>Белгазпромбанк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>120</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.belgazprombank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>БелИнвестБанк</key>
 	<dict>
@@ -159,16 +131,12 @@
 		<string>Белинвестбанк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>146</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.belinvestbank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>БелСвиссБанк</key>
 	<dict>
@@ -180,16 +148,12 @@
 		<string>Белcвиссбанк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 306-20-40</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.bsb.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>БелСвиссБанк, РКЦ №1, РїР». РЎРІРѕР±РѕРґС‹, 23</key>
 	<dict>
@@ -201,16 +165,12 @@
 		<string>Белсвиссбанк, РКЦ №1</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>3333***333</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>***site***</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>БеларусБанк</key>
 	<dict>
@@ -222,16 +182,12 @@
 		<string>Беларусбанк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>147</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>belarusbank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>Белорусский Банк Малого Бизнеса</key>
 	<dict>
@@ -240,19 +196,15 @@
 		<key>address</key>
 		<string>***temp-address***</string>
 		<key>bankName</key>
-		<string>ББМБ</string>
+		<string>Белорусский Банк Малого Бизнеса</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 385 22 14</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.bbsb.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>Белорусский Народный Банк</key>
 	<dict>
@@ -264,16 +216,12 @@
 		<string>Белорусский Нородный Банк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 309 73 09</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.bnb.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>ВТБ Беларусь</key>
 	<dict>
@@ -282,19 +230,15 @@
 		<key>address</key>
 		<string>***temp-address***</string>
 		<key>bankName</key>
-		<string>Банк ВТБ</string>
+		<string>ВТБ Банк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 309-15-15</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.vtb-bank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>Дельта Банк</key>
 	<dict>
@@ -306,16 +250,12 @@
 		<string>Дельта Банк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 279 02 79</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>deltabank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>ЕвроБанк</key>
 	<dict>
@@ -327,16 +267,12 @@
 		<string>Евробанк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 259-61-17</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.eurobank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>ЕвроТоргИнвестБанк</key>
 	<dict>
@@ -348,16 +284,12 @@
 		<string>Евроторгинвестбанк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 262-11-11</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>etib.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>Идея Банк</key>
 	<dict>
@@ -369,16 +301,12 @@
 		<string>Идея Банк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 306-33-14</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>ideabank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>ИнтерПэйБанк (Кредэксбанк)</key>
 	<dict>
@@ -390,16 +318,12 @@
 		<string>ИнтерПэйБанк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>8-801-100-60-00</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>ipaybank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>МТБанк</key>
 	<dict>
@@ -411,16 +335,12 @@
 		<string>МТБанк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 229-99-99</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.mtbank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>Москва-Минск Банк</key>
 	<dict>
@@ -429,19 +349,15 @@
 		<key>address</key>
 		<string>***temp-address***</string>
 		<key>bankName</key>
-		<string>Банк Москва-Минск</string>
+		<string>Москва-Минск Банк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>186</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.mmbank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>Паритетбанк</key>
 	<dict>
@@ -453,16 +369,12 @@
 		<string>Паритетбанк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 237-76-85</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.paritetbank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>ПриорБанк</key>
 	<dict>
@@ -474,16 +386,12 @@
 		<string>Приорбанк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 289-92-92</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.priorbank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>РРБ-Банк</key>
 	<dict>
@@ -495,16 +403,12 @@
 		<string>РРБ-Банк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 306-02-02</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.rrb.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>ТК Банк</key>
 	<dict>
@@ -516,16 +420,12 @@
 		<string>ТК банк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 312-10-12</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.tcbank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>ТехноБанк</key>
 	<dict>
@@ -537,16 +437,12 @@
 		<string>Технобанк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 283-28-28</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>tb.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>ТрастБанк</key>
 	<dict>
@@ -558,16 +454,12 @@
 		<string>Трастбанк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>8 801 100 33 33</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.trustbank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>ФрансаБанк</key>
 	<dict>
@@ -579,16 +471,12 @@
 		<string>Франсабанк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 389-36-36</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.fransabank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>Хоум Кредит Банк</key>
 	<dict>
@@ -600,16 +488,12 @@
 		<string>Хоум Кредит Банк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 229-89-89</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.homecredit.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 	<key>Цептер Банк</key>
 	<dict>
@@ -621,16 +505,12 @@
 		<string>Цептер Банк</string>
 		<key>monThuWorkTime</key>
 		<string>monThu</string>
-		<key>otherWorkTime</key>
-		<string>tempOtherWorkTime</string>
 		<key>phoneNumber</key>
 		<string>+375 (17) 331-89-49</string>
 		<key>friWorkTime</key>
 		<string>sat</string>
 		<key>site</key>
 		<string>www.zepterbank.by</string>
-		<key>sunWorkTime</key>
-		<string>sun</string>
 	</dict>
 </dict>
 </plist>

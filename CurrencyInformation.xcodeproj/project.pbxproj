@@ -226,7 +226,6 @@
 				84033F1C191C26FB006D72A8 /* CIMainTableViewController.m */,
 				84E4658319545F330018F312 /* saveData.plist */,
 				849CD9C5194DCBC000D23FE7 /* Datafile.plist */,
-				84F3802B19559C55008EA30B /* bankDetails.plist */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -288,6 +287,14 @@
 				84546F5E1933805200A56337 /* UIWebView+AFNetworking.m */,
 			);
 			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		84EA55381958543600450900 /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				84F3802B19559C55008EA30B /* bankDetails.plist */,
+			);
+			name = plist;
 			sourceTree = "<group>";
 		};
 		84EC297F19392588006C5AFC /* banks */ = {
@@ -366,6 +373,7 @@
 		84FB1C9418FF369400D0381E /* CurrencyInformation */ = {
 			isa = PBXGroup;
 			children = (
+				84EA55381958543600450900 /* plist */,
 				843DBD031912A2C5002AFB8C /* entities */,
 				843DBD021912A2B8002AFB8C /* controllers */,
 				84FB1C9D18FF369400D0381E /* CIAppDelegate.h */,

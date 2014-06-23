@@ -24,8 +24,8 @@
 
 @implementation CIMainTableViewController {
     NSMutableArray *banks;
-    NSDictionary *dict;
-    
+    NSMutableDictionary *bankDetailsDict;
+    NSMutableDictionary *ratesDict;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -51,9 +51,11 @@
     [indicator startAnimating];
     [self.view addSubview:indicator];
     
+    banks = [NSMutableArray arrayWithCapacity:10];
+    [self readBankDetailsFromPlist];
+    
     /*              *** start networking ***              */
     
-    banks = [NSMutableArray arrayWithCapacity:10];
     NSURL *url = [NSURL URLWithString:JSON_URL];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:REQUEST_TIMEOUT_INTERVAL];
     
@@ -63,9 +65,8 @@
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        dict = (NSDictionary *) responseObject;
-        [self fillRatesArrayFromDictionary];
-        [self readBankDetailsFromPlist];
+        ratesDict = (NSMutableDictionary *) responseObject;
+        [self mergeDictionaries];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"SaveToPlist" object:self];
         
         [indicator stopAnimating];
@@ -81,9 +82,8 @@
         
         NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"saveData" ofType:@"plist"];
         
-        dict = [NSDictionary dictionaryWithContentsOfFile:dataPath];
-        [self fillRatesArrayFromDictionary];
-        [self readBankDetailsFromPlist];
+        ratesDict = [NSMutableDictionary dictionaryWithContentsOfFile:dataPath];
+        [self mergeDictionaries];
         
         [indicator stopAnimating];
         [self.tableView setUserInteractionEnabled:YES];
@@ -103,20 +103,27 @@
 
 - (void)ReloadNotification:(NSNotification *)notification
 {
-    [dict writeToFile:@"33ts/CurrencyInformation/CurrencyInformation/saveData.plist" atomically:YES];
+    [ratesDict writeToFile:@"33ts/CurrencyInformation/CurrencyInformation/saveData.plist" atomically:YES];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void) fillRatesArrayFromDictionary
+- (void) mergeDictionaries
 {
     CIBank *bank;
-    for (NSArray *keysArray in dict) {
-        NSDictionary *rates = [dict objectForKey:keysArray];
-        
+    for (NSString *key in [bankDetailsDict allKeys]) {
+        NSDictionary *details = [bankDetailsDict valueForKey:key];
+        NSDictionary *rates = [ratesDict valueForKey:key];
         bank = [[CIBank alloc] init];
         
-        bank.bankName = (NSString *) keysArray;
+        bank.bankName = [details objectForKey:@"bankName"];
+        bank.address = [details objectForKey:@"address"];
+        bank.site = [details objectForKey:@"site"];
+        //bank._mapURL = [details objectForKey:@"_mapURL"];
+        bank.phoneNumber = [details objectForKey:@"phoneNumber"];
+        bank.monThuWorkTime = [details objectForKey:@"monThuWorkTime"];
+        bank.friWorkTime = [details objectForKey:@"friWorkTime"];
+        
         bank.bankSellEUR = [[rates objectForKey:@"EUR_BUY"] integerValue];
         bank.bankBuyEUR = [[rates objectForKey:@"EUR_SELL"] integerValue];
         bank.bankSellUSD = [[rates objectForKey:@"USD_BUY"] integerValue];
@@ -125,30 +132,15 @@
         bank.bankBuyRUB = [[rates objectForKey:@"RUR_SELL"] integerValue];
         
         [banks addObject:bank];
+        
+        NSLog(@"%d", bank.bankSellUSD);
     }
 }
 
 - (void) readBankDetailsFromPlist
 {
     NSString *dataPath = [[NSBundle mainBundle] pathForResource:PATH_TO_BANK_DETAILS_PLIST ofType:@"plist"];
-    NSDictionary *bankDetailsDict = [NSDictionary dictionaryWithContentsOfFile:dataPath];
-    NSEnumerator *enumerator = [banks objectEnumerator];
-    
-    for (NSArray *keysArray in bankDetailsDict) {
-        NSDictionary *values = [bankDetailsDict objectForKey:keysArray];
-        
-        CIBank *bank = [enumerator nextObject];
-        
-        bank.bankName = [values objectForKey:@"bankName"];
-        bank.address = [values objectForKey:@"address"];
-        bank.site = [values objectForKey:@"site"];
-        //bank._mapURL = [values objectForKey:@"_mapURL"];
-        bank.phoneNumber = [values objectForKey:@"phoneNumber"];
-        bank.monThuWorkTime = [values objectForKey:@"monThuWorkTime"];
-        bank.friWorkTime = [values objectForKey:@"friWorkTime"];
-    }
-    
-    //NSLog(bankDetailsDict);
+    bankDetailsDict = [NSMutableDictionary dictionaryWithContentsOfFile:dataPath];
 }
 
 - (void)didReceiveMemoryWarning
