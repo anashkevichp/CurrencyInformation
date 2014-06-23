@@ -10,7 +10,6 @@
 
 @interface CICurrencyTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *bankNameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *branchBankNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *currencyRateLabel;
 
 @end
