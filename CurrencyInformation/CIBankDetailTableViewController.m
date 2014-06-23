@@ -22,8 +22,6 @@
 #define WORKTIME_SECTION 2
 #define MON_FRI_TIME_ROW 0
 #define SAT_TIME_ROW 1
-#define SUN_TIME_ROW 2
-#define OTHER_TIME_ROW 3
 
 @interface CIBankDetailTableViewController ()
 
@@ -43,9 +41,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"Datafile" ofType:@"plist"];
-    self.data = [NSDictionary dictionaryWithContentsOfFile:dataPath];
-    NSLog(@"%@", self.data);
+    //NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"Datafile" ofType:@"plist"];
+    //self.data = [NSDictionary dictionaryWithContentsOfFile:dataPath];
+    //NSLog(@"%@", self.data);
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -133,14 +131,6 @@
                 case SAT_TIME_ROW:
                     cell.textLabel.text = @"Пт:";
                     cell.detailTextLabel.text = self.bank.friWorkTime;
-                    break;
-                case SUN_TIME_ROW:
-                    cell.textLabel.text = @"Вс:";
-                    cell.detailTextLabel.text = self.bank.workTime;
-                    break;
-                case OTHER_TIME_ROW:
-                    cell.textLabel.text = @"Другое:";
-                    cell.detailTextLabel.text = self.bank.workTime;
                     break;
             }
             break;
