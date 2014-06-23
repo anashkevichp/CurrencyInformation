@@ -4,6 +4,10 @@
 <dict>
 	<key>Абсолютбанк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string>53.9259598</string>
+		<key>_map_Longitude</key>
+		<string>27.6166947</string>
 		<key>_mapURL</key>
 		<string>https://goo.gl/maps/f82FE</string>
 		<key>address</key>
@@ -21,6 +25,10 @@
 	</dict>
 	<key>Альфа-Банк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string>53.895276</string>
+		<key>_map_Longitude</key>
+		<string>27.540777</string>
 		<key>_mapURL</key>
 		<string>https://goo.gl/maps/ioLVW</string>
 		<key>address</key>
@@ -38,6 +46,10 @@
 	</dict>
 	<key>БПС-Сбербанк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string>53.9137653</string>
+		<key>_map_Longitude</key>
+		<string>27.5843284</string>
 		<key>_mapURL</key>
 		<string>https://goo.gl/maps/N5AKc</string>
 		<key>address</key>
@@ -55,6 +67,10 @@
 	</dict>
 	<key>БТА Банк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string>53.9201118</string>
+		<key>_map_Longitude</key>
+		<string>27.5750963</string>
 		<key>_mapURL</key>
 		<string>https://goo.gl/maps/FjPFK</string>
 		<key>address</key>
@@ -72,6 +88,10 @@
 	</dict>
 	<key>БелАгроПромБанк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string>53.8935922</string>
+		<key>_map_Longitude</key>
+		<string>27.5003683</string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -89,6 +109,10 @@
 	</dict>
 	<key>БелВЭБ</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string>53.9131129</string>
+		<key>_map_Longitude</key>
+		<string>27.5434131</string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -106,6 +130,10 @@
 	</dict>
 	<key>БелГазпромБанк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string>53.9089421</string>
+		<key>_map_Longitude</key>
+		<string>27.4682612</string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -123,6 +151,10 @@
 	</dict>
 	<key>БелИнвестБанк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -140,6 +172,10 @@
 	</dict>
 	<key>БелСвиссБанк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -157,6 +193,10 @@
 	</dict>
 	<key>БелСвиссБанк, РКЦ №1, РїР». РЎРІРѕР±РѕРґС‹, 23</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -174,6 +214,10 @@
 	</dict>
 	<key>БеларусБанк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -191,6 +235,10 @@
 	</dict>
 	<key>Белорусский Банк Малого Бизнеса</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -208,6 +256,10 @@
 	</dict>
 	<key>Белорусский Народный Банк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -225,6 +277,10 @@
 	</dict>
 	<key>ВТБ Беларусь</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -242,6 +298,10 @@
 	</dict>
 	<key>Дельта Банк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -259,6 +319,10 @@
 	</dict>
 	<key>ЕвроБанк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -276,6 +340,10 @@
 	</dict>
 	<key>ЕвроТоргИнвестБанк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -293,6 +361,10 @@
 	</dict>
 	<key>Идея Банк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -310,6 +382,10 @@
 	</dict>
 	<key>ИнтерПэйБанк (Кредэксбанк)</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -327,6 +403,10 @@
 	</dict>
 	<key>МТБанк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -344,6 +424,10 @@
 	</dict>
 	<key>Москва-Минск Банк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -361,6 +445,10 @@
 	</dict>
 	<key>Паритетбанк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -378,6 +466,10 @@
 	</dict>
 	<key>ПриорБанк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -395,6 +487,10 @@
 	</dict>
 	<key>РРБ-Банк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -412,6 +508,10 @@
 	</dict>
 	<key>ТК Банк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -429,6 +529,10 @@
 	</dict>
 	<key>ТехноБанк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -446,6 +550,10 @@
 	</dict>
 	<key>ТрастБанк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -463,6 +571,10 @@
 	</dict>
 	<key>ФрансаБанк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -480,6 +592,10 @@
 	</dict>
 	<key>Хоум Кредит Банк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>
@@ -497,6 +613,10 @@
 	</dict>
 	<key>Цептер Банк</key>
 	<dict>
+		<key>_mapLatitude</key>
+		<string></string>
+		<key>_map_Longitude</key>
+		<string></string>
 		<key>_mapURL</key>
 		<string>tempURL</string>
 		<key>address</key>

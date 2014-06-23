@@ -29,7 +29,7 @@
 - (void)loadView {
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:self._mapLatitude
                                                             longitude:self._mapLongitude
-                                                                 zoom:12];
+                                                                 zoom:17];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.myLocationEnabled = YES;
     mapView_.settings.myLocationButton = YES;
