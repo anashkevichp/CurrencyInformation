@@ -68,8 +68,27 @@
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         switch (status) {
             case NO_CONNECTION:
+            {
                 NSLog(@"connection off!");
+                
+                NSString *filePath = [self getFilePathByFilename:CURRENCY_RATES_PLIST_NAME];
+                
+                if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+                    ratesDict = [NSMutableDictionary dictionaryWithContentsOfFile:filePath];
+                    [self mergeDictionaries];
+                    [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] setUserInteractionEnabled:YES];
+                    [[[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] textLabel] setTextColor:[UIColor blackColor]];
+                } else {
+                    [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] setUserInteractionEnabled:NO];
+                    [[[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] textLabel] setTextColor:[UIColor grayColor]];
+                    UIAlertView *alertView = [self connectionErrorAlert];
+                    [alertView setMessage:@"Для просмотра курсов валют потребуется подключение к интернету!"];
+                    [alertView show];
+                }
+                [self.tableView setUserInteractionEnabled:YES];
+                
                 break;
+            }
             case WWAN_CONNECTION:
             case WIFI_CONNECTION:
             {
