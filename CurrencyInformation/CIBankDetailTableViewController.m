@@ -98,6 +98,8 @@
             break;
             
         case CONTACT_SECTION:
+        {
+            [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
             if (row == PHONE_NUMBER_ROW) {
                 cell.textLabel.text = @"Телефон:";
                 cell.detailTextLabel.text = self.bank.phoneNumber;
@@ -109,6 +111,7 @@
                 cell.detailTextLabel.text = self.bank.site;
             }
             break;
+        }
         
         case WORKTIME_SECTION:
             cell.selectionStyle = UITableViewCellSelectionStyleNone;

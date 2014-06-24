@@ -213,27 +213,6 @@
             </objects>
             <point key="canvasLocation" x="938" y="240"/>
         </scene>
-        <!--Map View Controller - Показать на карте-->
-        <scene sceneID="niw-1K-nub">
-            <objects>
-                <viewController id="A36-rK-LnF" customClass="CIMapViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="CoG-UJ-g50"/>
-                        <viewControllerLayoutGuide type="bottom" id="J0u-47-UX0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="auV-XD-r11">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Показать на карте" id="DXa-du-loM">
-                        <barButtonItem key="backBarButtonItem" title="Назад" id="aJw-yl-w5z"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pAp-4u-YHD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1426" y="240"/>
-        </scene>
         <!--Main Table View Controller - Главное меню-->
         <scene sceneID="2db-G5-Scy">
             <objects>
@@ -396,6 +375,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="IsY-Qb-84Q"/>
+        <segue reference="dpw-tt-zIS"/>
     </inferredMetricsTieBreakers>
 </document>
