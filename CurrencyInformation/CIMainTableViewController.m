@@ -29,6 +29,14 @@
 
 @interface CIMainTableViewController ()
 
+- (void) networkingOperation;
+- (UIAlertView *) connectionErrorAlert;
+- (UIAlertView *) updateDataAlert;
+- (void) ReloadNotification:(NSNotification *)notification;
+- (void) mergeDictionaries;
+- (void) readBankDetailsFromPlist;
+- (NSString *) getFilePathByFilename: (NSString *)fileName;
+
 @end
 
 @implementation CIMainTableViewController {
@@ -67,13 +75,9 @@
             {
                 [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] setUserInteractionEnabled:YES];
                 [[[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] textLabel] setTextColor:[UIColor blackColor]];
-                
-                NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
-                NSString *documentsDir = [paths objectAtIndex:0];
-                NSString *filePath = [documentsDir stringByAppendingPathComponent:CURRENCY_RATES_PLIST_NAME];
-                
+
+                NSString *filePath = [self getFilePathByFilename:CURRENCY_RATES_PLIST_NAME];
                 NSDictionary *fileAttributes = [[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:nil];
-                
                 
                 if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
                     NSDate *fileModifDate = [fileAttributes fileModificationDate];
@@ -138,11 +142,8 @@
         [[self updateDataAlert] show];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
-        NSString *documentsDir = [paths objectAtIndex:0];
-        NSString *filePath = [documentsDir stringByAppendingPathComponent:CURRENCY_RATES_PLIST_NAME];
-        
+
+        NSString *filePath = [self getFilePathByFilename:CURRENCY_RATES_PLIST_NAME];
         if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
             
             ratesDict = [NSMutableDictionary dictionaryWithContentsOfFile:filePath];
@@ -193,13 +194,17 @@
     return alertView;
 }
 
-- (void) ReloadNotification:(NSNotification *)notification
+- (NSString *) getFilePathByFilename: (NSString *)fileName
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     NSString *documentsDir = [paths objectAtIndex:0];
-    NSString *filePath = [documentsDir stringByAppendingPathComponent:CURRENCY_RATES_PLIST_NAME];
+    return [documentsDir stringByAppendingPathComponent:fileName];
+}
+
+- (void) ReloadNotification: (NSNotification *)notification
+{
+    NSString *filePath = [self getFilePathByFilename:CURRENCY_RATES_PLIST_NAME];
     [ratesDict writeToFile:filePath atomically:YES];
-    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
