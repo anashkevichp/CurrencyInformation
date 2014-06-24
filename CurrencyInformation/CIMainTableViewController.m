@@ -58,7 +58,7 @@
 {
     [super viewDidLoad];
     
-    banks = [NSMutableArray arrayWithCapacity:10];
+    
     [self.tableView setUserInteractionEnabled:NO];
     [self readBankDetailsFromPlist];
     
@@ -69,6 +69,7 @@
         switch (status) {
             case NO_CONNECTION:
             {
+                banks = [NSMutableArray arrayWithCapacity:10];
                 NSLog(@"connection off!");
                 
                 NSString *filePath = [self getFilePathByFilename:CURRENCY_RATES_PLIST_NAME];
@@ -93,6 +94,7 @@
             case WWAN_CONNECTION:
             case WIFI_CONNECTION:
             {
+                banks = [NSMutableArray arrayWithCapacity:10];
                 [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] setUserInteractionEnabled:YES];
                 [[[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] textLabel] setTextColor:[UIColor blackColor]];
 
