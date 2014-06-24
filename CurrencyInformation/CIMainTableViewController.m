@@ -75,7 +75,7 @@
                 
                 if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
                     ratesDict = [NSMutableDictionary dictionaryWithContentsOfFile:filePath];
-                    [self mergeDictionaries];
+                    
                     [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] setUserInteractionEnabled:YES];
                     [[[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] textLabel] setTextColor:[UIColor blackColor]];
                 } else {
@@ -85,6 +85,7 @@
                     [alertView setMessage:@"Для просмотра курсов валют потребуется подключение к интернету!"];
                     [alertView show];
                 }
+                [self mergeDictionaries];
                 [self.tableView setUserInteractionEnabled:YES];
                 
                 break;
