@@ -45,7 +45,6 @@
 		84546F6D1933805200A56337 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 84546F5A1933805200A56337 /* UIProgressView+AFNetworking.m */; };
 		84546F6E1933805200A56337 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 84546F5C1933805200A56337 /* UIRefreshControl+AFNetworking.m */; };
 		84546F6F1933805200A56337 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 84546F5E1933805200A56337 /* UIWebView+AFNetworking.m */; };
-		849CD9C6194DCBC000D23FE7 /* Datafile.plist in Resources */ = {isa = PBXBuildFile; fileRef = 849CD9C5194DCBC000D23FE7 /* Datafile.plist */; };
 		849E5EB51956D5F30046427B /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849E5EB41956D5F30046427B /* GoogleMaps.framework */; };
 		849E5EB71956D65B0046427B /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 849E5EB61956D65B0046427B /* GoogleMaps.bundle */; };
 		84E4658419545F330018F312 /* saveData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84E4658319545F330018F312 /* saveData.plist */; };
@@ -140,7 +139,6 @@
 		84546F5C1933805200A56337 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		84546F5D1933805200A56337 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		84546F5E1933805200A56337 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		849CD9C5194DCBC000D23FE7 /* Datafile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Datafile.plist; sourceTree = "<group>"; };
 		849E5EB41956D5F30046427B /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		849E5EB61956D65B0046427B /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		84A31D91191FE21500143277 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };

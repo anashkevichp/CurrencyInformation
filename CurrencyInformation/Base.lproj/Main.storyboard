@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bjL-g4-Cpf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bjL-g4-Cpf">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -87,7 +87,7 @@
                     <tabBarItem key="tabBarItem" title="Банк продает" id="ZX5-Bm-1Qy">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-17"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" title="Банк продает" id="VQn-3y-S1d">
+                    <navigationItem key="navigationItem" id="VQn-3y-S1d">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="McO-vZ-Fvm"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -156,7 +156,7 @@
                     <tabBarItem key="tabBarItem" title="Банк покупает" id="6ya-DE-9No">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-17"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" title="Банк покупает" id="XAv-JM-99n">
+                    <navigationItem key="navigationItem" id="XAv-JM-99n">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="P9u-HP-iQ9"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -205,13 +205,15 @@
                             <outlet property="delegate" destination="Yg1-3I-Akt" id="pUQ-w8-Axx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Подробнее" id="e90-4y-d5d"/>
+                    <navigationItem key="navigationItem" title="Подробнее" id="e90-4y-d5d">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="c2v-AU-hJi"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lq6-U5-gjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="938" y="240"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Map View Controller - Показать на карте-->
         <scene sceneID="niw-1K-nub">
             <objects>
                 <viewController id="A36-rK-LnF" customClass="CIMapViewController" sceneMemberID="viewController">
@@ -224,7 +226,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="DXa-du-loM"/>
+                    <navigationItem key="navigationItem" title="Показать на карте" id="DXa-du-loM">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="aJw-yl-w5z"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAp-4u-YHD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -309,7 +313,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="lZF-Mg-HF5">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Введите название банка" id="lZF-Mg-HF5">
                             <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -392,6 +396,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="IsY-Qb-84Q"/>
+        <segue reference="dpw-tt-zIS"/>
     </inferredMetricsTieBreakers>
 </document>
