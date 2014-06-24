@@ -146,20 +146,20 @@
 		84EC297C19392574006C5AFC /* CIBankListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIBankListTableViewController.h; sourceTree = "<group>"; };
 		84EC297D19392574006C5AFC /* CIBankListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIBankListTableViewController.m; sourceTree = "<group>"; };
 		84F3802B19559C55008EA30B /* bankDetails.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bankDetails.plist; sourceTree = "<group>"; };
-		84FB1C8B18FF369400D0381E /* banks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = banks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84FB1C8B18FF369400D0381E /* Минск.Банки.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Минск.Банки.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FB1C8E18FF369400D0381E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84FB1C9018FF369400D0381E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		84FB1C9218FF369400D0381E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		84FB1C9618FF369400D0381E /* banks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "banks-Info.plist"; sourceTree = "<group>"; };
+		84FB1C9618FF369400D0381E /* Минск.Банки-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Минск.Банки-Info.plist"; sourceTree = "<group>"; };
 		84FB1C9818FF369400D0381E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84FB1C9A18FF369400D0381E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		84FB1C9C18FF369400D0381E /* banks-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "banks-Prefix.pch"; sourceTree = "<group>"; };
+		84FB1C9C18FF369400D0381E /* Минск.Банки-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Минск.Банки-Prefix.pch"; sourceTree = "<group>"; };
 		84FB1C9D18FF369400D0381E /* CIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIAppDelegate.h; sourceTree = "<group>"; };
 		84FB1C9E18FF369400D0381E /* CIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIAppDelegate.m; sourceTree = "<group>"; };
 		84FB1CA118FF369400D0381E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84FB1CA618FF369400D0381E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		84FB1CAC18FF369500D0381E /* banksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = banksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		84FB1CB518FF369500D0381E /* banksTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "banksTests-Info.plist"; sourceTree = "<group>"; };
+		84FB1CAC18FF369500D0381E /* Минск.БанкиTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Минск.БанкиTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84FB1CB518FF369500D0381E /* Минск.БанкиTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Минск.БанкиTests-Info.plist"; sourceTree = "<group>"; };
 		84FB1CB718FF369500D0381E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84FB1CB918FF369500D0381E /* CurrencyInformationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrencyInformationTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -336,8 +336,8 @@
 		84FB1C8C18FF369400D0381E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84FB1C8B18FF369400D0381E /* banks.app */,
-				84FB1CAC18FF369500D0381E /* banksTests.xctest */,
+				84FB1C8B18FF369400D0381E /* Минск.Банки.app */,
+				84FB1CAC18FF369500D0381E /* Минск.БанкиTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -385,10 +385,10 @@
 		84FB1C9518FF369400D0381E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				84FB1C9618FF369400D0381E /* banks-Info.plist */,
+				84FB1C9618FF369400D0381E /* Минск.Банки-Info.plist */,
 				84FB1C9718FF369400D0381E /* InfoPlist.strings */,
 				84FB1C9A18FF369400D0381E /* main.m */,
-				84FB1C9C18FF369400D0381E /* banks-Prefix.pch */,
+				84FB1C9C18FF369400D0381E /* Минск.Банки-Prefix.pch */,
 				84546F351933768800A56337 /* download_tray.png */,
 				84546F361933768800A56337 /* upload_tray.png */,
 			);
@@ -407,7 +407,7 @@
 		84FB1CB418FF369500D0381E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				84FB1CB518FF369500D0381E /* banksTests-Info.plist */,
+				84FB1CB518FF369500D0381E /* Минск.БанкиTests-Info.plist */,
 				84FB1CB618FF369500D0381E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -416,9 +416,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		84FB1C8A18FF369400D0381E /* banks */ = {
+		84FB1C8A18FF369400D0381E /* Минск.Банки */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84FB1CBD18FF369500D0381E /* Build configuration list for PBXNativeTarget "banks" */;
+			buildConfigurationList = 84FB1CBD18FF369500D0381E /* Build configuration list for PBXNativeTarget "Минск.Банки" */;
 			buildPhases = (
 				84FB1C8718FF369400D0381E /* Sources */,
 				84FB1C8818FF369400D0381E /* Frameworks */,
@@ -428,14 +428,14 @@
 			);
 			dependencies = (
 			);
-			name = banks;
+			name = "Минск.Банки";
 			productName = CurrencyInformation;
-			productReference = 84FB1C8B18FF369400D0381E /* banks.app */;
+			productReference = 84FB1C8B18FF369400D0381E /* Минск.Банки.app */;
 			productType = "com.apple.product-type.application";
 		};
-		84FB1CAB18FF369500D0381E /* banksTests */ = {
+		84FB1CAB18FF369500D0381E /* Минск.БанкиTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84FB1CC018FF369500D0381E /* Build configuration list for PBXNativeTarget "banksTests" */;
+			buildConfigurationList = 84FB1CC018FF369500D0381E /* Build configuration list for PBXNativeTarget "Минск.БанкиTests" */;
 			buildPhases = (
 				84FB1CA818FF369500D0381E /* Sources */,
 				84FB1CA918FF369500D0381E /* Frameworks */,
@@ -446,9 +446,9 @@
 			dependencies = (
 				84FB1CB218FF369500D0381E /* PBXTargetDependency */,
 			);
-			name = banksTests;
+			name = "Минск.БанкиTests";
 			productName = CurrencyInformationTests;
-			productReference = 84FB1CAC18FF369500D0381E /* banksTests.xctest */;
+			productReference = 84FB1CAC18FF369500D0381E /* Минск.БанкиTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -466,7 +466,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 84FB1C8618FF369400D0381E /* Build configuration list for PBXProject "banks" */;
+			buildConfigurationList = 84FB1C8618FF369400D0381E /* Build configuration list for PBXProject "Минск.Банки" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -479,8 +479,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				84FB1C8A18FF369400D0381E /* banks */,
-				84FB1CAB18FF369500D0381E /* banksTests */,
+				84FB1C8A18FF369400D0381E /* Минск.Банки */,
+				84FB1CAB18FF369500D0381E /* Минск.БанкиTests */,
 			);
 		};
 /* End PBXProject section */
@@ -559,7 +559,7 @@
 /* Begin PBXTargetDependency section */
 		84FB1CB218FF369500D0381E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 84FB1C8A18FF369400D0381E /* banks */;
+			target = 84FB1C8A18FF369400D0381E /* Минск.Банки */;
 			targetProxy = 84FB1CB118FF369500D0381E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -674,11 +674,11 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CurrencyInformation/banks-Prefix.pch";
-				INFOPLIST_FILE = "CurrencyInformation/banks-Info.plist";
+				GCC_PREFIX_HEADER = "CurrencyInformation/Минск.Банки-Prefix.pch";
+				INFOPLIST_FILE = "CurrencyInformation/Минск.Банки-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = banks;
+				PRODUCT_NAME = "Минск.Банки";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -696,11 +696,11 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CurrencyInformation/banks-Prefix.pch";
-				INFOPLIST_FILE = "CurrencyInformation/banks-Info.plist";
+				GCC_PREFIX_HEADER = "CurrencyInformation/Минск.Банки-Prefix.pch";
+				INFOPLIST_FILE = "CurrencyInformation/Минск.Банки-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = banks;
+				PRODUCT_NAME = "Минск.Банки";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -721,9 +721,9 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "CurrencyInformationTests/banksTests-Info.plist";
+				INFOPLIST_FILE = "CurrencyInformationTests/Минск.БанкиTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = banksTests;
+				PRODUCT_NAME = "Минск.БанкиTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -740,9 +740,9 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CurrencyInformation/CurrencyInformation-Prefix.pch";
-				INFOPLIST_FILE = "CurrencyInformationTests/banksTests-Info.plist";
+				INFOPLIST_FILE = "CurrencyInformationTests/Минск.БанкиTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = banksTests;
+				PRODUCT_NAME = "Минск.БанкиTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -751,7 +751,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		84FB1C8618FF369400D0381E /* Build configuration list for PBXProject "banks" */ = {
+		84FB1C8618FF369400D0381E /* Build configuration list for PBXProject "Минск.Банки" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84FB1CBB18FF369500D0381E /* Debug */,
@@ -760,7 +760,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84FB1CBD18FF369500D0381E /* Build configuration list for PBXNativeTarget "banks" */ = {
+		84FB1CBD18FF369500D0381E /* Build configuration list for PBXNativeTarget "Минск.Банки" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84FB1CBE18FF369500D0381E /* Debug */,
@@ -769,7 +769,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84FB1CC018FF369500D0381E /* Build configuration list for PBXNativeTarget "banksTests" */ = {
+		84FB1CC018FF369500D0381E /* Build configuration list for PBXNativeTarget "Минск.БанкиTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84FB1CC118FF369500D0381E /* Debug */,
