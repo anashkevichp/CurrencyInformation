@@ -20,11 +20,11 @@
 
 @property (nonatomic, assign) int bankBuyUSD;
 @property (nonatomic, assign) int bankBuyEUR;
-@property (nonatomic, assign) int bankBuyRUB;
+@property (nonatomic, assign) double bankBuyRUB;
 
 @property (nonatomic, assign) int bankSellUSD;
 @property (nonatomic, assign) int bankSellEUR;
-@property (nonatomic, assign) int bankSellRUB;
+@property (nonatomic, assign) double bankSellRUB;
 
 @property (nonatomic, assign) double _mapLatitude;
 @property (nonatomic, assign) double _mapLongitude;

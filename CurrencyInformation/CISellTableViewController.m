@@ -80,8 +80,8 @@
             break;
         case RUB_SEGMENT:
             [((NSMutableArray *) self.banks) sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
-                NSInteger rate1 = bank1.bankSellRUB;
-                NSInteger rate2 = bank2.bankSellRUB;
+                double rate1 = bank1.bankSellRUB;
+                double rate2 = bank2.bankSellRUB;
                 if (rate1 > rate2) {
                     return NSOrderedDescending;
                 } else if (rate1 < rate2) {
@@ -130,7 +130,7 @@
             break;
         case RUB_SEGMENT:
             cell.bankNameLabel.text = bank.bankName;
-            cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankSellRUB];
+            cell.currencyRateLabel.text = [NSString stringWithFormat: @"%.1f", bank.bankSellRUB];
             break;
     }
 

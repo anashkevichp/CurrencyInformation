@@ -251,8 +251,8 @@
         bank.bankBuyEUR = [[rates objectForKey:@"EUR_SELL"] integerValue];
         bank.bankSellUSD = [[rates objectForKey:@"USD_BUY"] integerValue];
         bank.bankBuyUSD = [[rates objectForKey:@"USD_SELL"] integerValue];
-        bank.bankSellRUB = [[rates objectForKey:@"RUR_BUY"] integerValue];
-        bank.bankBuyRUB = [[rates objectForKey:@"RUR_SELL"] integerValue];
+        bank.bankSellRUB = [[rates objectForKey:@"RUR_BUY"] doubleValue];
+        bank.bankBuyRUB = [[rates objectForKey:@"RUR_SELL"] doubleValue];
         
         [banks addObject:bank];
     }
