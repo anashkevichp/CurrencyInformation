@@ -157,7 +157,8 @@
             NSString *urlString = [NSString stringWithFormat:@"http://%@", [self.bank site]];
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
         } else if (row == PHONE_NUMBER_ROW) {
-            NSString *phoneUrl = [NSString stringWithFormat:@"telprompt://%@", [self.bank phoneNumber]];
+            NSString *formattedPhone = [self.bank.phoneNumber stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+            NSString *phoneUrl = [NSString stringWithFormat:@"tel://%@", formattedPhone];
             [[UIApplication sharedApplication] openURL: [NSURL URLWithString:phoneUrl]];
         }
     }
