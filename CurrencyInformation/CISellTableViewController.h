@@ -10,6 +10,7 @@
 
 @interface CISellTableViewController : UITableViewController
 
-@property (nonatomic, strong) NSMutableArray *banks;
+@property (nonatomic, strong) NSMutableArray *currencyRates;
+@property (nonatomic, strong) NSDictionary *bankDetails;
 
 @end

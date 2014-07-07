@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 First Group. All rights reserved.
 //
 
-#import "CIBank.h"
+#import "CICurrencyRate.h"
 
-@implementation CIBank
+@implementation CICurrencyRate
 
 @end

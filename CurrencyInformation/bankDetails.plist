@@ -2,14 +2,69 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Абсолютбанк</key>
+    <key>Норд Европеан Банк</key>
 	<dict>
 		<key>_mapLatitude</key>
 		<string>53.9259598</string>
 		<key>_mapLongitude</key>
 		<string>27.6166947</string>
-		<key>_mapURL</key>
-		<string>https://goo.gl/maps/f82FE</string>
+		<key>address</key>
+		<string>ул. К. Цеткин, 51</string>
+		<key>bankName</key>
+		<string>Норд Европеан Банк</string>
+		<key>monThuWorkTime</key>
+		<string>8:30 - 17:30</string>
+		<key>phoneNumber</key>
+		<string>+375-17-306-06-90</string>
+		<key>friWorkTime</key>
+		<string>8:30 - 16:15</string>
+		<key>site</key>
+		<string>www.hbank.by</string>
+	</dict>
+    <key>Банк развития</key>
+	<dict>
+		<key>_mapLatitude</key>
+		<string>53.9259598</string>
+		<key>_mapLongitude</key>
+		<string>27.6166947</string>
+		<key>address</key>
+		<string>пр. Машерова, 35</string>
+		<key>bankName</key>
+		<string>Банк развития РБ</string>
+		<key>monThuWorkTime</key>
+		<string>9:00 - 18:00</string>
+		<key>phoneNumber</key>
+		<string>+375-17-385-96-11</string>
+		<key>friWorkTime</key>
+		<string>9:00 - 16:45</string>
+		<key>site</key>
+		<string>brrb.by</string>
+	</dict>
+	<key>БИТ</key>
+	<dict>
+		<key>_mapLatitude</key>
+		<string>53.9259598</string>
+		<key>_mapLongitude</key>
+		<string>27.6166947</string>
+		<key>address</key>
+		<string>ул. Шемеша Адама, 28</string>
+		<key>bankName</key>
+		<string>Банк Инвестиционных Технологий</string>
+		<key>monThuWorkTime</key>
+		<string>9:00 - 16:00</string>
+		<key>phoneNumber</key>
+		<string>+375-17-204-88-70</string>
+		<key>friWorkTime</key>
+		<string>9:00 - 15:00</string>
+		<key>site</key>
+		<string>www.bit-bank.by</string>
+	</dict>
+    <key>Абсолютбанк</key>
+	<dict>
+		<key>_mapLatitude</key>
+		<string>53.9259598</string>
+		<key>_mapLongitude</key>
+		<string>27.6166947</string>
 		<key>address</key>
 		<string>пр. Независимости, 95</string>
 		<key>bankName</key>
@@ -29,8 +84,6 @@
 		<string>53.895276</string>
 		<key>_mapLongitude</key>
 		<string>27.540777</string>
-		<key>_mapURL</key>
-		<string>https://goo.gl/maps/ioLVW</string>
 		<key>address</key>
 		<string>ул. Мясникова, 70</string>
 		<key>bankName</key>
@@ -50,8 +103,6 @@
 		<string>53.9137653</string>
 		<key>_mapLongitude</key>
 		<string>27.5843284</string>
-		<key>_mapURL</key>
-		<string>https://goo.gl/maps/N5AKc</string>
 		<key>address</key>
 		<string>б-р им. Мулявина, 6</string>
 		<key>bankName</key>
@@ -71,8 +122,6 @@
 		<string>53.9201118</string>
 		<key>_mapLongitude</key>
 		<string>27.5750963</string>
-		<key>_mapURL</key>
-		<string>https://goo.gl/maps/FjPFK</string>
 		<key>address</key>
 		<string>ул. В. Хоружей, 20</string>
 		<key>bankName</key>
@@ -92,10 +141,8 @@
 		<string>53.8935922</string>
 		<key>_mapLongitude</key>
 		<string>27.5003683</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
-		<key>address</key>
-		<string>пр-т. Жукова, 3</string>
+        <key>address</key>
+		<string>пр. Жукова, 3</string>
 		<key>bankName</key>
 		<string>Белагропромбанк</string>
 		<key>monThuWorkTime</key>
@@ -113,10 +160,8 @@
 		<string>53.9131129</string>
 		<key>_mapLongitude</key>
 		<string>27.5434131</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
-		<string>пр-т Победителей, 29</string>
+		<string>пр. Победителей, 29</string>
 		<key>bankName</key>
 		<string>БелВЭБ</string>
 		<key>monThuWorkTime</key>
@@ -134,8 +179,6 @@
 		<string>53.9089421</string>
 		<key>_mapLongitude</key>
 		<string>27.4682612</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>ул.Притыцкого 60/2</string>
 		<key>bankName</key>
@@ -155,8 +198,6 @@
 		<string>53.9167276</string>
 		<key>_mapLongitude</key>
 		<string>27.5558694</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>пр. Машерова, 29</string>
 		<key>bankName</key>
@@ -176,10 +217,8 @@
 		<string>53.9111478</string>
 		<key>_mapLongitude</key>
 		<string>27.5405764</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
-		<string>пр-т Победителей, 23/3</string>
+		<string>пр. Победителей, 23/3</string>
 		<key>bankName</key>
 		<string>Белcвиссбанк</string>
 		<key>monThuWorkTime</key>
@@ -197,8 +236,6 @@
 		<string>53.9036492</string>
 		<key>_mapLongitude</key>
 		<string>27.5572836</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>пл. Свободы, 23</string>
 		<key>bankName</key>
@@ -218,8 +255,6 @@
 		<string>53.8982224</string>
 		<key>_mapLongitude</key>
 		<string>27.5428937</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>ул. Мясникова, 32</string>
 		<key>bankName</key>
@@ -239,8 +274,6 @@
 		<string>53.9258643</string>
 		<key>_mapLongitude</key>
 		<string>27.5960375</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>ул. Сурганова, 28</string>
 		<key>bankName</key>
@@ -260,8 +293,6 @@
 		<string>53.9237872</string>
 		<key>_mapLongitude</key>
 		<string>27.6055231</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>пр. Независимости 87а</string>
 		<key>bankName</key>
@@ -281,8 +312,6 @@
 		<string>53.8887578</string>
 		<key>_mapLongitude</key>
 		<string>27.5381004</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>ул. Московская, 14</string>
 		<key>bankName</key>
@@ -302,10 +331,8 @@
 		<string>53.8892986</string>
 		<key>_mapLongitude</key>
 		<string>27.5126281</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
-		<string>ул. Р.Люксембург, 95</string>
+		<string>ул. Р. Люксембург, 95</string>
 		<key>bankName</key>
 		<string>Дельта Банк</string>
 		<key>monThuWorkTime</key>
@@ -323,8 +350,6 @@
 		<string>53.925485</string>
 		<key>_mapLongitude</key>
 		<string>27.5088227</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>ул. Тимирязева, 129/5</string>
 		<key>bankName</key>
@@ -344,8 +369,6 @@
 		<string>53.837403</string>
 		<key>_mapLongitude</key>
 		<string>27.6833456</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>пер.Промышленный, 11</string>
 		<key>bankName</key>
@@ -365,8 +388,6 @@
 		<string>53.89829</string>
 		<key>_mapLongitude</key>
 		<string>27.5571496</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>ул. К. Маркса, 25</string>
 		<key>bankName</key>
@@ -386,8 +407,6 @@
 		<string>53.9401999</string>
 		<key>_mapLongitude</key>
 		<string>27.5673418</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>ул. Некрасова, 114</string>
 		<key>bankName</key>
@@ -407,10 +426,8 @@
 		<string>53.8845576</string>
 		<key>_mapLongitude</key>
 		<string>27.5834192</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
-		<string>пр-т Партизанский, 6а</string>
+		<string>пр. Партизанский, 6а</string>
 		<key>bankName</key>
 		<string>МТБанк</string>
 		<key>monThuWorkTime</key>
@@ -428,8 +445,6 @@
 		<string>53.9124936</string>
 		<key>_mapLongitude</key>
 		<string>27.5634884</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>ул. Коммунистическая, 49</string>
 		<key>bankName</key>
@@ -449,8 +464,6 @@
 		<string>53.9151182</string>
 		<key>_mapLongitude</key>
 		<string>27.560553</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>ул. Киселева, 61а</string>
 		<key>bankName</key>
@@ -470,8 +483,6 @@
 		<string>53.9225004</string>
 		<key>_mapLongitude</key>
 		<string>27.5580989</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>ул. Веры Хоружей, 31a</string>
 		<key>bankName</key>
@@ -491,8 +502,6 @@
 		<string>53.9097531</string>
 		<key>_mapLongitude</key>
 		<string>27.5857633</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>ул. Краснозвездная, 18</string>
 		<key>bankName</key>
@@ -512,8 +521,6 @@
 		<string>53.9233513</string>
 		<key>_mapLongitude</key>
 		<string>27.5105851</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>ул. Тимирязева 65а</string>
 		<key>bankName</key>
@@ -533,9 +540,7 @@
 		<string>53.9166804</string>
 		<key>_mapLongitude</key>
 		<string>27.5570457</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
-		<key>address</key>
+        <key>address</key>
 		<string>ул. Кропоткина, 44</string>
 		<key>bankName</key>
 		<string>Технобанк</string>
@@ -554,8 +559,6 @@
 		<string>53.9180991</string>
 		<key>_mapLongitude</key>
 		<string>27.5258223</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>ул. Игнатенко, 11</string>
 		<key>bankName</key>
@@ -575,10 +578,8 @@
 		<string>53.9261517</string>
 		<key>_mapLongitude</key>
 		<string>27.6186432</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
-		<string>пр-т Независимости, 95а</string>
+		<string>пр. Независимости, 95а</string>
 		<key>bankName</key>
 		<string>Франсабанк</string>
 		<key>monThuWorkTime</key>
@@ -596,8 +597,6 @@
 		<string>53.9007541</string>
 		<key>_mapLongitude</key>
 		<string>27.4693944</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>ул. Одоевского, 129</string>
 		<key>bankName</key>
@@ -617,8 +616,6 @@
 		<string>53.904456</string>
 		<key>_mapLongitude</key>
 		<string>27.5888371</string>
-		<key>_mapURL</key>
-		<string>tempURL</string>
 		<key>address</key>
 		<string>ул. Платонова, 1б</string>
 		<key>bankName</key>

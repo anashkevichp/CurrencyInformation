@@ -1,30 +1,23 @@
 //
-//  CICurrencyRates.h
-//  CurrencyInformation
+//  CIBankDetail.h
+//  Минск.Банки
 //
-//  Created by Admin on 17.04.14.
+//  Created by Pavel on 01.07.14.
 //  Copyright (c) 2014 First Group. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface CIBank : NSObject
+@interface CIBankDetail : NSObject
+
+@property (nonatomic, strong) NSString *_key;
 
 @property (nonatomic, strong) NSString *bankName;
-@property (nonatomic, strong) NSString *branchBankName;
 @property (nonatomic, strong) NSString *address;
 @property (nonatomic, strong) NSString *phoneNumber;
 @property (nonatomic, strong) NSString *site;
 @property (nonatomic, strong) NSString *monThuWorkTime;
 @property (nonatomic, strong) NSString *friWorkTime;
-
-@property (nonatomic, assign) int bankBuyUSD;
-@property (nonatomic, assign) int bankBuyEUR;
-@property (nonatomic, assign) double bankBuyRUB;
-
-@property (nonatomic, assign) int bankSellUSD;
-@property (nonatomic, assign) int bankSellEUR;
-@property (nonatomic, assign) double bankSellRUB;
 
 @property (nonatomic, assign) double _mapLatitude;
 @property (nonatomic, assign) double _mapLongitude;

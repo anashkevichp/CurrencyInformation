@@ -9,15 +9,13 @@
 #import "CISellTableViewController.h"
 #import "CICurrencyTableViewCell.h"
 #import "CIBankDetailTableViewController.h"
-#import "CIBank.h"
+#import "CICurrencyRate.h"
 
 #define USD_SEGMENT 0
 #define EUR_SEGMENT 1
 #define RUB_SEGMENT 2
 
-@interface CISellTableViewController (){
-    
-}
+@interface CISellTableViewController ()
 
 @end
 
@@ -52,7 +50,7 @@
             
         case USD_SEGMENT:
             
-            [self.banks sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
+            [self.currencyRates sortUsingComparator:^NSComparisonResult(CICurrencyRate *bank1, CICurrencyRate *bank2) {
                 NSInteger rate1 = bank1.bankSellUSD;
                 NSInteger rate2 = bank2.bankSellUSD;
                 if (rate1 > rate2) {
@@ -66,7 +64,7 @@
             break;
         case EUR_SEGMENT:
             
-            [self.banks sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
+            [self.currencyRates sortUsingComparator:^NSComparisonResult(CICurrencyRate *bank1, CICurrencyRate *bank2) {
                 NSInteger rate1 = bank1.bankSellEUR;
                 NSInteger rate2 = bank2.bankSellEUR;
                 if (rate1 > rate2) {
@@ -79,7 +77,8 @@
             }];
             break;
         case RUB_SEGMENT:
-            [((NSMutableArray *) self.banks) sortUsingComparator:^NSComparisonResult(CIBank *bank1, CIBank *bank2) {
+            
+            [self.currencyRates sortUsingComparator:^NSComparisonResult(CICurrencyRate *bank1, CICurrencyRate *bank2) {
                 double rate1 = bank1.bankSellRUB;
                 double rate2 = bank2.bankSellRUB;
                 if (rate1 > rate2) {
@@ -104,7 +103,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.banks count];
+    return [self.currencyRates count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -118,18 +117,19 @@
     }
     
     long row = [indexPath row];
-    CIBank *bank = [self.banks objectAtIndex:row];
+    CICurrencyRate *bank = [self.currencyRates objectAtIndex:row];
+    
+    NSString *bankName = [[self.bankDetails objectForKey:[bank _key]] objectForKey:@"bankName"];
+    cell.bankNameLabel.text = bankName;
+    
     switch (_segmentIndex) {
         case USD_SEGMENT:
-            cell.bankNameLabel.text = bank.bankName;
             cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankSellUSD];
             break;
         case EUR_SEGMENT:
-            cell.bankNameLabel.text = bank.bankName;
             cell.currencyRateLabel.text = [NSString stringWithFormat: @"%i", bank.bankSellEUR];
             break;
         case RUB_SEGMENT:
-            cell.bankNameLabel.text = bank.bankName;
             cell.currencyRateLabel.text = [NSString stringWithFormat: @"%.1f", bank.bankSellRUB];
             break;
     }
@@ -145,7 +145,11 @@
         CIBankDetailTableViewController *detail = [segue destinationViewController];
         
         NSInteger selected = [[self.tableView indexPathForSelectedRow] row];
-        detail.bank = [self.banks objectAtIndex:selected];
+        NSString *bankKey = [[self.currencyRates objectAtIndex:selected] _key];
+        
+        NSDictionary *detailDict = [self.bankDetails objectForKey:bankKey];
+        
+        detail.bankDetailsDict = detailDict;
     }
 }
 

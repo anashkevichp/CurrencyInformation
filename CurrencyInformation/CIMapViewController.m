@@ -14,7 +14,7 @@
 @end
 
 @implementation CIMapViewController{
-    GMSMapView *mapView_;
+    GMSMapView *mapView;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -30,25 +30,23 @@
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:self._mapLatitude
                                                             longitude:self._mapLongitude
                                                                  zoom:17];
-    mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    mapView_.myLocationEnabled = YES;
-    mapView_.settings.myLocationButton = YES;
+    mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+    mapView.myLocationEnabled = YES;
+    mapView.settings.myLocationButton = YES;
     CLLocationCoordinate2D position = CLLocationCoordinate2DMake(self._mapLatitude, self._mapLongitude);
     
     GMSMarker *marker = [GMSMarker markerWithPosition:position];
     marker.title = self.bankName;
     marker.snippet = self.address;
     marker.appearAnimation = kGMSMarkerAnimationPop;
-    marker.map = mapView_;
-    [mapView_ setSelectedMarker:marker];
-    self.view = mapView_;
+    marker.map = mapView;
+    [mapView setSelectedMarker:marker];
+    self.view = mapView;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    
 }
 
 - (void)didReceiveMemoryWarning

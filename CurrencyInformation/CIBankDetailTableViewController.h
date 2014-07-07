@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CIBank.h"
+#import "CIBankDetail.h"
+#import "CICurrencyRate.h"
 
 @interface CIBankDetailTableViewController : UITableViewController
 
-@property (nonatomic, strong) CIBank *bank;
+@property (nonatomic, strong) NSDictionary *bankDetailsDict;
 
 @end

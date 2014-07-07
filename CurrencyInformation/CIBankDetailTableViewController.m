@@ -8,7 +8,7 @@
 
 #import "CIBankDetailTableViewController.h"
 #import "CIMapViewController.h"
-#import "CIBank.h"
+#import "CICurrencyRate.h"
 
 #define BANK_NAME_SECTION 0
 #define BANK_NAME_ROW 0
@@ -27,12 +27,16 @@
 
 @end
 
-@implementation CIBankDetailTableViewController
+@implementation CIBankDetailTableViewController {
+    CIBankDetail *bankDetail;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
+    
     if (self) {
+        
         // Custom initialization
     }
     return self;
@@ -41,6 +45,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    bankDetail = [[CIBankDetail alloc] init];
+    
+    // [bankDetail set_key:self._bankKey];
+    
+    [bankDetail setBankName:[self.bankDetailsDict objectForKey:@"bankName"]];
+    [bankDetail setAddress:[self.bankDetailsDict objectForKey:@"address"]];
+    [bankDetail setSite:[self.bankDetailsDict objectForKey:@"site"]];
+    [bankDetail setPhoneNumber:[self.bankDetailsDict objectForKey:@"phoneNumber"]];
+    
+    [bankDetail setMonThuWorkTime:[self.bankDetailsDict objectForKey:@"monThuWorkTime"]];
+    [bankDetail setFriWorkTime:[self.bankDetailsDict objectForKey:@"friWorkTime"]];
+    
+    [bankDetail set_mapLatitude:[[self.bankDetailsDict objectForKey:@"_mapLatitude"] doubleValue]];
+    [bankDetail set_mapLongitude:[[self.bankDetailsDict objectForKey:@"_mapLongitude"] doubleValue]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -90,7 +109,7 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             if (row == BANK_NAME_ROW) {
                 cell.textLabel.text = @"Банк:";
-                cell.detailTextLabel.text = self.bank.bankName;
+                cell.detailTextLabel.text = [bankDetail bankName];
             } else if (row == BRANCH_NAME_ROW) {
                 cell.textLabel.text = @"Отделение:";
                 cell.detailTextLabel.text = @"Головной офис";
@@ -102,13 +121,13 @@
             [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
             if (row == PHONE_NUMBER_ROW) {
                 cell.textLabel.text = @"Телефон:";
-                cell.detailTextLabel.text = self.bank.phoneNumber;
+                cell.detailTextLabel.text = [bankDetail phoneNumber];
             } else if (row == ADDRESS_ROW ) {
                 cell.textLabel.text = @"Адрес:";
-                cell.detailTextLabel.text = self.bank.address;
+                cell.detailTextLabel.text = [bankDetail address];
             } else if (row == SITE_ROW) {
                 cell.textLabel.text = @"Сайт:";
-                cell.detailTextLabel.text = self.bank.site;
+                cell.detailTextLabel.text = [bankDetail site];
             }
             break;
         }
@@ -117,10 +136,10 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             if (row == MON_FRI_TIME_ROW) {
                 cell.textLabel.text = @"Пн-Чт:";
-                cell.detailTextLabel.text = self.bank.monThuWorkTime;
+                cell.detailTextLabel.text = [bankDetail monThuWorkTime];
             } else if (row == SAT_TIME_ROW) {
                 cell.textLabel.text = @"Пт:";
-                cell.detailTextLabel.text = self.bank.friWorkTime;
+                cell.detailTextLabel.text = [bankDetail friWorkTime];
             }
             break;
     }
@@ -149,21 +168,24 @@
     int row = [indexPath row];
     
     if (section == CONTACT_SECTION) {
+        
         if (row == ADDRESS_ROW) {
             CIMapViewController *mapController = [[CIMapViewController alloc] init];
-            mapController.bankName = [self.bank bankName];
-            mapController.address = [self.bank address];
-            mapController._mapLatitude = [self.bank _mapLatitude];
-            mapController._mapLongitude = [self.bank _mapLongitude];
+            
+            mapController.bankName = [bankDetail bankName];
+            mapController.address = [bankDetail address];
+            mapController._mapLatitude = [bankDetail _mapLatitude];
+            mapController._mapLongitude = [bankDetail _mapLongitude];
             [self.navigationController pushViewController:mapController animated:YES];
         } else if (row == SITE_ROW) {
-            NSString *urlString = [NSString stringWithFormat:@"http://%@", [self.bank site]];
+            NSString *urlString = [NSString stringWithFormat:@"http://%@", [bankDetail site]];
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
         } else if (row == PHONE_NUMBER_ROW) {
-            NSString *formattedPhone = [self.bank.phoneNumber stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+            NSString *formattedPhone = [bankDetail.phoneNumber stringByReplacingOccurrencesOfString:@" " withString:@"-"];
             NSString *phoneUrl = [NSString stringWithFormat:@"tel://%@", formattedPhone];
             [[UIApplication sharedApplication] openURL: [NSURL URLWithString:phoneUrl]];
         }
+        
     }
     
 }

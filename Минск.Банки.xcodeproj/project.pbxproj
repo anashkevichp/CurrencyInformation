@@ -25,7 +25,7 @@
 		841F3A0919556C8000C77700 /* CIMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841F3A0819556C8000C77700 /* CIMapViewController.m */; };
 		843845081912A5050088E88D /* CISellTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843845071912A5050088E88D /* CISellTableViewController.m */; };
 		8438450B1912A5DB0088E88D /* CICurrencyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438450A1912A5DB0088E88D /* CICurrencyTableViewCell.m */; };
-		843DBD0A1912A34F002AFB8C /* CIBank.m in Sources */ = {isa = PBXBuildFile; fileRef = 843DBD051912A34F002AFB8C /* CIBank.m */; };
+		843DBD0A1912A34F002AFB8C /* CICurrencyRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 843DBD051912A34F002AFB8C /* CICurrencyRate.m */; };
 		84546F371933768800A56337 /* download_tray.png in Resources */ = {isa = PBXBuildFile; fileRef = 84546F351933768800A56337 /* download_tray.png */; };
 		84546F381933768800A56337 /* upload_tray.png in Resources */ = {isa = PBXBuildFile; fileRef = 84546F361933768800A56337 /* upload_tray.png */; };
 		84546F5F1933805200A56337 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84546F3B1933805200A56337 /* AFHTTPRequestOperation.m */; };
@@ -47,7 +47,7 @@
 		84546F6F1933805200A56337 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 84546F5E1933805200A56337 /* UIWebView+AFNetworking.m */; };
 		849E5EB51956D5F30046427B /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849E5EB41956D5F30046427B /* GoogleMaps.framework */; };
 		849E5EB71956D65B0046427B /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 849E5EB61956D65B0046427B /* GoogleMaps.bundle */; };
-		84E4658419545F330018F312 /* saveData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84E4658319545F330018F312 /* saveData.plist */; };
+		849FEAB9196305140056F045 /* CIBankDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 849FEAB8196305140056F045 /* CIBankDetail.m */; };
 		84EC297E19392574006C5AFC /* CIBankListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EC297D19392574006C5AFC /* CIBankListTableViewController.m */; };
 		84F3802C19559C55008EA30B /* bankDetails.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F3802B19559C55008EA30B /* bankDetails.plist */; };
 		84FB1C8F18FF369400D0381E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FB1C8E18FF369400D0381E /* Foundation.framework */; };
@@ -99,8 +99,8 @@
 		843845071912A5050088E88D /* CISellTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CISellTableViewController.m; sourceTree = "<group>"; };
 		843845091912A5DB0088E88D /* CICurrencyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CICurrencyTableViewCell.h; sourceTree = "<group>"; };
 		8438450A1912A5DB0088E88D /* CICurrencyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CICurrencyTableViewCell.m; sourceTree = "<group>"; };
-		843DBD041912A34F002AFB8C /* CIBank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIBank.h; sourceTree = "<group>"; };
-		843DBD051912A34F002AFB8C /* CIBank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIBank.m; sourceTree = "<group>"; };
+		843DBD041912A34F002AFB8C /* CICurrencyRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CICurrencyRate.h; sourceTree = "<group>"; };
+		843DBD051912A34F002AFB8C /* CICurrencyRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CICurrencyRate.m; sourceTree = "<group>"; };
 		84546F351933768800A56337 /* download_tray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = download_tray.png; path = icons/download_tray.png; sourceTree = "<group>"; };
 		84546F361933768800A56337 /* upload_tray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = upload_tray.png; path = icons/upload_tray.png; sourceTree = "<group>"; };
 		84546F3A1933805200A56337 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -141,8 +141,9 @@
 		84546F5E1933805200A56337 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		849E5EB41956D5F30046427B /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		849E5EB61956D65B0046427B /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		849FEAB7196305140056F045 /* CIBankDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIBankDetail.h; sourceTree = "<group>"; };
+		849FEAB8196305140056F045 /* CIBankDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIBankDetail.m; sourceTree = "<group>"; };
 		84A31D91191FE21500143277 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		84E4658319545F330018F312 /* saveData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = saveData.plist; sourceTree = "<group>"; };
 		84EC297C19392574006C5AFC /* CIBankListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIBankListTableViewController.h; sourceTree = "<group>"; };
 		84EC297D19392574006C5AFC /* CIBankListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIBankListTableViewController.m; sourceTree = "<group>"; };
 		84F3802B19559C55008EA30B /* bankDetails.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bankDetails.plist; sourceTree = "<group>"; };
@@ -222,7 +223,6 @@
 				84033F24191C3D37006D72A8 /* rates */,
 				84033F1B191C26FB006D72A8 /* CIMainTableViewController.h */,
 				84033F1C191C26FB006D72A8 /* CIMainTableViewController.m */,
-				84E4658319545F330018F312 /* saveData.plist */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -230,8 +230,10 @@
 		843DBD031912A2C5002AFB8C /* entities */ = {
 			isa = PBXGroup;
 			children = (
-				843DBD041912A34F002AFB8C /* CIBank.h */,
-				843DBD051912A34F002AFB8C /* CIBank.m */,
+				843DBD041912A34F002AFB8C /* CICurrencyRate.h */,
+				843DBD051912A34F002AFB8C /* CICurrencyRate.m */,
+				849FEAB7196305140056F045 /* CIBankDetail.h */,
+				849FEAB8196305140056F045 /* CIBankDetail.m */,
 			);
 			name = entities;
 			sourceTree = "<group>";
@@ -495,7 +497,6 @@
 				84F3802C19559C55008EA30B /* bankDetails.plist in Resources */,
 				84FB1C9918FF369400D0381E /* InfoPlist.strings in Resources */,
 				84546F381933768800A56337 /* upload_tray.png in Resources */,
-				84E4658419545F330018F312 /* saveData.plist in Resources */,
 				84FB1CA218FF369400D0381E /* Main.storyboard in Resources */,
 				84546F371933768800A56337 /* download_tray.png in Resources */,
 			);
@@ -520,6 +521,7 @@
 				84546F641933805200A56337 /* AFURLConnectionOperation.m in Sources */,
 				84546F6E1933805200A56337 /* UIRefreshControl+AFNetworking.m in Sources */,
 				84546F6B1933805200A56337 /* UIButton+AFNetworking.m in Sources */,
+				849FEAB9196305140056F045 /* CIBankDetail.m in Sources */,
 				84546F6D1933805200A56337 /* UIProgressView+AFNetworking.m in Sources */,
 				84546F5F1933805200A56337 /* AFHTTPRequestOperation.m in Sources */,
 				84FB1C9F18FF369400D0381E /* CIAppDelegate.m in Sources */,
@@ -535,7 +537,7 @@
 				84EC297E19392574006C5AFC /* CIBankListTableViewController.m in Sources */,
 				84FB1C9B18FF369400D0381E /* main.m in Sources */,
 				843845081912A5050088E88D /* CISellTableViewController.m in Sources */,
-				843DBD0A1912A34F002AFB8C /* CIBank.m in Sources */,
+				843DBD0A1912A34F002AFB8C /* CICurrencyRate.m in Sources */,
 				84546F631933805200A56337 /* AFSecurityPolicy.m in Sources */,
 				84033F1D191C26FB006D72A8 /* CIMainTableViewController.m in Sources */,
 				84546F651933805200A56337 /* AFURLRequestSerialization.m in Sources */,
